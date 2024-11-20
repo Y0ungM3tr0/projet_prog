@@ -93,23 +93,24 @@ namespace prog_final
             {
                 var v = ligne.Split(";");
 
-                addActivite(v[0], v[1], v[2], v[3]);
+                addActivite(v[0], v[1], v[2], Convert.ToDouble(v[3]), Convert.ToDouble(v[4]));
             }
         }
 
         // ajoute les Activites dans la bd
-        public void addActivite(string _nom, string _prenom, string _adresse, string _dateNaissance)
+        public void addActivite(string _nom, string _description, string _type, double _coutOrganisation, double _prixVente)
         {
             try
             {
                 MySqlCommand commande = new MySqlCommand();
                 commande.Connection = con;
-                commande.CommandText = "INSERT INTO Activite (nom, prenom, adresse, dateNaissance) VALUES (@nom, @prenom, @adresse, @dateNaissance);";
+                commande.CommandText = "INSERT INTO activite (nom, description, type, coutOrganisation, prixVente) VALUES (@nom, @description, @type, @coutOrganisation, @prixVente);";
 
                 commande.Parameters.AddWithValue("@nom", _nom);
-                commande.Parameters.AddWithValue("@prenom", _prenom);
-                commande.Parameters.AddWithValue("@adresse", _adresse);
-                commande.Parameters.AddWithValue("@dateNaissance", _dateNaissance);
+                commande.Parameters.AddWithValue("@description", _description);
+                commande.Parameters.AddWithValue("@type", _type);
+                commande.Parameters.AddWithValue("@coutOrganisation", _coutOrganisation);
+                commande.Parameters.AddWithValue("@prixVente", _prixVente);
 
                 con.Open();
                 commande.ExecuteNonQuery();
