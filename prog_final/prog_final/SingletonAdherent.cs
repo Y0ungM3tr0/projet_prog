@@ -13,7 +13,7 @@ namespace prog_final
 {
     internal class SingletonAdherent
     {
-        MySqlConnection con; 
+        MySqlConnection con;
         ObservableCollection<Adherent> liste_des_adherent;
         static SingletonAdherent instance = null;
 
@@ -38,6 +38,43 @@ namespace prog_final
             return liste_des_adherent;
         }
 
+        // ajoute les adherents dans la liste (va les chercher dans la bd)
+        public void getToutAdherent()
+        {
+            liste_des_adherent.Clear();
+            try
+            {
+                MySqlCommand commande = new MySqlCommand();
+                commande.Connection = con;
+                commande.CommandText = "SELECT * FROM adherent;";
+
+                con.Open();
+                MySqlDataReader r = commande.ExecuteReader();
+
+                while (r.Read())
+                {
+                    string nom = r.GetString("nom");
+                    string prenom = r.GetString("prenom");
+                    string adresse = r.GetString("adresse");
+                    string dateNaissance = r.GetString("dateNaissance");
+
+                    Adherent adherent = new Adherent(nom, prenom, adresse, dateNaissance);
+                    liste_des_adherent.Add(adherent);
+                }
+
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                // vérification que la connection est ouverte, pour la fermer
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    con.Close();
+                }
+            }
+        }
+
+        // utilise le fichier csv pour les ajouter dans la liste
         public async void ajoutCSV()
         {
             var picker = new Windows.Storage.Pickers.FileOpenPicker();
@@ -62,6 +99,7 @@ namespace prog_final
             }
         }
 
+        // ajoute les adherents dans la bd
         public void addAdherent(string _nom, string _prenom, string _adresse, string _dateNaissance)
         {
             try
@@ -89,7 +127,7 @@ namespace prog_final
 
                 Console.WriteLine(ex.Message);
             }
-            //getProduit();
+            getToutAdherent();
         }
 
 
