@@ -35,7 +35,7 @@ namespace prog_final
             return liste_des_activites;
         }
 
-        // ajoute les Activites dans la liste (va les chercher dans la bd)
+        // ajoute les Activites dans la liste (va les chercher dans la bd))
         public void getToutActivite()
         {
             liste_des_activites.Clear();
