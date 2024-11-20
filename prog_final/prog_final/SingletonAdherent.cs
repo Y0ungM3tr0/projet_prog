@@ -13,7 +13,7 @@ namespace prog_final
 {
     internal class SingletonAdherent
     {
-        MySqlConnection con; //test
+        MySqlConnection con; 
         ObservableCollection<Adherent> liste_des_adherent;
         static SingletonAdherent instance = null;
 
