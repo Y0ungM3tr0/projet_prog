@@ -27,5 +27,9 @@ namespace prog_final
         {
             SingletonAdherent.getInstance().ajoutCSV();
         }
+        private void exporterAdherentbtn_Click(object sender, RoutedEventArgs e)
+        {
+            //SingletonAdherent.getInstance().ajoutCSV();
+        }
     }
 }

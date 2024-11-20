@@ -26,7 +26,6 @@ namespace prog_final
         }
         public Adherent(string nom, string prenom, string adresse, string dateNaissance)
         {
-            this.idAdherent = idAdherent;
             this.nom = nom;
             this.prenom = prenom;
             this.adresse = adresse;

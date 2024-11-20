@@ -1,52 +1,49 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace prog_final
 {
-    internal class SingletonAdherent
+    internal class SingletonActivite
     {
         MySqlConnection con;
-        ObservableCollection<Adherent> liste_des_adherents;
-        static SingletonAdherent instance = null;
+        ObservableCollection<Activite> liste_des_activites;
+        static SingletonActivite instance = null;
 
-        public SingletonAdherent()
+        public SingletonActivite()
         {
             con = new MySqlConnection("Server=cours.cegep3r.info;Database=420345ri_gr00001_2366599-etienne-mac-donald;Uid=2366599;Pwd=2366599;");
-            liste_des_adherents = new ObservableCollection<Adherent>();
+            liste_des_activites = new ObservableCollection<Activite>();
         }
 
         // SINGLETON
-        public static SingletonAdherent getInstance()
+        public static SingletonActivite getInstance()
         {
             if (instance == null)
             {
-                instance = new SingletonAdherent();
+                instance = new SingletonActivite();
             }
             return instance;
         }
 
-        public ObservableCollection<Adherent> getliste_des_adherents()
+        public ObservableCollection<Activite> getListe_des_activites()
         {
-            return liste_des_adherents;
+            return liste_des_activites;
         }
 
-        // ajoute les adherents dans la liste (va les chercher dans la bd)
-        public void getToutAdherent()
+        // ajoute les Activites dans la liste (va les chercher dans la bd)
+        public void getToutActivite()
         {
-            liste_des_adherents.Clear();
+            liste_des_activites.Clear();
             try
             {
                 MySqlCommand commande = new MySqlCommand();
                 commande.Connection = con;
-                commande.CommandText = "SELECT * FROM adherent;";
+                commande.CommandText = "SELECT * FROM activite;";
 
                 con.Open();
                 MySqlDataReader r = commande.ExecuteReader();
@@ -54,12 +51,13 @@ namespace prog_final
                 while (r.Read())
                 {
                     string nom = r.GetString("nom");
-                    string prenom = r.GetString("prenom");
-                    string adresse = r.GetString("adresse");
-                    string dateNaissance = r.GetString("dateNaissance");
+                    string description = r.GetString("description");
+                    string type = r.GetString("type");
+                    double coutOrganisation = r.GetDouble("coutOrganisation");
+                    double prixVente = r.GetDouble("prixVente");
 
-                    Adherent adherent = new Adherent(nom, prenom, adresse, dateNaissance);
-                    liste_des_adherents.Add(adherent);
+                    Activite activite = new Activite(nom, description, type, coutOrganisation, prixVente);
+                    liste_des_activites.Add(activite);
                 }
 
                 con.Close();
@@ -95,18 +93,18 @@ namespace prog_final
             {
                 var v = ligne.Split(";");
 
-                addAdherent(v[0], v[1], v[2], v[3]);
+                addActivite(v[0], v[1], v[2], v[3]);
             }
         }
 
-        // ajoute les adherents dans la bd
-        public void addAdherent(string _nom, string _prenom, string _adresse, string _dateNaissance)
+        // ajoute les Activites dans la bd
+        public void addActivite(string _nom, string _prenom, string _adresse, string _dateNaissance)
         {
             try
             {
                 MySqlCommand commande = new MySqlCommand();
                 commande.Connection = con;
-                commande.CommandText = "INSERT INTO adherent (nom, prenom, adresse, dateNaissance) VALUES (@nom, @prenom, @adresse, @dateNaissance);";
+                commande.CommandText = "INSERT INTO Activite (nom, prenom, adresse, dateNaissance) VALUES (@nom, @prenom, @adresse, @dateNaissance);";
 
                 commande.Parameters.AddWithValue("@nom", _nom);
                 commande.Parameters.AddWithValue("@prenom", _prenom);
@@ -127,10 +125,7 @@ namespace prog_final
 
                 Console.WriteLine(ex.Message);
             }
-            getToutAdherent();
+            getToutActivite();
         }
-
-
-
     }
 }
