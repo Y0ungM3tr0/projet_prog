@@ -25,7 +25,7 @@ namespace prog_final
 
         private void addAdherentbtn_Click(object sender, RoutedEventArgs e)
         {
-
+            SingletonAdherent.getInstance().ajoutCSV();
         }
     }
 }
