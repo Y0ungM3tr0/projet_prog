@@ -1,3 +1,14 @@
+-- Étienne Mac Donald, Simon cartier
+-- projet final de programmation graphique et de base de données
+
+
+-- shéma rationnel
+/*
+adherent(pk idAdherent, nom, prenom, dateNaissance, adresse)
+activite(pk idActivite, nomActivite, type, description, coutOrganisation, prixVenteClient)
+seance(pk idSeance, date, heure, nbr fk idAdherent, fk idActivite)
+appreciation(pk idApprecitation, fk idAdherent, fk idActivite)
+*/
 
 
 -- creation des tables
