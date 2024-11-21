@@ -36,6 +36,9 @@ namespace prog_final
                     case "pageAffichageActivité":
                         mainFrame.Navigate(typeof(pageAffichageActivité));
                         break;
+                    case "pageAjouterAdherent":
+                        mainFrame.Navigate(typeof(pageAjouterAdherent));
+                        break;
                     default:
                         break;
                 }

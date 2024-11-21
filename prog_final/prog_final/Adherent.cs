@@ -24,6 +24,13 @@ namespace prog_final
             this.adresse = "adresse";
             this.dateNaissance = "dateNaissance";
         }
+        public Adherent(string nom, string prenom, string adresse, string dateNaissance)
+        {
+            this.nom = nom;
+            this.prenom = prenom;
+            this.adresse = adresse;
+            this.dateNaissance = dateNaissance;
+        }
 
         public Adherent(int idAdherent, string nom, string prenom, string adresse, string dateNaissance)
         {

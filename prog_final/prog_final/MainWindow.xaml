@@ -9,7 +9,8 @@
 
     <NavigationView x:Name="nav" SelectionChanged="nav_SelectionChanged" IsSettingsVisible="False" IsBackButtonVisible="Collapsed">
         <NavigationView.MenuItems>
-            <NavigationViewItem Icon="ViewAll" Content="Affichage des produits" Name="pageAffichageActivité"/>
+            <NavigationViewItem Icon="ViewAll" Content="Affichage des activitées" Name="pageAffichageActivité"/>
+            <NavigationViewItem Icon="Add" Content="Gestion Adherent" Name="pageAjouterAdherent"/>
             <NavigationViewItemSeparator />
         </NavigationView.MenuItems>
 
