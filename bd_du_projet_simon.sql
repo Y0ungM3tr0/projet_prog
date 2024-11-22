@@ -11,3 +11,7 @@ BEGIN
 set NEW.matricule=CONCAT(SUBSTRING(NEW.prenom, 1, 1), SUBSTRING(NEW.nom, 1, 1), '-',YEAR(NEW.datenaissance), '-', LPAD(FLOOR(RAND() * 1000), 3, '0'));
 END//
 DELIMITER ;
+
+
+-- 3.2
+-- 
