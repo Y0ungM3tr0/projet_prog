@@ -1,3 +1,66 @@
+-- Tables
+
+-- adherent
+CREATE TABLE adherent
+(
+    matricule VARCHAR(110) NOT NULL PRIMARY KEY,
+    nom VARCHAR(100) NOT NULL,
+    prenom VARCHAR(100) NOT NULL,
+    adresse VARCHAR(150) NOT NULL,
+    dateNaissance DATE NOT NULL,
+    age INT NOT NULL
+);
+
+-- activite
+CREATE TABLE activite
+(
+    idActivite INT NOT NULL PRIMARY KEY,
+    nomActivite VARCHAR(100) NOT NULL,
+    type VARCHAR(100) NOT NULL,
+    description VARCHAR(250) NOT NULL,
+    cout_organisation double NOT NULL,
+    prix_vente_client double NOT NULL
+);
+
+-- seance
+CREATE TABLE seance (
+    idSeance INT PRIMARY KEY,
+    idActivite INT NOT NULL,
+    date_seance DATE NOT NULL,
+    heure VARCHAR(100) NOT NULL,
+    nbr_place_disponible INT NOT NULL,
+    nbr_inscription INT NOT NULL,
+    moyenne_appreciation DOUBLE NOT NULL,
+    FOREIGN KEY (idActivite) REFERENCES activite(idActivite)
+);
+
+-- appreciation
+CREATE TABLE appreciation (
+    idAppreciation INT PRIMARY KEY,
+    idSeance INT NOT NULL,
+    matricule VARCHAR(110) NOT NULL,
+    note_appreciation DOUBLE NOT NULL DEFAULT 0.0,
+    FOREIGN KEY (idSeance) REFERENCES seance(idSeance),
+    FOREIGN KEY (matricule) REFERENCES adherent(matricule)
+);
+
+-- reservation
+CREATE TABLE reservation (
+    idReservation INT PRIMARY KEY AUTO_INCREMENT,
+    idSeance INT NOT NULL,
+    matricule VARCHAR(110) NOT NULL,
+    FOREIGN KEY (idSeance) REFERENCES seance(idSeance),
+    FOREIGN KEY (matricule) REFERENCES adherent(matricule)
+);
+
+-- administrateur
+CREATE TABLE administrateur (
+    nom_utilisateur VARCHAR(150) PRIMARY KEY,
+    mot_de_passe VARCHAR(150) NOT NULL
+);
+ 
+
+
 -- Triggers
 
 -- 3.1
@@ -74,6 +137,27 @@ END//
 DELIMITER ;
 
 
+-- Calculer la moyenne des notes d'une(des) activité(s) d'une séance
+DELIMITER //
+CREATE TRIGGER set_moyenne_notes_seance
+AFTER INSERT
+ON appreciation
+FOR EACH ROW
+BEGIN
+    DECLARE t_moyenne_notes DOUBLE;
+
+    SELECT
+        ROUND(AVG(a.note_appreciation), 1) INTO t_moyenne_notes
+    FROM appreciation a
+    WHERE idSeance = NEW.idSeance;
+
+    UPDATE seance
+    SET moyenne_appreciation = t_moyenne_notes
+    WHERE idSeance = NEW.idSeance;
+END//
+DELIMITER ;
+
+
 
 -- Insertion des données
 -- Données table adherent
@@ -98,7 +182,7 @@ INSERT INTO activite (idActivite, nomActivite, type, description, cout_organisat
 (5, 'Musique', 'Art', 'Cours de guitare pour débutants', 120.0, 30.0),
 (6, 'Randonnée', 'Sport', 'Sortie en montagne', 50.0, 10.0),
 (7, 'Photographie', 'Loisir', 'Atelier de photographie en extérieur', 90.0, 25.0),
-(8, 'Théâtre', 'Art', 'Atelier d'\improvisation théâtrale', 70.0, 20.0),
+(8, 'Théâtre', 'Art', 'Atelier d\'improvisation théâtrale' ' , 70.0, 20.0),  -- <-- supprimer le "'" après "théâtrale" AVANT INSERTION !!!!!!
 (9, 'Fitness', 'Sport', 'Séance de fitness intensif', 110.0, 15.0),
 (10, 'Lecture', 'Loisir', 'Cercle de lecture et discussion', 30.0, 5.0);
 
@@ -143,12 +227,7 @@ INSERT INTO appreciation (idAppreciation, idSeance, matricule, note_appreciation
 
 -- Données table administrateur
 INSERT INTO administrateur (nom_utilisateur, mot_de_passe) VALUES
-('admin1', 'pass123'),
-('admin2', 'pass456'),
-('admin3', 'pass789'),
-('admin4', 'securepass'),
-('admin5', 'adminpassword');
-' -- <-- supprimer le "'" AVANT INSERTION !!!!!!
+('admin', 'Secret1234');
 
 
 
@@ -224,3 +303,90 @@ GROUP BY mois, a.nomActivite;
 
 
 -- Procédures stockées
+-- Ajouter un adhérent
+DELIMITER //
+CREATE procedure Ajouter_adherent(
+    IN p_nom VARCHAR(100),
+    IN p_prenom VARCHAR(100),
+    IN p_adresse VARCHAR(150),
+    IN p_dateNaissance DATE,
+    IN p_age INT)
+BEGIN
+    INSERT INTO adherent(matricule, nom, prenom, adresse, dateNaissance, age)
+    VALUES ('', p_nom, p_prenom, p_adresse, p_dateNaissance, p_age);
+END//
+DELIMITER ;
+
+-- Appel à la procédure
+CALL Ajouter_adherent('Mac Donald', 'Étienne', '123 Rue Test', '2000-01-01', 24);
+
+
+-- Ajouter une activité
+DELIMITER //
+CREATE procedure Ajouter_activite(
+    IN p_idActivite INT(11),
+    IN p_nomActivite VARCHAR(100),
+    IN p_type VARCHAR(100),
+    IN p_description VARCHAR(250),
+    IN p_cout_organisation DOUBLE,
+    IN p_prix_vente_client DOUBLE)
+BEGIN
+    INSERT INTO activite(idActivite, nomActivite, type, description, cout_organisation, prix_vente_client)
+    VALUES (p_idActivite, p_nomActivite, p_type, p_description, p_cout_organisation, p_prix_vente_client);
+END//
+DELIMITER ;
+
+-- Appel à la procédure
+CALL Ajouter_activite(11, 'Fortnite', 'E-Sport', 'The low taper fade meme is still MASSIVE', 250.0, 10.0);
+
+
+-- Ajouter une séance
+DELIMITER //
+CREATE procedure Ajouter_seance(
+    IN p_idSeance INT(11),
+    IN p_idActivite INT(11),
+    IN p_date_seance DATE,
+    IN p_heure VARCHAR(100),
+    IN p_nbr_place_disponible INT(11),
+    IN p_nbr_inscription INT(11),
+    IN p_moyenne_appreciation DOUBLE)
+BEGIN
+    INSERT INTO seance(idSeance, idActivite, date_seance, heure, nbr_place_disponible, nbr_inscription, moyenne_appreciation)
+    VALUES (p_idSeance, p_idActivite, p_date_seance, p_heure, p_nbr_place_disponible, p_nbr_inscription, p_moyenne_appreciation);
+END//
+DELIMITER ;
+
+-- Appel à la procédure
+CALL Ajouter_seance(11, 11, '2024-12-05', '18:00', 10, 0, 0);
+
+
+-- Ajouter une séance
+DELIMITER //
+CREATE procedure Ajouter_appreciation(
+    IN p_idAppreciation INT(11),
+    IN p_idSeance INT(11),
+    IN p_matricule VARCHAR(110),
+    IN p_note_appreciation DOUBLE)
+BEGIN
+    INSERT INTO appreciation(idAppreciation, idSeance, matricule, note_appreciation)
+    VALUES (p_idAppreciation, p_idSeance, p_matricule, p_note_appreciation);
+END//
+DELIMITER ;
+
+-- Appel à la procédure
+CALL Ajouter_appreciation(11, 11, 'ÉM-2000-666', 5.0);
+
+
+-- Ajouter une séance
+DELIMITER //
+CREATE procedure Ajouter_reservation(
+    IN p_idSeance INT(11),
+    IN p_matricule VARCHAR(110))
+BEGIN
+    INSERT INTO reservation(idSeance, matricule)
+    VALUES (p_idSeance, p_matricule);
+END//
+DELIMITER ;
+
+-- Appel à la procédure
+CALL Ajouter_reservation(11, 'ÉM-2000-666');
