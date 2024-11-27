@@ -6,7 +6,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    >
 
     <Grid Background="LightGray">
         <Grid.ColumnDefinitions>
@@ -17,57 +18,68 @@
         </Grid.RowDefinitions>
 
 
-
-
-        <GridView x:Name="gv_activite" Grid.Row="2" Grid.RowSpan="3" Grid.Column="1" SelectionChanged="gv_activite_SelectionChanged" HorizontalAlignment="Center">
+        <GridView x:Name="gv_activite" SelectionChanged="gv_activite_SelectionChanged" HorizontalAlignment="Center">
             <GridView.ItemTemplate>
                 <DataTemplate x:DataType="local:Activite" >
-                    <StackPanel x:Name="produitCard" Margin="15" Background="White" CornerRadius="5" Width="350">
+                    <StackPanel x:Name="produitCard" Margin="15" Background="White" CornerRadius="5" Width="975" HorizontalAlignment="Stretch">
                         <Grid Margin="5">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="4*" />
+                                <ColumnDefinition Width="4*" />
+                                <ColumnDefinition Width="3*" />
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="4*" />
-                                <RowDefinition Height="1*" />
+                                <RowDefinition Height="2*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="2*" />
                             </Grid.RowDefinitions>
 
-                            <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Padding="10" HorizontalAlignment="Stretch">
-                                <TextBlock Text="{x:Bind Nom_activite}" FontSize="23" FontFamily="Arial rouded" MaxLines="2" TextTrimming="WordEllipsis"/>
-                                <TextBlock FontSize="17" Margin="5">
+                            <StackPanel Grid.Column="0" Grid.Row="0" HorizontalAlignment="Stretch">
+                                <TextBlock Text="{x:Bind Nom_activite}" FontSize="25" Margin="15,15,0,0" FontFamily="Arial rouded" TextTrimming="WordEllipsis"/>
+
+                                <TextBlock FontSize="20" Margin="15">
+                                    <Run Text="Description:"/>
+                                    <LineBreak></LineBreak>
+                                    <Run FontWeight="Light" Text="{x:Bind Description}"/>
+                                </TextBlock>
+                            </StackPanel>
+
+                            <StackPanel Grid.Column="1" Grid.Row="0" Margin="0,20,0,0" HorizontalAlignment="Stretch">
+                                <TextBlock FontSize="20" Margin="5">
                                     <Run Text="Type d'activité:"/>
                                     <Run FontWeight="Light" Text="{x:Bind Type}"/>
                                 </TextBlock>
-                                <TextBlock FontSize="17" Margin="5">
-                                    <Run Text="Description:"/>
-                                    <Run FontWeight="Light" Text="{x:Bind Description}"/>
-                                </TextBlock>
-                                <TextBlock FontSize="17" Margin="5">
+                                <TextBlock FontSize="20" Margin="5">
                                     <Run Text="Cout de l'organisation:"/>
                                     <Run FontWeight="Light" Text="{x:Bind Cout_organisation}"/>
+                                    <Run FontWeight="Light" Text="$"/>
                                 </TextBlock>
-                                <TextBlock FontSize="17" Margin="5">
+                                <TextBlock FontSize="20" Margin="5">
                                     <Run Text="Prix d'inscription:"/>
                                     <Run FontWeight="Light" Text="{x:Bind Prix_vente_client}"/>
+                                    <Run FontWeight="Light" Text="$"/>
                                 </TextBlock>
                             </StackPanel>
 
                             <Button 
                                 Click="btn_inscription"
-                                Grid.Column="0" 
-                                Grid.Row="3" 
-                                Margin="20,0,0,0"
-                                HorizontalAlignment="Left"
-                                >
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Grid.Column="2"
+                                Grid.Row="0"
+                                FontSize="19"
+                                Width="150" Height="40"
+                                >           
                                 S'inscrire
                             </Button>
                             <Button 
                                 Click="btn_Supp_Click"
-                                Grid.Column="1" 
-                                Grid.Row="3" 
-                                Margin="0,0,20,0"
-                                HorizontalAlignment="Right"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Grid.Column="2"
+                                Grid.Row="1"
+                                FontSize="19"
+                                Width="150" Height="40"
                                 >
                                 Supprimer
                             </Button>

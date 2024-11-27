@@ -169,5 +169,45 @@ namespace prog_final
                 return -1;
             }
         }
+        // get son identifiant
+        public void getIdentifiantAdmin(string nom_utilisateur)
+        {
+            try
+            {
+                MySqlCommand commande = new MySqlCommand();
+                commande.Connection = con;
+                commande.CommandText = "SELECT * FROM administrateur WHERE nom_utilisateur = @nom_utilisateur;";
+
+                commande.Parameters.AddWithValue("@nom_utilisateur", nom_utilisateur);
+
+                con.Open();
+                MySqlDataReader r = commande.ExecuteReader();
+
+                while (r.Read())
+                {
+                    SingletonUtilisateur.getInstance().UsernameAdmin = r.GetString("nom_utilisateur");
+                }
+
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                // vérification que la connection est ouverte, pour la fermer
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    con.Close();
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+
+
     }
 }

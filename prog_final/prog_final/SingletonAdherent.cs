@@ -17,7 +17,7 @@ namespace prog_final
 
         public SingletonAdherent()
         {
-            con = new MySqlConnection("Server=cours.cegep3r.info;Database=420345ri_gr00001_2366599-etienne-mac-donald;Uid=2366599;Pwd=2366599;");
+            con = new MySqlConnection("Server=cours.cegep3r.info;Database=420335ri_gr00001_2366599-mac-donald-etienne;Uid=2366599;Pwd=2366599;");
             liste_des_adherents = new ObservableCollection<Adherent>();
         }
 
@@ -105,6 +105,76 @@ namespace prog_final
             getToutAdherents();
         }
 
+
+        // CONNEXION
+        public bool validationAdherentLogIn(string inputNumIdentification)
+        {
+            bool validationConnexion = false;
+            try
+            {
+                MySqlCommand commande = new MySqlCommand();
+                commande.Connection = con;
+                commande.CommandText = "SELECT * FROM adherent;";
+
+                con.Open();
+                MySqlDataReader r = commande.ExecuteReader();
+
+                while (r.Read())
+                {
+                    string matricule = r.GetString("matricule");
+
+                    // est-ce qu'il existe
+                    if (matricule == inputNumIdentification)
+                    {
+                        validationConnexion = true;
+                        break;
+                    }
+                }
+
+                con.Close();
+                return validationConnexion;
+            }
+            catch (Exception ex)
+            {
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    con.Close();
+                }
+
+                Console.WriteLine(ex.Message);
+                return validationConnexion;
+            }
+        }
+        // get son identifiant
+        public void getIdentifiantAdherent(string matricule)
+        {
+            try
+            {
+                MySqlCommand commande = new MySqlCommand();
+                commande.Connection = con;
+                commande.CommandText = "SELECT * FROM adherent WHERE matricule = @matricule;";
+
+                commande.Parameters.AddWithValue("@matricule", matricule);
+
+                con.Open();
+                MySqlDataReader r = commande.ExecuteReader();
+
+                while (r.Read())
+                {
+                    SingletonUtilisateur.getInstance().UsernameAdherent = r.GetString("prenom");
+                }
+
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                // vérification que la connection est ouverte, pour la fermer
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    con.Close();
+                }
+            }
+        }
 
 
 

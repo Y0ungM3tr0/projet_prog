@@ -58,7 +58,7 @@
             <TextBox 
                 x:Name="tbx_userAdherent" 
                 Margin="5"
-                PlaceholderText="numéro d'identification"
+                PlaceholderText="matricule"
             />
             <TextBlock
                 x:Name="messageErr_tbx_userAdherent"

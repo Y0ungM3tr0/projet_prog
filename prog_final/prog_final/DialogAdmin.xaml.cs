@@ -23,21 +23,14 @@ namespace prog_final
 {
     public sealed partial class DialogAdmin : ContentDialog
     {
-        bool fermer = false;
-
         public DialogAdmin()
         {
             this.InitializeComponent();
             cbxAdherent.IsChecked = true;
         }
 
-        public string UsernameAdmin { get; set; }
-        public string Mdp { get; set; }
-        public string UsernameAdherent { get; set; }
 
-
-
-
+        // une fois les inputs validés
         private void connexionbtn(object sender, RoutedEventArgs e)
         {
             if (validationInputsConnexion())
@@ -57,6 +50,13 @@ namespace prog_final
                         case 1:
                             // 1 -> username bon + mot de passe bon -> doit log in
                             this.Hide();
+
+
+                            SingletonUtilisateur.getInstance().Connecter = true;
+
+                            SingletonUtilisateur.getInstance().StatutUtilisateur = true;
+                            SingletonUtilisateur.getInstance().UsernameAdmin = tbx_userAdmin.Text;
+                            SingletonUtilisateur.getInstance().Mdp = tbx_userAdmin.Text;
                             // jsp trop quoi faire
                             break;
                         default:
@@ -67,11 +67,35 @@ namespace prog_final
                 }
                 else 
                 {
-                    //SingletonAdmin.getInstance().validationLogIn();
+                    switch (SingletonAdherent.getInstance().validationAdherentLogIn(tbx_userAdherent.Text))
+                    {
+
+                        case false:
+                            // false -> num identification = mauvais (pas username dans bd)
+                            messageErr_tbx_userAdherent.Text = "Matricule inexistant.";
+                            break;
+                        case true:
+                            // true -> num identification = bon 
+                            messageErr_tbx_userAdherent.Text = "";
+                            this.Hide();
+
+
+                            SingletonUtilisateur.getInstance().Connecter = true;
+
+                            SingletonUtilisateur.getInstance().StatutUtilisateur = false;
+                            SingletonUtilisateur.getInstance().UsernameAdherent = tbx_userAdherent.Text;
+                            // jsp trop quoi faire
+                            break;
+                        default:
+                            messageErr_tbx_userAdherent.Text = "Une erreur s'est produite.";
+                            break;
+                    }
+                    
                 }    
             }
         }
 
+        // validation des inputs avant de vérifier pour log in
         private bool validationInputsConnexion()
         {
             bool validation = true;
@@ -115,6 +139,13 @@ namespace prog_final
         }
 
 
+
+
+        // fermer dialog
+        private void closeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+        }
         // gestion checkbox
         private void gestion_checkbox_admin(object sender, RoutedEventArgs e)
         {
@@ -123,6 +154,8 @@ namespace prog_final
                 stckpnl_admin.Visibility = Visibility.Visible;
                 stckpnl_adherent.Visibility = Visibility.Collapsed;
                 messageErr_tbx_userAdherent.Text = "";
+                tbx_userAdmin.Text = "";
+                pwd_userAdmin.Password = "";
                 cbxAdherent.IsChecked = false;
             }
             else
@@ -137,6 +170,7 @@ namespace prog_final
                 stckpnl_adherent.Visibility = Visibility.Visible;
                 stckpnl_admin.Visibility = Visibility.Collapsed;
                 messageErr_tbx_userAdmin.Text = "";
+                tbx_userAdherent.Text = "";
                 cbxAdmin.IsChecked = false;
             }
             else
@@ -145,10 +179,6 @@ namespace prog_final
             }
         }
 
-        private void closeBtn_Click(object sender, RoutedEventArgs e)
-        {
-            this.Hide();
-        }
 
     }
 }

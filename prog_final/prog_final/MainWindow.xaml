@@ -13,8 +13,16 @@
             <NavigationViewItem Icon="Add" Content="Gestion Adherent" Name="pageAjouterAdherent"/>
             <NavigationViewItemSeparator />
             <NavigationViewItem Icon="Admin" Content="Connexion" Name="pageConnexion"/>
+            <NavigationViewItem Icon="Clear" Content="Deconnexion" Name="pageDeconnexion"/>
+
+            <NavigationViewItemSeparator Margin="0,40,0,0"/>
+            <TextBlock
+                x:Name="infoUtilisateur"
+                VerticalAlignment="Bottom"
+                >
+            </TextBlock>
         </NavigationView.MenuItems>
-        
+
         <Frame x:Name="mainFrame"/>
     </NavigationView>
 </Window>

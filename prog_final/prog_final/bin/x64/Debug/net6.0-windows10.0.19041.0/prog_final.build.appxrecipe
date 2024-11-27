@@ -10,34 +10,34 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>05fd7d9d-c1d8-4cb1-9b90-db4c15a8d52d</PackageIdentityName>
     <PackageIdentityPublisher>CN=2366599</PackageIdentityPublisher>
-    <IntermediateOutputPath>D:\session_3_disc\prog_graph\progfinalv2\projet_prog\prog_final\prog_final\obj\x64\Debug\net6.0-windows10.0.19041.0\</IntermediateOutputPath>
+    <IntermediateOutputPath>D:\session_3_disc\prog_graph\prog_final\prog_final\prog_final\obj\x64\Debug\net6.0-windows10.0.19041.0\</IntermediateOutputPath>
     <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>false</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>D:\session_3_disc\prog_graph\progfinalv2\projet_prog\prog_final\prog_final\bin\x64\Debug\net6.0-windows10.0.19041.0\AppX</LayoutDir>
+    <LayoutDir>D:\session_3_disc\prog_graph\prog_final\prog_final\prog_final\bin\x64\Debug\net6.0-windows10.0.19041.0\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="D:\session_3_disc\prog_graph\progfinalv2\projet_prog\prog_final\prog_final\bin\x64\Debug\net6.0-windows10.0.19041.0\AppxManifest.xml">
+    <AppXManifest Include="D:\session_3_disc\prog_graph\prog_final\prog_final\prog_final\bin\x64\Debug\net6.0-windows10.0.19041.0\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="D:\session_3_disc\prog_graph\progfinalv2\projet_prog\prog_final\prog_final\bin\x64\Debug\net6.0-windows10.0.19041.0\resources.pri">
+    <AppxPackagedFile Include="D:\session_3_disc\prog_graph\prog_final\prog_final\prog_final\bin\x64\Debug\net6.0-windows10.0.19041.0\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\session_3_disc\prog_graph\progfinalv2\projet_prog\prog_final\prog_final\bin\x64\Debug\net6.0-windows10.0.19041.0\prog_final.runtimeconfig.json">
+    <AppxPackagedFile Include="D:\session_3_disc\prog_graph\prog_final\prog_final\prog_final\bin\x64\Debug\net6.0-windows10.0.19041.0\prog_final.runtimeconfig.json">
       <PackagePath>prog_final.runtimeconfig.json</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\session_3_disc\prog_graph\progfinalv2\projet_prog\prog_final\prog_final\bin\x64\Debug\net6.0-windows10.0.19041.0\prog_final.dll">
+    <AppxPackagedFile Include="D:\session_3_disc\prog_graph\prog_final\prog_final\prog_final\bin\x64\Debug\net6.0-windows10.0.19041.0\prog_final.dll">
       <PackagePath>prog_final.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\session_3_disc\prog_graph\progfinalv2\projet_prog\prog_final\prog_final\obj\x64\Debug\net6.0-windows10.0.19041.0\apphost.exe">
+    <AppxPackagedFile Include="D:\session_3_disc\prog_graph\prog_final\prog_final\prog_final\obj\x64\Debug\net6.0-windows10.0.19041.0\apphost.exe">
       <PackagePath>prog_final.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\session_3_disc\prog_graph\progfinalv2\projet_prog\prog_final\prog_final\bin\x64\Debug\net6.0-windows10.0.19041.0\prog_final.deps.json">
+    <AppxPackagedFile Include="D:\session_3_disc\prog_graph\prog_final\prog_final\prog_final\bin\x64\Debug\net6.0-windows10.0.19041.0\prog_final.deps.json">
       <PackagePath>prog_final.deps.json</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2366599\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.52\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
@@ -181,25 +181,25 @@
     <AppxPackagedFile Include="C:\Users\2366599\.nuget\packages\system.windows.extensions\8.0.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll">
       <PackagePath>runtimes\win\lib\net6.0\System.Windows.Extensions.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\session_3_disc\prog_graph\progfinalv2\projet_prog\prog_final\prog_final\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="D:\session_3_disc\prog_graph\prog_final\prog_final\prog_final\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\session_3_disc\prog_graph\progfinalv2\projet_prog\prog_final\prog_final\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="D:\session_3_disc\prog_graph\prog_final\prog_final\prog_final\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\session_3_disc\prog_graph\progfinalv2\projet_prog\prog_final\prog_final\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="D:\session_3_disc\prog_graph\prog_final\prog_final\prog_final\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\session_3_disc\prog_graph\progfinalv2\projet_prog\prog_final\prog_final\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="D:\session_3_disc\prog_graph\prog_final\prog_final\prog_final\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\session_3_disc\prog_graph\progfinalv2\projet_prog\prog_final\prog_final\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="D:\session_3_disc\prog_graph\prog_final\prog_final\prog_final\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\session_3_disc\prog_graph\progfinalv2\projet_prog\prog_final\prog_final\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="D:\session_3_disc\prog_graph\prog_final\prog_final\prog_final\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\session_3_disc\prog_graph\progfinalv2\projet_prog\prog_final\prog_final\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="D:\session_3_disc\prog_graph\prog_final\prog_final\prog_final\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>
