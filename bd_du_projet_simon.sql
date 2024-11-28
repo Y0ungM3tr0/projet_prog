@@ -75,6 +75,19 @@ set NEW.matricule=CONCAT(SUBSTRING(NEW.prenom, 1, 1), SUBSTRING(NEW.nom, 1, 1), 
 END//
 DELIMITER ;
 
+-- Modification avec fonction stockée
+-- 3.1
+-- Créer le matricule pour un adhérent avant son insertion à l'aide d'une fonction stockée
+DELIMITER //
+CREATE TRIGGER set_matriculeAdherent_test
+BEFORE INSERT
+ON adherent
+FOR EACH ROW
+BEGIN
+set NEW.matricule=;
+END//
+DELIMITER ;
+
 
 -- 3.2
 -- Gérer le nombre de places disponibles dans chaque séances. Ajouter un participant (adhérent)
@@ -138,6 +151,27 @@ DELIMITER ;
 
 
 -- Calculer la moyenne des notes d'une(des) activité(s) d'une séance
+DELIMITER //
+CREATE TRIGGER set_moyenne_notes_seance
+AFTER INSERT
+ON appreciation
+FOR EACH ROW
+BEGIN
+    DECLARE t_moyenne_notes DOUBLE;
+
+    SELECT
+        ROUND(AVG(a.note_appreciation), 1) INTO t_moyenne_notes
+    FROM appreciation a
+    WHERE idSeance = NEW.idSeance;
+
+    UPDATE seance
+    SET moyenne_appreciation = t_moyenne_notes
+    WHERE idSeance = NEW.idSeance;
+END//
+DELIMITER ;
+
+
+-- Calculer l'âge d'un adhérent
 DELIMITER //
 CREATE TRIGGER set_moyenne_notes_seance
 AFTER INSERT
@@ -390,3 +424,136 @@ DELIMITER ;
 
 -- Appel à la procédure
 CALL Ajouter_reservation(11, 'ÉM-2000-666');
+
+
+
+-- Fonctions stockées
+
+-- Fonction pour générer le matricule d'un adhérent
+
+
+
+
+
+
+
+
+
+
+
+-- MODIFICATIONS
+
+-- Calculer l'âge d'un adhérent
+DELIMITER //
+CREATE FUNCTION Calculer_age_adherent(f_dateNaissance DATE)
+RETURNS INT
+DETERMINISTIC
+BEGIN
+    DECLARE age INT;
+    SET age = TIMESTAMPDIFF(YEAR, f_dateNaissance, CURDATE());
+
+    IF MONTH(f_dateNaissance) > MONTH(CURDATE()) OR
+       (MONTH(f_dateNaissance) = MONTH(CURDATE()) AND DAY(f_dateNaissance) > DAY(CURDATE())) THEN
+        SET age = age - 1;
+    END IF;
+
+    SET age = ROUND(age);
+    RETURN age;
+END //
+DELIMITER ;
+
+
+-- Mettre à jour l'âge d'un adhérent après l'insertion de sa date de naissance en utilisant une fonction stockée
+DELIMITER //
+CREATE TRIGGER set_age_adherent
+BEFORE INSERT
+ON adherent
+FOR EACH ROW
+BEGIN
+    DECLARE age INT;
+    SET age = Calculer_age_adherent(NEW.dateNaissance);
+
+    IF age < 18 THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'L\'adhérent doit avoir au moins 18 ans.';
+    ELSE
+        UPDATE adherent
+        SET age = age
+        WHERE matricule = NEW.matricule;
+    END IF;
+END//
+DELIMITER ;
+
+
+
+
+
+DELIMITER //
+CREATE FUNCTION Verifier_age_adherent(f_dateNaissance DATE, f_dateInscription DATE)
+RETURNS BOOLEAN
+DETERMINISTIC
+BEGIN
+    RETURN TIMESTAMPDIFF(YEAR, f_dateNaissance, f_dateInscription) >= 18;
+END //
+
+-- Calculer la moyenne des notes d'une(des) activité(s) d'une séance
+DELIMITER //
+CREATE TRIGGER set_moyenne_notes_seance
+AFTER INSERT
+ON appreciation
+FOR EACH ROW
+BEGIN
+    DECLARE t_moyenne_notes DOUBLE;
+
+    SELECT
+        ROUND(AVG(a.note_appreciation), 1) INTO t_moyenne_notes
+    FROM appreciation a
+    WHERE idSeance = NEW.idSeance;
+
+    CALL Verifier_age_adherent();
+
+    UPDATE seance
+    SET moyenne_appreciation = t_moyenne_notes
+    WHERE idSeance = NEW.idSeance;
+END//
+DELIMITER ;
+
+
+
+-- Fonctions stockées
+
+-- Fonction pour générer le matricule d'un adhérent
+DELIMITER //
+CREATE FUNCTION Generer_matricule_adherent(f_prenom VARCHAR(100), f_nom VARCHAR(100), f_dateNaissance DATE)
+RETURNS VARCHAR(110)
+DETERMINISTIC
+BEGIN
+    RETURN CONCAT(
+        UPPER(LEFT(f_prenom, 1)),
+        UPPER(LEFT(f_nom, 1)),
+        '-',
+        YEAR(f_dateNaissance),
+        '-',
+        LPAD(FLOOR(100 + RAND() * 900), 3, '0')
+        );
+END //
+
+-- Modification avec fonction stockée
+-- 3.1
+-- Créer le matricule pour un adhérent avant son insertion à l'aide d'une fonction stockée
+DELIMITER //
+CREATE TRIGGER set_matriculeAdherent_test
+BEFORE INSERT
+ON adherent
+FOR EACH ROW
+BEGIN
+    SET NEW.matricule=Generer_matricule_adherent(NEW.prenom, NEW.nom, NEW.dateNaissance);
+END//
+DELIMITER ;
+
+
+CALL Ajouter_adherent('Cartier', 'Simon', '123 Rue DuTest', '2000-10-10', );
+
+
+
+DROP TRIGGER set_matriculeAdherent;
