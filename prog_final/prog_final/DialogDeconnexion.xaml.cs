@@ -17,9 +17,35 @@ namespace prog_final
 {
     public sealed partial class DialogDeconnexion : ContentDialog
     {
+        bool annulerBtnDeco = false;
+
         public DialogDeconnexion()
         {
             this.InitializeComponent();
+        }
+        public bool AnnulerBtnDeco
+        {
+            get => annulerBtnDeco;
+            set
+            {
+                annulerBtnDeco = value;
+            }
+
+        }
+
+        // confirmer la déconnexion
+        private void confirmerBtn_Click(object sender, RoutedEventArgs e)
+        {
+            SingletonUtilisateur.getInstance().supprimerInfoUtilisateur();
+            AnnulerBtnDeco = false;
+            this.Hide();
+        }
+
+        // fermer dialog
+        private void annulerBtn_Click(object sender, RoutedEventArgs e)
+        {
+            AnnulerBtnDeco = true;
+            this.Hide();
         }
     }
 }

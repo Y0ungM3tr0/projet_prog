@@ -15,7 +15,10 @@
     <None Remove="DialogAdmin.xaml" />
     <None Remove="DialogDeconnexion.xaml" />
     <None Remove="pageAffichageActivité.xaml" />
+    <None Remove="pageAjouterActivite.xaml" />
     <None Remove="pageAjouterAdherent.xaml" />
+    <None Remove="pageAjouterCategorie.xaml" />
+    <None Remove="pageAjouterSeance.xaml" />
     <None Remove="pageConnexion.xaml" />
     <None Remove="UserControl1.xaml" />
   </ItemGroup>
@@ -44,6 +47,21 @@
   -->
   <ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
     <ProjectCapability Include="Msix" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="pageAjouterSeance.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="pageAjouterCategorie.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="pageAjouterActivite.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="DialogDeconnexion.xaml">

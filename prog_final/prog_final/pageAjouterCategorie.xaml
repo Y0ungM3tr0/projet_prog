@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="prog_final.pageAjouterCategorie"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:prog_final"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="LightGray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock
+            Grid.Row="0"
+            Grid.Column="1"
+            x:Name="titre"
+            FontSize="35"
+            HorizontalAlignment="Center"
+            >
+            gestion categories
+        </TextBlock>
+
+        <StackPanel 
+            Grid.Row="1" Grid.Column="1"
+            HorizontalAlignment="Center"
+            >
+            <TextBox
+                x:Name="tbx_type"
+                Header="categorie:"
+                Margin="5"
+                Width="240" Height="75"
+                FontSize="18" 
+                PlaceholderText="ex: "
+                PlaceholderForeground="DarkGray"
+                >   
+            </TextBox>
+            <TextBlock
+                x:Name="typeErr"
+                FontSize="15"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Bottom"
+                Foreground="DarkRed"
+                >   
+            </TextBlock>
+        </StackPanel>
+
+        <Button
+            Grid.Row="2"
+            Grid.Column="1"
+            Width="100" Height="40"
+            HorizontalAlignment="Center"
+            Click="add_btn_Click"
+            >
+            ajouter
+        </Button>
+    </Grid>
+</Page>

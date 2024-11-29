@@ -1,6 +1,7 @@
 ﻿using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
+using Microsoft.UI.Xaml.CustomAttributes;
 using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
@@ -43,11 +44,23 @@ namespace prog_final
                     case "pageAjouterAdherent":
                         mainFrame.Navigate(typeof(pageAjouterAdherent));
                         break;
+                    case "pageAjouterActivite":
+                        mainFrame.Navigate(typeof(pageAjouterActivite));
+                        break;
+                    case "pageAjouterCategorie":
+                        mainFrame.Navigate(typeof(pageAjouterCategorie));
+                        break;
+                    case "pageAjouterSeance":
+                        mainFrame.Navigate(typeof(pageAjouterSeance));
+                        break;
                     case "pageConnexion":
                         connexion_btn_Click();
                         break;
                     case "pageDeconnexion":
-                        deconnexion_btn_Click();
+                        if (SingletonUtilisateur.getInstance().Connecter == true)
+                        {
+                            deconnexion_btn_Click();
+                        }
                         break;
                     default:
                         break;
@@ -64,34 +77,42 @@ namespace prog_final
 
             ContentDialogResult resultat = await dialog.ShowAsync();
 
-            if (SingletonUtilisateur.getInstance().StatutUtilisateur == false)
+            if (dialog.AnnulerBtn != true)
             {
-                SingletonAdherent.getInstance().getIdentifiantAdherent(
-                    SingletonUtilisateur.getInstance().UsernameAdherent.ToString()
-                    );
+                
+                if (SingletonUtilisateur.getInstance().StatutUtilisateur == false)
+                {
+                    SingletonAdherent.getInstance().getIdentifiantAdherent(
+                        SingletonUtilisateur.getInstance().UsernameAdherent.ToString()
+                        );
 
-                infoUtilisateur.Text = "Bienvenue, \n" + SingletonUtilisateur.getInstance().UsernameAdherent.ToString();
+                    infoUtilisateur.Text = "Bienvenue, \n" + SingletonUtilisateur.getInstance().UsernameAdherent.ToString();
+                    SingletonUtilisateur.getInstance().Connecter = true;
+                }
+                else 
+                {
+                    SingletonAdmin.getInstance().getIdentifiantAdmin(
+                        SingletonUtilisateur.getInstance().UsernameAdmin.ToString()
+                        );
+
+                    infoUtilisateur.Text = "Bienvenue, \n" + SingletonUtilisateur.getInstance().UsernameAdmin.ToString();
+                    SingletonUtilisateur.getInstance().Connecter = true;
+                }
             }
-            else 
-            {
-                SingletonAdmin.getInstance().getIdentifiantAdmin(
-                    SingletonUtilisateur.getInstance().UsernameAdmin.ToString()
-                    );
-
-                infoUtilisateur.Text = "Bienvenue, \n" + SingletonUtilisateur.getInstance().UsernameAdmin.ToString();
-            }
-
         }
         private async void deconnexion_btn_Click()
         {
             DialogDeconnexion dialog = new DialogDeconnexion();
             dialog.XamlRoot = this.Content.XamlRoot;
-            dialog.Title = "Authentification";
+            dialog.Title = "Déconnexion";
 
             ContentDialogResult resultat = await dialog.ShowAsync();
 
-            SingletonUtilisateur.getInstance().Connecter = false;
-
+            if (dialog.AnnulerBtnDeco != true)
+            {
+                    SingletonUtilisateur.getInstance().Connecter = false;
+                infoUtilisateur.Text = "Déconnecté";
+            }
         }
 
 

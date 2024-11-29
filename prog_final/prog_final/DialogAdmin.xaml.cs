@@ -23,12 +23,23 @@ namespace prog_final
 {
     public sealed partial class DialogAdmin : ContentDialog
     {
+        bool annulerBtn = false;
+
         public DialogAdmin()
         {
             this.InitializeComponent();
             cbxAdherent.IsChecked = true;
         }
 
+        public bool AnnulerBtn
+        {
+            get => annulerBtn;
+            set
+            {
+                annulerBtn = value;
+            }
+
+        }
 
         // une fois les inputs validés
         private void connexionbtn(object sender, RoutedEventArgs e)
@@ -77,6 +88,7 @@ namespace prog_final
                         case true:
                             // true -> num identification = bon 
                             messageErr_tbx_userAdherent.Text = "";
+                            AnnulerBtn = false;
                             this.Hide();
 
 
@@ -144,8 +156,10 @@ namespace prog_final
         // fermer dialog
         private void closeBtn_Click(object sender, RoutedEventArgs e)
         {
+            AnnulerBtn = true;
             this.Hide();
         }
+
         // gestion checkbox
         private void gestion_checkbox_admin(object sender, RoutedEventArgs e)
         {

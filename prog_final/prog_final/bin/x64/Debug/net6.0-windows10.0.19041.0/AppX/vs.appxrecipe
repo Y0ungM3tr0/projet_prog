@@ -29,29 +29,29 @@
     <AppXManifest Include="D:\session_3_disc\prog_graph\prog_final\prog_final\prog_final\bin\x64\Debug\net6.0-windows10.0.19041.0\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-11-27T22:12:04.902</Modified>
+      <Modified>2024-11-29T19:19:22.489</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\session_3_disc\prog_graph\prog_final\prog_final\prog_final\bin\x64\Debug\net6.0-windows10.0.19041.0\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-11-27T22:12:04.784</Modified>
+      <Modified>2024-11-29T19:17:49.330</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\session_3_disc\prog_graph\prog_final\prog_final\prog_final\bin\x64\Debug\net6.0-windows10.0.19041.0\prog_final.runtimeconfig.json">
       <PackagePath>prog_final.runtimeconfig.json</PackagePath>
-      <Modified>2024-11-27T20:33:48.014</Modified>
+      <Modified>2024-11-28T22:21:52.359</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\session_3_disc\prog_graph\prog_final\prog_final\prog_final\bin\x64\Debug\net6.0-windows10.0.19041.0\prog_final.dll">
       <PackagePath>prog_final.dll</PackagePath>
-      <Modified>2024-11-27T22:12:04.093</Modified>
+      <Modified>2024-11-29T19:19:22.251</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\session_3_disc\prog_graph\prog_final\prog_final\prog_final\obj\x64\Debug\net6.0-windows10.0.19041.0\apphost.exe">
       <PackagePath>prog_final.exe</PackagePath>
-      <Modified>2024-11-27T22:12:04.237</Modified>
+      <Modified>2024-11-29T19:19:22.414</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\session_3_disc\prog_graph\prog_final\prog_final\prog_final\bin\x64\Debug\net6.0-windows10.0.19041.0\prog_final.deps.json">
       <PackagePath>prog_final.deps.json</PackagePath>
-      <Modified>2024-11-27T22:12:04.584</Modified>
+      <Modified>2024-11-29T18:03:20.930</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2366599\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.52\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>

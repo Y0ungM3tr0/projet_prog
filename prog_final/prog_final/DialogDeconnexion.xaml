@@ -9,6 +9,30 @@
     mc:Ignorable="d">
 
     <Grid>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <Button
+            x:Name="confirmerBtn"
+            Grid.Column="0"
+            HorizontalAlignment="Center"
+            Click="confirmerBtn_Click"
+            >
+            Confirmer
+        </Button>
+        <Button
+            x:Name="annulerBtn"
+            Grid.Column="1"
+            HorizontalAlignment="Center"
+            Background="CornflowerBlue"
+            Click="annulerBtn_Click"
+            >
+            Annuler
+        </Button>
     </Grid>
 </ContentDialog>

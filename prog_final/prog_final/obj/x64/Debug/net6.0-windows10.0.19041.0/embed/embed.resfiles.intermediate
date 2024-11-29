@@ -3,6 +3,9 @@ DialogAdmin.xbf
 DialogDeconnexion.xbf
 MainWindow.xbf
 pageAffichageActivité.xbf
+pageAjouterActivite.xbf
 pageAjouterAdherent.xbf
+pageAjouterCategorie.xbf
+pageAjouterSeance.xbf
 pageConnexion.xbf
 UserControl1.xbf

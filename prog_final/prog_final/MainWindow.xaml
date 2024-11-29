@@ -10,7 +10,10 @@
     <NavigationView x:Name="nav" SelectionChanged="nav_SelectionChanged" IsSettingsVisible="False" IsBackButtonVisible="Collapsed">
         <NavigationView.MenuItems>
             <NavigationViewItem Icon="ViewAll" Content="Affichage des activitées" Name="pageAffichageActivité"/>
-            <NavigationViewItem Icon="Add" Content="Gestion Adherent" Name="pageAjouterAdherent"/>
+            <NavigationViewItem Icon="Add" Content="Gestion Adherents" Name="pageAjouterAdherent"/>
+            <NavigationViewItem Icon="Add" Content="Gestion Activites" Name="pageAjouterActivite"/>
+            <NavigationViewItem Icon="Add" Content="Gestion Categories" Name="pageAjouterCategorie"/>
+            <NavigationViewItem Icon="Add" Content="Gestion Séances" Name="pageAjouterSeance"/>
             <NavigationViewItemSeparator />
             <NavigationViewItem Icon="Admin" Content="Connexion" Name="pageConnexion"/>
             <NavigationViewItem Icon="Clear" Content="Deconnexion" Name="pageDeconnexion"/>
@@ -20,6 +23,7 @@
                 x:Name="infoUtilisateur"
                 VerticalAlignment="Bottom"
                 >
+                Déconnecté
             </TextBlock>
         </NavigationView.MenuItems>
 

@@ -11,7 +11,7 @@ namespace prog_final
     {
         int idActivite;
         string nom_activite;
-        string type;
+        int idCategorie;
         string description;
         double cout_organisation;
         double prix_vente_client;
@@ -20,25 +20,25 @@ namespace prog_final
         {
             this.IdActivite = -1;
             this.Nom_activite = "nom_activite";
-            this.Type = "type";
+            this.IdCategorie = -1;
             this.Description = "description";
             this.Cout_organisation = -1.00;
             this.Prix_vente_client = -1.00;
         }
-        public Activite(string nom_activite, string type, string description, double cout_organisation, double prix_vente_client)
+        public Activite(string nom_activite, int idCategorie, string description, double cout_organisation, double prix_vente_client)
         {
             this.Nom_activite = nom_activite;
-            this.Type = type;
+            this.IdCategorie = idCategorie;
             this.Description = description;
             this.Cout_organisation = cout_organisation;
             this.Prix_vente_client = prix_vente_client;
         }
 
-        public Activite(int idActivite, string nom_activite, string type, string description, double cout_organisation, double prix_vente_client)
+        public Activite(int idActivite, string nom_activite, int idCategorie, string description, double cout_organisation, double prix_vente_client)
         {
             this.IdActivite = idActivite;
             this.Nom_activite = nom_activite;
-            this.Type = type;
+            this.IdCategorie = -1;
             this.description = description;
             this.Cout_organisation = cout_organisation;
             this.Prix_vente_client = prix_vente_client;
@@ -67,13 +67,13 @@ namespace prog_final
 
         }
 
-        public string Type
+        public int IdCategorie
         {
-            get => type;
+            get => idCategorie;
             set
             {
-                type = value;
-                this.OnPropertyChanged(nameof(Type));
+                idCategorie = value;
+                this.OnPropertyChanged(nameof(IdCategorie));
             }
 
         }

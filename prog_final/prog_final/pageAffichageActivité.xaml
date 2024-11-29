@@ -47,7 +47,7 @@
                             <StackPanel Grid.Column="1" Grid.Row="0" Margin="0,20,0,0" HorizontalAlignment="Stretch">
                                 <TextBlock FontSize="20" Margin="5">
                                     <Run Text="Type d'activité:"/>
-                                    <Run FontWeight="Light" Text="{x:Bind Type}"/>
+                                    <Run FontWeight="Light" Text="{x:Bind IdCategorie}"/>
                                 </TextBlock>
                                 <TextBlock FontSize="20" Margin="5">
                                     <Run Text="Cout de l'organisation:"/>

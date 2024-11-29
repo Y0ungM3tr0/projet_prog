@@ -1,42 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\2366599\\OneDrive - C\u00E9gep de Trois-Rivi\u00E8res\\ann\u00E9e 1\\SESSION_2\\WHAT TZE FUCK\\Bureau\\prog_final\\",
+  "WorkspaceRootPath": "D:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|c:\\users\\2366599\\onedrive - c\u00E9gep de trois-rivi\u00E8res\\ann\u00E9e 1\\session_2\\what tze fuck\\bureau\\prog_final\\prog_final\\singletonutilisateur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\singletonutilisateur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|d:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\singletonactivite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\singletonactivite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|c:\\users\\2366599\\onedrive - c\u00E9gep de trois-rivi\u00E8res\\ann\u00E9e 1\\session_2\\what tze fuck\\bureau\\prog_final\\prog_final\\dialogadmin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\dialogadmin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|d:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\singletoncategorie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\singletoncategorie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|c:\\users\\2366599\\onedrive - c\u00E9gep de trois-rivi\u00E8res\\ann\u00E9e 1\\session_2\\what tze fuck\\bureau\\prog_final\\prog_final\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|d:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\pageajoutercategorie.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\pageajoutercategorie.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|c:\\users\\2366599\\onedrive - c\u00E9gep de trois-rivi\u00E8res\\ann\u00E9e 1\\session_2\\what tze fuck\\bureau\\prog_final\\prog_final\\dialogadmin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\dialogadmin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|d:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\pageajouteractivite.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\pageajouteractivite.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|c:\\users\\2366599\\onedrive - c\u00E9gep de trois-rivi\u00E8res\\ann\u00E9e 1\\session_2\\what tze fuck\\bureau\\prog_final\\prog_final\\dialogdeconnexion.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\dialogdeconnexion.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|c:\\users\\2366599\\onedrive - c\u00E9gep de trois-rivi\u00E8res\\ann\u00E9e 1\\session_2\\what tze fuck\\bureau\\prog_final\\prog_final\\dialogdeconnexion.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\dialogdeconnexion.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|c:\\users\\2366599\\onedrive - c\u00E9gep de trois-rivi\u00E8res\\ann\u00E9e 1\\session_2\\what tze fuck\\bureau\\prog_final\\prog_final\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|d:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|c:\\users\\2366599\\onedrive - c\u00E9gep de trois-rivi\u00E8res\\ann\u00E9e 1\\session_2\\what tze fuck\\bureau\\prog_final\\prog_final\\singletonadherent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\singletonadherent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|d:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|c:\\users\\2366599\\onedrive - c\u00E9gep de trois-rivi\u00E8res\\ann\u00E9e 1\\session_2\\what tze fuck\\bureau\\prog_final\\prog_final\\singletonadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\singletonadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|d:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\pageajoutercategorie.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\pageajoutercategorie.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|d:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\pageajouteractivite.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\pageajouteractivite.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,111 +50,106 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DialogAdmin.xaml",
-              "DocumentMoniker": "C:\\Users\\2366599\\OneDrive - C\u00E9gep de Trois-Rivi\u00E8res\\ann\u00E9e 1\\SESSION_2\\WHAT TZE FUCK\\Bureau\\prog_final\\prog_final\\DialogAdmin.xaml",
-              "RelativeDocumentMoniker": "prog_final\\DialogAdmin.xaml",
-              "ToolTip": "C:\\Users\\2366599\\OneDrive - C\u00E9gep de Trois-Rivi\u00E8res\\ann\u00E9e 1\\SESSION_2\\WHAT TZE FUCK\\Bureau\\prog_final\\prog_final\\DialogAdmin.xaml",
-              "RelativeToolTip": "prog_final\\DialogAdmin.xaml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAsAAAAQAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "prog_final\\MainWindow.xaml",
+              "ToolTip": "D:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\MainWindow.xaml",
+              "RelativeToolTip": "prog_final\\MainWindow.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-27T22:08:36.674Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DialogAdmin.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\2366599\\OneDrive - C\u00E9gep de Trois-Rivi\u00E8res\\ann\u00E9e 1\\SESSION_2\\WHAT TZE FUCK\\Bureau\\prog_final\\prog_final\\DialogAdmin.xaml.cs",
-              "RelativeDocumentMoniker": "prog_final\\DialogAdmin.xaml.cs",
-              "ToolTip": "C:\\Users\\2366599\\OneDrive - C\u00E9gep de Trois-Rivi\u00E8res\\ann\u00E9e 1\\SESSION_2\\WHAT TZE FUCK\\Bureau\\prog_final\\prog_final\\DialogAdmin.xaml.cs",
-              "RelativeToolTip": "prog_final\\DialogAdmin.xaml.cs",
-              "ViewState": "AgIAAJUAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T22:11:22.541Z"
+              "WhenOpened": "2024-11-23T15:58:51.629Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "DialogDeconnexion.xaml",
-              "DocumentMoniker": "C:\\Users\\2366599\\OneDrive - C\u00E9gep de Trois-Rivi\u00E8res\\ann\u00E9e 1\\SESSION_2\\WHAT TZE FUCK\\Bureau\\prog_final\\prog_final\\DialogDeconnexion.xaml",
-              "RelativeDocumentMoniker": "prog_final\\DialogDeconnexion.xaml",
-              "ToolTip": "C:\\Users\\2366599\\OneDrive - C\u00E9gep de Trois-Rivi\u00E8res\\ann\u00E9e 1\\SESSION_2\\WHAT TZE FUCK\\Bureau\\prog_final\\prog_final\\DialogDeconnexion.xaml",
-              "RelativeToolTip": "prog_final\\DialogDeconnexion.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-27T22:08:32.4Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DialogDeconnexion.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\2366599\\OneDrive - C\u00E9gep de Trois-Rivi\u00E8res\\ann\u00E9e 1\\SESSION_2\\WHAT TZE FUCK\\Bureau\\prog_final\\prog_final\\DialogDeconnexion.xaml.cs",
-              "RelativeDocumentMoniker": "prog_final\\DialogDeconnexion.xaml.cs",
-              "ToolTip": "C:\\Users\\2366599\\OneDrive - C\u00E9gep de Trois-Rivi\u00E8res\\ann\u00E9e 1\\SESSION_2\\WHAT TZE FUCK\\Bureau\\prog_final\\prog_final\\DialogDeconnexion.xaml.cs",
-              "RelativeToolTip": "prog_final\\DialogDeconnexion.xaml.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "prog_final\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\MainWindow.xaml.cs",
+              "RelativeToolTip": "prog_final\\MainWindow.xaml.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAQwDUAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T22:10:36.275Z"
+              "WhenOpened": "2024-11-23T16:00:16.831Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\2366599\\OneDrive - C\u00E9gep de Trois-Rivi\u00E8res\\ann\u00E9e 1\\SESSION_2\\WHAT TZE FUCK\\Bureau\\prog_final\\prog_final\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "prog_final\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\2366599\\OneDrive - C\u00E9gep de Trois-Rivi\u00E8res\\ann\u00E9e 1\\SESSION_2\\WHAT TZE FUCK\\Bureau\\prog_final\\prog_final\\MainWindow.xaml",
-              "RelativeToolTip": "prog_final\\MainWindow.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAoAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "pageAjouterActivite.xaml",
+              "DocumentMoniker": "D:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\pageAjouterActivite.xaml",
+              "RelativeDocumentMoniker": "prog_final\\pageAjouterActivite.xaml",
+              "ToolTip": "D:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\pageAjouterActivite.xaml",
+              "RelativeToolTip": "prog_final\\pageAjouterActivite.xaml",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAAAKQAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-23T15:58:51.629Z"
+              "WhenOpened": "2024-11-29T19:37:41.152Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\2366599\\OneDrive - C\u00E9gep de Trois-Rivi\u00E8res\\ann\u00E9e 1\\SESSION_2\\WHAT TZE FUCK\\Bureau\\prog_final\\prog_final\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "prog_final\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\2366599\\OneDrive - C\u00E9gep de Trois-Rivi\u00E8res\\ann\u00E9e 1\\SESSION_2\\WHAT TZE FUCK\\Bureau\\prog_final\\prog_final\\MainWindow.xaml.cs",
-              "RelativeToolTip": "prog_final\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAqwDoAAAAwAAAAAAAAAA==",
+              "Title": "pageAjouterCategorie.xaml.cs",
+              "DocumentMoniker": "D:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\pageAjouterCategorie.xaml.cs",
+              "RelativeDocumentMoniker": "prog_final\\pageAjouterCategorie.xaml.cs",
+              "ToolTip": "D:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\pageAjouterCategorie.xaml.cs",
+              "RelativeToolTip": "prog_final\\pageAjouterCategorie.xaml.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAADwvyEAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T16:00:16.831Z"
+              "WhenOpened": "2024-11-29T19:37:18.21Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "SingletonAdherent.cs",
-              "DocumentMoniker": "C:\\Users\\2366599\\OneDrive - C\u00E9gep de Trois-Rivi\u00E8res\\ann\u00E9e 1\\SESSION_2\\WHAT TZE FUCK\\Bureau\\prog_final\\prog_final\\SingletonAdherent.cs",
-              "RelativeDocumentMoniker": "prog_final\\SingletonAdherent.cs",
-              "ToolTip": "C:\\Users\\2366599\\OneDrive - C\u00E9gep de Trois-Rivi\u00E8res\\ann\u00E9e 1\\SESSION_2\\WHAT TZE FUCK\\Bureau\\prog_final\\prog_final\\SingletonAdherent.cs",
-              "RelativeToolTip": "prog_final\\SingletonAdherent.cs",
-              "ViewState": "AgIAAJEAAAAAAAAAAAAAAKMAAABdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T20:34:43.652Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "SingletonAdmin.cs",
-              "DocumentMoniker": "C:\\Users\\2366599\\OneDrive - C\u00E9gep de Trois-Rivi\u00E8res\\ann\u00E9e 1\\SESSION_2\\WHAT TZE FUCK\\Bureau\\prog_final\\prog_final\\SingletonAdmin.cs",
-              "RelativeDocumentMoniker": "prog_final\\SingletonAdmin.cs",
-              "ToolTip": "C:\\Users\\2366599\\OneDrive - C\u00E9gep de Trois-Rivi\u00E8res\\ann\u00E9e 1\\SESSION_2\\WHAT TZE FUCK\\Bureau\\prog_final\\prog_final\\SingletonAdmin.cs",
-              "RelativeToolTip": "prog_final\\SingletonAdmin.cs",
-              "ViewState": "AgIAAKkAAAAAAAAAAAAqwLMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T14:18:22.443Z"
+              "DocumentIndex": 6,
+              "Title": "pageAjouterCategorie.xaml",
+              "DocumentMoniker": "D:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\pageAjouterCategorie.xaml",
+              "RelativeDocumentMoniker": "prog_final\\pageAjouterCategorie.xaml",
+              "ToolTip": "D:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\pageAjouterCategorie.xaml",
+              "RelativeToolTip": "prog_final\\pageAjouterCategorie.xaml",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAIwC8AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-29T19:37:17.552Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SingletonUtilisateur.cs",
-              "DocumentMoniker": "C:\\Users\\2366599\\OneDrive - C\u00E9gep de Trois-Rivi\u00E8res\\ann\u00E9e 1\\SESSION_2\\WHAT TZE FUCK\\Bureau\\prog_final\\prog_final\\SingletonUtilisateur.cs",
-              "RelativeDocumentMoniker": "prog_final\\SingletonUtilisateur.cs",
-              "ToolTip": "C:\\Users\\2366599\\OneDrive - C\u00E9gep de Trois-Rivi\u00E8res\\ann\u00E9e 1\\SESSION_2\\WHAT TZE FUCK\\Bureau\\prog_final\\prog_final\\SingletonUtilisateur.cs",
-              "RelativeToolTip": "prog_final\\SingletonUtilisateur.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAgwCUAAABCAAAAAAAAAA==",
+              "Title": "SingletonActivite.cs",
+              "DocumentMoniker": "D:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\SingletonActivite.cs",
+              "RelativeDocumentMoniker": "prog_final\\SingletonActivite.cs",
+              "ToolTip": "D:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\SingletonActivite.cs",
+              "RelativeToolTip": "prog_final\\SingletonActivite.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAcwG8AAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T21:22:38.131Z",
+              "WhenOpened": "2024-11-29T18:03:57.902Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SingletonCategorie.cs",
+              "DocumentMoniker": "D:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\SingletonCategorie.cs",
+              "RelativeDocumentMoniker": "prog_final\\SingletonCategorie.cs",
+              "ToolTip": "D:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\SingletonCategorie.cs",
+              "RelativeToolTip": "prog_final\\SingletonCategorie.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAAAGgAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T19:01:14.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "pageAjouterActivite.xaml.cs",
+              "DocumentMoniker": "D:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\pageAjouterActivite.xaml.cs",
+              "RelativeDocumentMoniker": "prog_final\\pageAjouterActivite.xaml.cs",
+              "ToolTip": "D:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\pageAjouterActivite.xaml.cs",
+              "RelativeToolTip": "prog_final\\pageAjouterActivite.xaml.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAQwIEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T18:04:20.087Z",
               "EditorCaption": ""
             }
           ]

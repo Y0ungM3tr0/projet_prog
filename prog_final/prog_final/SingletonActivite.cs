@@ -17,7 +17,7 @@ namespace prog_final
 
         public SingletonActivite()
         {
-            con = new MySqlConnection("Server=cours.cegep3r.info;Database=420345ri_gr00001_2366599-etienne-mac-donald;Uid=2366599;Pwd=2366599;");
+            con = new MySqlConnection("Server=cours.cegep3r.info;Database=420335ri_gr00001_2366599-mac-donald-etienne;Uid=2366599;Pwd=2366599;");
             liste_des_activites = new ObservableCollection<Activite>();
         }
 
@@ -52,13 +52,13 @@ namespace prog_final
                 while (r.Read())
                 {
                     int idActivite = r.GetInt32("idActivite");
-                    string nom_activite = r.GetString("nom_activite");
-                    string type = r.GetString("type");
+                    string nom_activite = r.GetString("nomActivite");
+                    int idCategorie = r.GetInt32("idCategorie");
                     string description = r.GetString("description");
                     double cout_organisation = r.GetDouble("cout_organisation");
                     double prix_vente_client = r.GetDouble("prix_vente_client");
 
-                    Activite activite = new Activite(idActivite, nom_activite, type, description, cout_organisation, prix_vente_client);
+                    Activite activite = new Activite(idActivite, nom_activite, idCategorie, description, cout_organisation, prix_vente_client);
                     liste_des_activites.Add(activite);
                 }
 
@@ -95,24 +95,25 @@ namespace prog_final
             {
                 var v = ligne.Split(";");
 
-                addActivite(v[0], v[1], v[2], Convert.ToDouble(v[3]), Convert.ToDouble(v[4]));
+
+               addActivite(v[1], v[3], Convert.ToInt32(v[2]), Convert.ToDouble(v[4]), Convert.ToDouble(v[5]));
             }
         }
 
         // ajoute les Activites dans la bd
-        public void addActivite(string _nom, string _description, string _type, double _coutOrganisation, double _prixVente)
+        public void addActivite(string _nom, string _description, int _idCategorie, double _coutOrganisation, double _prixVente)
         {
             try
             {
                 MySqlCommand commande = new MySqlCommand();
                 commande.Connection = con;
-                commande.CommandText = "INSERT INTO activite (nom, description, type, coutOrganisation, prixVente) VALUES (@nom, @description, @type, @coutOrganisation, @prixVente);";
+                commande.CommandText = "INSERT INTO activite (nomActivite, description, idCategorie, cout_organisation, prix_vente_client) VALUES (@nomActivite, @description, @idCategorie, @cout_organisation, @prix_vente_client);";
 
-                commande.Parameters.AddWithValue("@nom", _nom);
+                commande.Parameters.AddWithValue("@nomActivite", _nom);
                 commande.Parameters.AddWithValue("@description", _description);
-                commande.Parameters.AddWithValue("@type", _type);
-                commande.Parameters.AddWithValue("@coutOrganisation", _coutOrganisation);
-                commande.Parameters.AddWithValue("@prixVente", _prixVente);
+                commande.Parameters.AddWithValue("@idCategorie", _idCategorie);
+                commande.Parameters.AddWithValue("@cout_organisation", _coutOrganisation);
+                commande.Parameters.AddWithValue("@prix_vente_client", _prixVente);
 
                 con.Open();
                 commande.ExecuteNonQuery();

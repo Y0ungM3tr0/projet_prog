@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
@@ -84,8 +85,16 @@ namespace prog_final
 
 
 
-
-
+        // remettre toutes les informations nulle
+        public void supprimerInfoUtilisateur()
+        {
+            StatutUtilisateur = false;
+            Connecter = false;
+            UsernameAdmin = "";
+            Mdp = "";
+            UsernameAdherent = "";
+            StatutUtilisateur = false;
+        }
 
 
 
