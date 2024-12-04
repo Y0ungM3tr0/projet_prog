@@ -26,7 +26,7 @@ CREATE TABLE administrateur (
 -- categorie
 CREATE TABLE categorie_activite
 (
-    idCategorie INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    idCategorie INT AUTO_INCREMENT PRIMARY KEY,
     type VARCHAR(100) NOT NULL
 );
 
@@ -36,7 +36,7 @@ CREATE TABLE categorie_activite
 -- activite
 CREATE TABLE activite
 (
-    idActivite INT NOT NULL PRIMARY KEY,
+    idActivite INT PRIMARY KEY AUTO_INCREMENT,
     nomActivite VARCHAR(100) NOT NULL,
     idCategorie INT NOT NULL,
     description VARCHAR(250) NOT NULL,
@@ -50,7 +50,7 @@ CREATE TABLE activite
 
 -- seance
 CREATE TABLE seance (
-    idSeance INT PRIMARY KEY,
+    idSeance INT PRIMARY KEY AUTO_INCREMENT,
     idActivite INT NOT NULL,
     date_seance DATE NOT NULL,
     heure VARCHAR(100) NOT NULL,
@@ -65,7 +65,7 @@ CREATE TABLE seance (
 
 -- appreciation
 CREATE TABLE appreciation (
-    idAppreciation INT PRIMARY KEY,
+    idAppreciation INT PRIMARY KEY AUTO_INCREMENT,
     idSeance INT NOT NULL,
     matricule VARCHAR(110) NOT NULL,
     note_appreciation DOUBLE NOT NULL DEFAULT 0.0,
@@ -96,6 +96,17 @@ CREATE TABLE reservation (
 DELIMITER //
 CREATE TRIGGER set_matriculeAdherent
 BEFORE INSERT
+ON adherent
+FOR EACH ROW
+BEGIN
+set NEW.matricule=Generer_matricule_adherent(NEW.prenom, NEW.nom, NEW.dateNaissance);
+END//
+DELIMITER ;
+
+-- Créer le matricule pour un adhérent avant son update à l'aide d'une fonction stockée
+DELIMITER //
+CREATE TRIGGER set_matriculeAdherent_update
+BEFORE UPDATE
 ON adherent
 FOR EACH ROW
 BEGIN
@@ -198,12 +209,37 @@ BEGIN
 
     IF age < 18 THEN
         SIGNAL SQLSTATE '45000'
-        SET MESSAGE_TEXT = 'L\'adhérent doit avoir au moins 18 ans.'; ' -- <- ENLEVER LE "'"
+        SET MESSAGE_TEXT = 'L\'adhérent doit avoir au moins 18 ans.';
     ELSE
         SET NEW.age = age;
     END IF;
 END//
 DELIMITER ;
+
+
+-- Mettre à jour l'âge d'un adhérent avant son update en utilisant une fonction stockée
+DELIMITER //
+CREATE TRIGGER set_age_adherent_update
+BEFORE UPDATE
+ON adherent
+FOR EACH ROW
+BEGIN
+    DECLARE new_age INT;
+
+    IF OLD.dateNaissance != NEW.dateNaissance THEN
+        SET new_age = Calculer_age_adherent(NEW.dateNaissance);
+
+        IF new_age < 18 THEN
+            SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'L\'adhérent doit avoir au moins 18 ans.';
+        ELSE
+            SET NEW.age = new_age;
+        END IF;
+    END IF;
+END//
+DELIMITER ;
+
+DROP TRIGGER set_age_adherent_update;
 
 
 -- Retirer toutes les entrées reliées à un adhérent qui a été retiré
@@ -396,6 +432,16 @@ JOIN activite a on s.idActivite = a.idActivite
 GROUP BY mois, a.nomActivite;
 
 
+-- Afficher les informations d'un adhérent à partir de son matricule
+CREATE VIEW infos_adherent AS
+SELECT matricule,
+       nom,
+       prenom,
+       adresse,
+       dateNaissance
+FROM adherent;
+
+
 
 -- Procédures stockées
 
@@ -438,16 +484,28 @@ CALL Supprimer_adherent('ÉM-2000-194');
 -- Modifier un adhérent
 DELIMITER //
 CREATE PROCEDURE Modifier_adherent(
-    IN p_matricule VARCHAR(110))
+    IN p_matricule VARCHAR(110),
+    IN p_nom VARCHAR(100),
+    IN p_prenom VARCHAR(100),
+    IN p_adresse VARCHAR(150),
+    IN p_dateNaissance DATE)
 BEGIN
-    IF NOT EXISTS(SELECT matricule FROM adherent WHERE matricule = p_matricule) THEN
+    IF NOT EXISTS(SELECT 1 FROM adherent WHERE matricule = p_matricule) THEN
         SIGNAL SQLSTATE '02000'
         SET MESSAGE_TEXT = 'Ce matricule est inexistant.';
+    ELSE
+        UPDATE adherent
+        SET
+            nom = p_nom,
+            prenom = p_prenom,
+            adresse = p_adresse,
+            dateNaissance = p_dateNaissance
+        WHERE matricule = p_matricule;
     END IF;
-
-    DELETE FROM adherent WHERE matricule = p_matricule;
 END//
 DELIMITER ;
+
+CALL Modifier_adherent('ÉM-2000-843', 'Cartier', 'Simon', '123 Rue Sigma', '2000-01-02');
 
 
 -- Ajouter une catégorie
@@ -481,6 +539,53 @@ DELIMITER ;
 
 -- Appel à la procédure
 CALL Ajouter_activite(11, 'Fortnite', 11, 'The low taper fade meme is still MASSIVE', 250.0, 10.0);
+
+
+-- Modifier une activité
+DELIMITER //
+CREATE PROCEDURE Modifier_activite(
+    IN p_idActivite INT(11),
+    IN p_nomActivite VARCHAR(100),
+    IN p_idCategorie INT(11),
+    IN p_description VARCHAR(250),
+    IN p_cout_organisation DOUBLE,
+    IN p_prix_vente_client DOUBLE)
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM activite WHERE idActivite = p_idActivite) THEN
+        SIGNAL SQLSTATE '02000'
+        SET MESSAGE_TEXT = 'Cet identification d\'activité est inexistant.';
+    ELSE
+        UPDATE activite
+        SET
+            nomActivite = p_nomActivite,
+            idCategorie = p_idCategorie,
+            description = p_description,
+            cout_organisation = p_cout_organisation,
+            prix_vente_client = p_prix_vente_client
+        WHERE idActivite = p_idActivite;
+    END IF;
+END//
+DELIMITER ;
+
+CALL Modifier_activite('ÉM-2000-843', 'Cartier', 'Simon', '123 Rue Sigma', '2000-01-02');
+
+
+-- Supprimer une activité
+DELIMITER //
+CREATE PROCEDURE Supprimer_activite(
+    IN p_idActivite INT(11))
+BEGIN
+    IF NOT EXISTS(SELECT idActivite FROM activite WHERE idActivite = p_idActivite) THEN
+        SIGNAL SQLSTATE '02000'
+        SET MESSAGE_TEXT = 'Cet identification d\'activité est inexistant.';
+    END IF;
+
+    DELETE FROM activite WHERE idActivite = p_idActivite;
+END//
+DELIMITER ;
+
+-- Appel à la procédure
+CALL Supprimer_adherent('ÉM-2000-194');
 
 
 -- Ajouter une séance
