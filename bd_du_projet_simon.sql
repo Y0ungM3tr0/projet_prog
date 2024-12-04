@@ -161,10 +161,7 @@ FOR EACH ROW
 BEGIN
     DECLARE places_disponibles INT;
 
-    SELECT nbr_place_disponible - nbr_inscription
-    INTO places_disponibles
-    FROM seance
-    WHERE idSeance = NEW.idSeance;
+    SET places_disponibles = Places_disponibles(NEW.idSeance);
 
     IF places_disponibles <= 0 THEN
         SIGNAL SQLSTATE '45000'
@@ -174,6 +171,8 @@ BEGIN
     END IF ;
 END//
 DELIMITER ;
+
+-- DROP TRIGGER check_nbr_places_disponibles;
 
 
 -- Mettre à jour la moyenne des notes d'une(des) activité(s) d'une séance
@@ -255,6 +254,17 @@ BEGIN
 END//
 DELIMITER ;
 
+
+-- Retirer toutes les entrées reliées à une activité qui a été retirée
+DELIMITER //
+CREATE TRIGGER delete_infos_activite
+BEFORE DELETE
+ON activite
+FOR EACH ROW
+BEGIN
+    DELETE FROM seance WHERE idActivite = OLD.idActivite;
+END//
+DELIMITER ;
 
 
 -- Insertion des données
@@ -567,7 +577,7 @@ BEGIN
 END//
 DELIMITER ;
 
-CALL Modifier_activite('ÉM-2000-843', 'Cartier', 'Simon', '123 Rue Sigma', '2000-01-02');
+CALL Modifier_activite(11, 'FN', 11, 'The low taper fade meme is still MASSIVE, yeah no MASSIVE', 275.00, 15.00);
 
 
 -- Supprimer une activité
@@ -585,7 +595,7 @@ END//
 DELIMITER ;
 
 -- Appel à la procédure
-CALL Supprimer_adherent('ÉM-2000-194');
+CALL Supprimer_activite(11);
 
 
 -- Ajouter une séance
@@ -606,6 +616,51 @@ DELIMITER ;
 
 -- Appel à la procédure
 CALL Ajouter_seance(11, 11, '2024-12-05', '18:00', 10, 0, 0);
+
+
+-- Modifier une séance
+DELIMITER //
+CREATE PROCEDURE Modifier_seance(
+    IN p_idSeance INT(11),
+    IN p_idActivite INT(11),
+    IN p_date_seance DATE,
+    IN p_heure VARCHAR(100),
+    IN p_nbr_place_disponible INT(11))
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM seance WHERE idSeance = p_idSeance) THEN
+        SIGNAL SQLSTATE '02000'
+        SET MESSAGE_TEXT = 'Cet identification de séance est inexistant.';
+    ELSE
+        UPDATE seance
+        SET
+            idActivite = p_idActivite,
+            date_seance = p_date_seance,
+            heure = p_heure,
+            nbr_place_disponible = p_nbr_place_disponible
+        WHERE idSeance = p_idSeance;
+    END IF;
+END//
+DELIMITER ;
+
+CALL Modifier_seance(10, 9, '2024-12-05', '10:00', 10);
+
+
+-- Supprimer une séance
+DELIMITER //
+CREATE PROCEDURE Supprimer_seance(
+    IN p_idSeance INT(11))
+BEGIN
+    IF NOT EXISTS(SELECT idSeance FROM seance WHERE idSeance = p_idSeance) THEN
+        SIGNAL SQLSTATE '02000'
+        SET MESSAGE_TEXT = 'Cet identification de séance est inexistant.';
+    END IF;
+
+    DELETE FROM seance WHERE idSeance = p_idSeance;
+END//
+DELIMITER ;
+
+-- Appel à la procédure
+CALL Supprimer_seance(10);
 
 
 -- Ajouter une séance
@@ -679,6 +734,23 @@ RETURNS DOUBLE
 DETERMINISTIC
 BEGIN
     RETURN ROUND(AVG(f_note_appreciation), 1);
+END //
+DELIMITER ;
+
+
+DELIMITER //
+CREATE FUNCTION Places_disponibles(idSeance INT)
+RETURNS INT
+DETERMINISTIC
+BEGIN
+    DECLARE places_disponibles INT;
+
+    SELECT nbr_place_disponible - nbr_inscription
+    INTO places_disponibles
+    FROM seance
+    WHERE idSeance = idSeance;
+
+    RETURN places_disponibles;
 END //
 DELIMITER ;
 
