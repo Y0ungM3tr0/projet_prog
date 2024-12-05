@@ -532,6 +532,50 @@ DELIMITER ;
 CALL Ajouter_categorie_activite('E-Sport');
 
 
+-- Modifier une catégorie
+DELIMITER //
+CREATE PROCEDURE Modifier_categorie_activite(
+    IN p_idCategorie INT(11),
+    IN p_type VARCHAR(100))
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM categorie_activite WHERE idCategorie = p_idCategorie) THEN
+        SIGNAL SQLSTATE '02000'
+        SET MESSAGE_TEXT = 'Cet identifiant de catégorie est inexistant.';
+    ELSE
+        UPDATE categorie_activite
+        SET
+            type = p_type
+        WHERE idCategorie = p_idCategorie;
+    END IF;
+END//
+DELIMITER ;
+
+CALL Modifier_categorie_activite(33, 'E-Sportif');
+
+
+-- Supprimer une catégorie
+DELIMITER //
+CREATE PROCEDURE Supprimer_categorie_activite(
+    IN p_idCategorie VARCHAR(110))
+BEGIN
+    IF NOT EXISTS(SELECT idCategorie FROM categorie_activite WHERE idCategorie = p_idCategorie) THEN
+        SIGNAL SQLSTATE '02000'
+        SET MESSAGE_TEXT = 'Cet identifiant de catégorie est inexistant.';
+    END IF;
+
+    IF EXISTS(SELECT idCategorie FROM activite WHERE idCategorie = p_idCategorie) THEN
+        SIGNAL SQLSTATE '23000'
+        SET MESSAGE_TEXT = 'Impossible de supprimer cette catégorie car elle est associée à une ou plusieurs activités.';
+    END IF;
+
+    DELETE FROM categorie_activite WHERE idCategorie = p_idCategorie;
+END//
+DELIMITER ;
+
+-- Appel à la procédure
+CALL Supprimer_categorie_activite(22);
+
+
 -- Ajouter une activité
 DELIMITER //
 CREATE procedure Ajouter_activite(
