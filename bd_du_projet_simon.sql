@@ -154,7 +154,7 @@ DELIMITER ;
 -- 3.3
 -- Insérer les participants (adhérents) dans une séance (réservation)
 DELIMITER //
-CREATE TRIGGER check_nbr_places_disponibles
+CREATE TRIGGER add_adherent_reservation
 BEFORE INSERT
 ON reservation
 FOR EACH ROW
@@ -166,13 +166,11 @@ BEGIN
     IF places_disponibles <= 0 THEN
         SIGNAL SQLSTATE '45000'
         SET MESSAGE_TEXT="Impossible d'ajouter la réservation: la séance est complète.";
-    ELSE
-        INSERT INTO reservation VALUES (NULL, idSeance, matricule);
     END IF ;
 END//
 DELIMITER ;
 
--- DROP TRIGGER check_nbr_places_disponibles;
+-- DROP TRIGGER add_adherent_reservation;
 
 
 -- Mettre à jour la moyenne des notes d'une(des) activité(s) d'une séance
@@ -184,16 +182,15 @@ FOR EACH ROW
 BEGIN
     DECLARE t_moyenne_notes DOUBLE;
 
-    SELECT
-        Calculer_moyenne_notes_une_seance(note_appreciation) INTO t_moyenne_notes
-    FROM appreciation a
-    WHERE idSeance = NEW.idSeance;
+    SET t_moyenne_notes = Calculer_moyenne_notes_une_seance(NEW.idSeance);
 
     UPDATE seance
     SET moyenne_appreciation = t_moyenne_notes
     WHERE idSeance = NEW.idSeance;
 END//
 DELIMITER ;
+
+-- DROP TRIGGER set_moyenne_notes_seance;
 
 
 -- Mettre à jour l'âge d'un adhérent avant son insertion en utilisant une fonction stockée
@@ -271,16 +268,17 @@ DELIMITER ;
 
 -- Données table adherent
 INSERT INTO adherent (matricule, nom, prenom, adresse, dateNaissance, age) VALUES
-('', 'Dupont', 'Jean', '123 Rue Principale', '1985-03-12', 39),
-('', 'Martin', 'Claire', '456 Avenue des Fleurs', '1990-07-15', 34),
-('', 'Durand', 'Luc', '789 Boulevard Saint-Michel', '2000-01-25', 24),
-('', 'Petit', 'Emma', '12 Place de la République', '1995-11-03', 29),
-('', 'Morel', 'Noah', '67 Rue de Paris', '1988-06-20', 36),
-('', 'Lemoine', 'Sophie', '89 Chemin Vert', '1992-04-18', 32),
-('', 'Blanc', 'Hugo', '34 Rue des Champs', '1998-09-22', 26),
-('', 'Marchand', 'Alice', '11 Quai de Seine', '1997-05-30', 27),
-('', 'Garnier', 'Thomas', '90 Rue de Lyon', '1987-08-11', 37),
-('', 'Roux', 'Camille', '78 Allée des Pins', '1993-12-02', 31);
+('JD-1990-123', 'Doe', 'John', '123 Rue Principale', '1990-05-15', 34),
+('MJ-1985-456', 'Smith', 'Marie', '456 Avenue Royale', '1985-09-10', 39),
+('LP-1992-789', 'Poirier', 'Luc', '789 Boulevard Saint-Laurent', '1992-03-21', 32),
+('CA-1988-112', 'Adams', 'Caroline', '112 Chemin des Pionniers', '1988-07-08', 36),
+('TR-1995-223', 'Roy', 'Thomas', '223 Rue Saint-Paul', '1995-11-17', 29),
+('NB-1993-334', 'Bouchard', 'Nicolas', '334 Route de l\'Église', '1993-02-25', 31),
+('EC-1998-445', 'Côté', 'Élise', '445 Rue de la Montagne', '1998-12-12', 25),
+('FF-1987-556', 'Fournier', 'François', '556 Allée des Pins', '1987-01-04', 37),
+('MG-1994-667', 'Gagnon', 'Mélanie', '667 Rue Cartier', '1994-06-30', 30),
+('BP-1990-778', 'Pelletier', 'Bernard', '778 Rue des Lilas', '1990-10-15', 34);
+
 
 
 -- Données table administrateur
@@ -333,31 +331,31 @@ INSERT INTO seance (idSeance, idActivite, date_seance, heure, nbr_place_disponib
 
 
 -- Données table appreciation
-INSERT INTO appreciation (idAppreciation, idSeance, matricule, note_appreciation) VALUES
-(1, 1, 'AM-1997-906', 4.5),
-(2, 1, 'CM-1990-704', 4.0),
-(3, 2, 'CR-1993-819', 5.0),
-(4, 2, 'EP-1995-503', 4.8),
-(5, 3, 'HB-1998-155', 3.5),
-(6, 4, 'JD-1985-659', 4.2),
-(7, 5, 'LD-2000-543', 4.0),
-(8, 6, 'NM-1988-786', 4.7),
-(9, 7, 'SL-1992-523', 3.8),
-(10, 8, 'TG-1987-367', 5.0);
+INSERT INTO appreciation (idSeance, matricule, note_appreciation) VALUES
+(1, 'BP-1990-778', 4.5),
+(2, 'CA-1988-112', 3.8),
+(3, 'EC-1998-445', 5.0),
+(4, 'FF-1987-556', 4.0),
+(5, 'JD-1990-123', 2.5),
+(6, 'LP-1992-789', 4.2),
+(7, 'MG-1994-667', 3.9),
+(8, 'MJ-1985-456', 3.5),
+(9, 'NB-1993-334', 4.8),
+(10, 'TR-1995-223', 4.7);
 
 
 -- Données table reservation
 INSERT INTO reservation (idSeance, matricule) VALUES
-(1, 'AM-1997-906'),
-(1, 'CM-1990-704'),
-(2, 'CR-1993-819'),
-(2, 'EP-1995-503'),
-(3, 'HB-1998-155'),
-(4, 'JD-1985-659'),
-(5, 'LD-2000-543'),
-(6, 'NM-1988-786'),
-(7, 'SL-1992-523'),
-(8, 'TG-1987-367');
+(1, 'BP-1990-778'),
+(2, 'CA-1988-112'),
+(3, 'EC-1998-445'),
+(4, 'FF-1987-556'),
+(5, 'JD-1990-123'),
+(6, 'LP-1992-789'),
+(7, 'MG-1994-667'),
+(8, 'MJ-1985-456'),
+(9, 'NB-1993-334'),
+(10, 'TR-1995-223');
 
 
 
@@ -469,7 +467,7 @@ END//
 DELIMITER ;
 
 -- Appel à la procédure
-CALL Ajouter_adherent('Mac Donald', 'Étienne', '123 Rue Test', '2000-01-01');
+-- CALL Ajouter_adherent('Mac Donald', 'Étienne', '123 Rue Test', '2000-01-01');
 
 
 -- Supprimer un adhérent
@@ -487,8 +485,8 @@ END//
 DELIMITER ;
 
 -- Appel à la procédure
-CALL Supprimer_adherent('dshdagda');
-CALL Supprimer_adherent('ÉM-2000-194');
+-- CALL Supprimer_adherent('dshdagda');
+-- CALL Supprimer_adherent('ÉM-2000-194');
 
 
 -- Modifier un adhérent
@@ -515,7 +513,7 @@ BEGIN
 END//
 DELIMITER ;
 
-CALL Modifier_adherent('ÉM-2000-843', 'Cartier', 'Simon', '123 Rue Sigma', '2000-01-02');
+-- CALL Modifier_adherent('ÉM-2000-843', 'Cartier', 'Simon', '123 Rue Sigma', '2000-01-02');
 
 
 -- Ajouter une catégorie
@@ -550,7 +548,7 @@ BEGIN
 END//
 DELIMITER ;
 
-CALL Modifier_categorie_activite(33, 'E-Sportif');
+-- CALL Modifier_categorie_activite(33, 'E-Sportif');
 
 
 -- Supprimer une catégorie
@@ -573,27 +571,27 @@ END//
 DELIMITER ;
 
 -- Appel à la procédure
-CALL Supprimer_categorie_activite(22);
+-- CALL Supprimer_categorie_activite(22);
 
 
 -- Ajouter une activité
 DELIMITER //
 CREATE procedure Ajouter_activite(
-    IN p_idActivite INT(11),
     IN p_nomActivite VARCHAR(100),
-    IN p_idCategorie INT(11),
+    IN p_idCategorie INT,
     IN p_description VARCHAR(250),
     IN p_cout_organisation DOUBLE,
     IN p_prix_vente_client DOUBLE)
 BEGIN
-    INSERT INTO activite(idActivite, nomActivite, idCategorie, description, cout_organisation, prix_vente_client)
-    VALUES (p_idActivite, p_nomActivite, p_idCategorie, p_description, p_cout_organisation, p_prix_vente_client);
+    INSERT INTO activite(nomActivite, idCategorie, description, cout_organisation, prix_vente_client)
+    VALUES (p_nomActivite, p_idCategorie, p_description, p_cout_organisation, p_prix_vente_client);
 END//
 DELIMITER ;
 
 -- Appel à la procédure
-CALL Ajouter_activite(11, 'Fortnite', 11, 'The low taper fade meme is still MASSIVE', 250.0, 10.0);
+-- CALL Ajouter_activite('Fortnite', 11, 'The low taper fade meme is still MASSIVE', 250.0, 10.0);
 
+-- DROP PROCEDURE Ajouter_activite;
 
 -- Modifier une activité
 DELIMITER //
@@ -621,7 +619,7 @@ BEGIN
 END//
 DELIMITER ;
 
-CALL Modifier_activite(11, 'FN', 11, 'The low taper fade meme is still MASSIVE, yeah no MASSIVE', 275.00, 15.00);
+-- CALL Modifier_activite(11, 'FN', 11, 'The low taper fade meme is still MASSIVE, yeah no MASSIVE', 275.00, 15.00);
 
 
 -- Supprimer une activité
@@ -639,27 +637,28 @@ END//
 DELIMITER ;
 
 -- Appel à la procédure
-CALL Supprimer_activite(11);
+-- CALL Supprimer_activite(11);
 
 
 -- Ajouter une séance
 DELIMITER //
 CREATE procedure Ajouter_seance(
-    IN p_idSeance INT(11),
-    IN p_idActivite INT(11),
+    IN p_idActivite INT,
     IN p_date_seance DATE,
     IN p_heure VARCHAR(100),
-    IN p_nbr_place_disponible INT(11),
-    IN p_nbr_inscription INT(11),
+    IN p_nbr_place_disponible INT,
+    IN p_nbr_inscription INT,
     IN p_moyenne_appreciation DOUBLE)
 BEGIN
-    INSERT INTO seance(idSeance, idActivite, date_seance, heure, nbr_place_disponible, nbr_inscription, moyenne_appreciation)
-    VALUES (p_idSeance, p_idActivite, p_date_seance, p_heure, p_nbr_place_disponible, p_nbr_inscription, p_moyenne_appreciation);
+    INSERT INTO seance(idActivite, date_seance, heure, nbr_place_disponible, nbr_inscription, moyenne_appreciation)
+    VALUES (p_idActivite, p_date_seance, p_heure, p_nbr_place_disponible, p_nbr_inscription, p_moyenne_appreciation);
 END//
 DELIMITER ;
 
 -- Appel à la procédure
-CALL Ajouter_seance(11, 11, '2024-12-05', '18:00', 10, 0, 0);
+CALL Ajouter_seance(10, '2024-12-05', '18:00', 10, 0, 0.0);
+
+-- DROP PROCEDURE Ajouter_seance;
 
 
 -- Modifier une séance
@@ -686,7 +685,7 @@ BEGIN
 END//
 DELIMITER ;
 
-CALL Modifier_seance(10, 9, '2024-12-05', '10:00', 10);
+-- CALL Modifier_seance(10, 9, '2024-12-05', '10:00', 10);
 
 
 -- Supprimer une séance
@@ -704,27 +703,28 @@ END//
 DELIMITER ;
 
 -- Appel à la procédure
-CALL Supprimer_seance(10);
+-- CALL Supprimer_seance(10);
 
 
 -- Ajouter une séance
 DELIMITER //
 CREATE procedure Ajouter_appreciation(
-    IN p_idAppreciation INT(11),
     IN p_idSeance INT(11),
     IN p_matricule VARCHAR(110),
     IN p_note_appreciation DOUBLE)
 BEGIN
-    INSERT INTO appreciation(idAppreciation, idSeance, matricule, note_appreciation)
-    VALUES (p_idAppreciation, p_idSeance, p_matricule, p_note_appreciation);
+    INSERT INTO appreciation(idSeance, matricule, note_appreciation)
+    VALUES (p_idSeance, p_matricule, p_note_appreciation);
 END//
 DELIMITER ;
 
 -- Appel à la procédure
-CALL Ajouter_appreciation(11, 11, 'ÉM-2000-194', 5.0);
+CALL Ajouter_appreciation(11, 'BP-1990-778', 5.0);
+
+-- DROP PROCEDURE Ajouter_appreciation;
 
 
--- Ajouter une séance
+-- Ajouter une réservation
 DELIMITER //
 CREATE procedure Ajouter_reservation(
     IN p_idSeance INT(11),
@@ -736,8 +736,7 @@ END//
 DELIMITER ;
 
 -- Appel à la procédure
-CALL Ajouter_reservation(11, 'ÉM-2000-194');
-
+CALL Ajouter_reservation(10, 'BP-1990-778');
 
 
 -- Fonctions stockées
@@ -773,17 +772,25 @@ DELIMITER ;
 
 -- Calculer la moyenne des notes d'une séance
 DELIMITER //
-CREATE FUNCTION Calculer_moyenne_notes_une_seance(f_note_appreciation DOUBLE)
+CREATE FUNCTION Calculer_moyenne_notes_une_seance(f_idSeance INT(11))
 RETURNS DOUBLE
 DETERMINISTIC
 BEGIN
-    RETURN ROUND(AVG(f_note_appreciation), 1);
+    DECLARE moyenne DOUBLE;
+
+    SELECT ROUND(AVG(note_appreciation), 1) INTO moyenne
+    FROM appreciation
+    WHERE idSeance = f_idSeance;
+
+    RETURN moyenne;
 END //
 DELIMITER ;
 
+-- DROP FUNCTION Calculer_moyenne_notes_une_seance;
+
 
 DELIMITER //
-CREATE FUNCTION Places_disponibles(idSeance INT)
+CREATE FUNCTION Places_disponibles(f_idSeance INT(11))
 RETURNS INT
 DETERMINISTIC
 BEGIN
@@ -792,13 +799,13 @@ BEGIN
     SELECT nbr_place_disponible - nbr_inscription
     INTO places_disponibles
     FROM seance
-    WHERE idSeance = idSeance;
+    WHERE idSeance = f_idSeance;
 
     RETURN places_disponibles;
 END //
 DELIMITER ;
 
-
+-- DROP FUNCTION Places_disponibles;
 
 
 
