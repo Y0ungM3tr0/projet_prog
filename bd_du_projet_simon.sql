@@ -706,7 +706,7 @@ DELIMITER ;
 -- CALL Supprimer_seance(10);
 
 
--- Ajouter une séance
+-- Ajouter une appréciation
 DELIMITER //
 CREATE procedure Ajouter_appreciation(
     IN p_idSeance INT(11),
