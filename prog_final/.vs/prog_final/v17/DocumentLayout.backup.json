@@ -1,17 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\",
+  "WorkspaceRootPath": "C:\\Users\\macdo\\OneDrive\\Bureau\\prog_final\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|e:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|e:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\pageajouteradherent.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|c:\\users\\macdo\\onedrive\\bureau\\prog_final\\prog_final\\pageajouteradherent.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\pageajouteradherent.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|e:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|c:\\users\\macdo\\onedrive\\bureau\\prog_final\\prog_final\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|c:\\users\\macdo\\onedrive\\bureau\\prog_final\\prog_final\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -22,15 +22,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\macdo\\OneDrive\\Bureau\\prog_final\\prog_final\\MainWindow.xaml",
               "RelativeDocumentMoniker": "prog_final\\MainWindow.xaml",
-              "ToolTip": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\macdo\\OneDrive\\Bureau\\prog_final\\prog_final\\MainWindow.xaml",
               "RelativeToolTip": "prog_final\\MainWindow.xaml",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAACMAAABiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
@@ -42,23 +42,22 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\macdo\\OneDrive\\Bureau\\prog_final\\prog_final\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "prog_final\\MainWindow.xaml.cs",
-              "ToolTip": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\macdo\\OneDrive\\Bureau\\prog_final\\prog_final\\MainWindow.xaml.cs",
               "RelativeToolTip": "prog_final\\MainWindow.xaml.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAQwBYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-23T16:00:16.831Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "pageAjouterAdherent.xaml.cs",
-              "DocumentMoniker": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\pageAjouterAdherent.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\macdo\\OneDrive\\Bureau\\prog_final\\prog_final\\pageAjouterAdherent.xaml.cs",
               "RelativeDocumentMoniker": "prog_final\\pageAjouterAdherent.xaml.cs",
-              "ToolTip": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\pageAjouterAdherent.xaml.cs",
+              "ToolTip": "C:\\Users\\macdo\\OneDrive\\Bureau\\prog_final\\prog_final\\pageAjouterAdherent.xaml.cs",
               "RelativeToolTip": "prog_final\\pageAjouterAdherent.xaml.cs",
               "ViewState": "AgIAAF0AAAAAAAAAAAAYwHYAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

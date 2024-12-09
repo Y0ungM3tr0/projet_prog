@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WrE5Oy9w2PQ=",
+  "dgSpecHash": "PhXNyZ3M/YA=",
   "success": true,
-  "projectFilePath": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\prog_final.csproj",
+  "projectFilePath": "C:\\Users\\macdo\\OneDrive\\Bureau\\prog_final\\prog_final\\prog_final.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\macdo\\.nuget\\packages\\bouncycastle.cryptography\\2.3.1\\bouncycastle.cryptography.2.3.1.nupkg.sha512",
     "C:\\Users\\macdo\\.nuget\\packages\\google.protobuf\\3.26.1\\google.protobuf.3.26.1.nupkg.sha512",

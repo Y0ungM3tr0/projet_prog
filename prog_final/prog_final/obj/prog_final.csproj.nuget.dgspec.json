@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\prog_final.csproj": {}
+    "C:\\Users\\macdo\\OneDrive\\Bureau\\prog_final\\prog_final\\prog_final.csproj": {}
   },
   "projects": {
-    "E:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\prog_final.csproj": {
+    "C:\\Users\\macdo\\OneDrive\\Bureau\\prog_final\\prog_final\\prog_final.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\prog_final.csproj",
+        "projectUniqueName": "C:\\Users\\macdo\\OneDrive\\Bureau\\prog_final\\prog_final\\prog_final.csproj",
         "projectName": "prog_final",
-        "projectPath": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\prog_final.csproj",
+        "projectPath": "C:\\Users\\macdo\\OneDrive\\Bureau\\prog_final\\prog_final\\prog_final.csproj",
         "packagesPath": "C:\\Users\\macdo\\.nuget\\packages\\",
-        "outputPath": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\obj\\",
+        "outputPath": "C:\\Users\\macdo\\OneDrive\\Bureau\\prog_final\\prog_final\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
