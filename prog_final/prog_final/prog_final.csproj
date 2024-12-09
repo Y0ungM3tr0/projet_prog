@@ -12,14 +12,22 @@
     <EnableMsixTooling>true</EnableMsixTooling>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="BlankPage1.xaml" />
     <None Remove="DialogAdmin.xaml" />
     <None Remove="DialogDeconnexion.xaml" />
     <None Remove="pageAffichageActivité.xaml" />
+    <None Remove="pageAffichageAdherent.xaml" />
+    <None Remove="pageAffichageAppréciation.xaml" />
+    <None Remove="pageAffichageReservation.xaml" />
     <None Remove="pageAjouterActivite.xaml" />
     <None Remove="pageAjouterAdherent.xaml" />
+    <None Remove="pageAjouterAppreciation.xaml" />
     <None Remove="pageAjouterCategorie.xaml" />
     <None Remove="pageAjouterSeance.xaml" />
     <None Remove="pageConnexion.xaml" />
+    <None Remove="pageStatistique.xaml" />
+    <None Remove="pageStatistique2.xaml" />
+    <None Remove="pageStatistique3.xaml" />
     <None Remove="UserControl1.xaml" />
   </ItemGroup>
 
@@ -47,6 +55,46 @@
   -->
   <ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
     <ProjectCapability Include="Msix" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="pageStatistique3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="pageStatistique2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="pageStatistique.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="pageAjouterAppreciation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="pageAffichageReservation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="BlankPage1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="pageAffichageAppréciation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="pageAffichageAdherent.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="pageAjouterSeance.xaml">

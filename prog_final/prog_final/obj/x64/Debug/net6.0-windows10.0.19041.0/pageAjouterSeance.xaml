@@ -9,8 +9,124 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid Background="LightGray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
+        <TextBlock x:ConnectionId='2' 
+            x:Name="titre"
+            FontSize="40"
+            FontWeight="Light"
+            HorizontalAlignment="Center"
+            Margin="20"
+            Grid.Row="0"
+            Grid.Column="0" Grid.ColumnSpan="2"
+            >
+            Ajouter une Scéance
+        </TextBlock>
+
+        <StackPanel Grid.Row="1" Grid.Column="0">
+            <ComboBox x:ConnectionId='10'
+                x:Name="cbx_Activite"
+                Header="Choisir l'activité:"
+                Margin="5"
+                HorizontalAlignment="Center"
+                Width="300" Height="75"
+                FontSize="18" 
+                >
+            </ComboBox>
+            <TextBlock x:ConnectionId='11'
+                 x:Name="cbx_ActiviteErr"
+                 FontSize="15"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Bottom"
+                 Foreground="DarkRed"
+                 >
+            </TextBlock>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <DatePicker x:ConnectionId='8'
+                x:Name="datepicker_date_seance"
+                Header="Choisir la date:"
+                Margin="5"
+                Width="500" Height="75"
+                FontSize="18" 
+                >
+            </DatePicker>
+            <TextBlock x:ConnectionId='9'
+             x:Name="datepicker_date_seanceErr"
+             FontSize="15"
+             HorizontalAlignment="Center"
+             VerticalAlignment="Bottom"
+             Foreground="DarkRed"
+             >
+            </TextBlock>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="0">
+            <TextBox x:ConnectionId='6'
+                 x:Name="tbx_heure"
+                 Header="Heure:"
+                 Margin="5"
+                 Width="300" Height="75"
+                 FontSize="18" 
+                 PlaceholderText="ex: 12:00"
+                 PlaceholderForeground="DarkGray"
+                 >
+            </TextBox>
+            <TextBlock x:ConnectionId='7'
+                 x:Name="tbx_heureErr"
+                 FontSize="15"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Bottom"
+                 Foreground="DarkRed"
+                 >
+            </TextBlock>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="1">
+            <TextBox x:ConnectionId='4'
+                 x:Name="tbx_nbrPlaceDispo"
+                 Header="Nombre de place disponible:"
+                 Margin="5"
+                 Width="300" Height="75"
+                 FontSize="18" 
+                 PlaceholderText="ex: 20"
+                 PlaceholderForeground="DarkGray"
+                 >
+            </TextBox>
+            <TextBlock x:ConnectionId='5'
+                 x:Name="tbx_nbrPlaceDispoErr"
+                 FontSize="15"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Bottom"
+                 Foreground="DarkRed"
+                 >
+            </TextBlock>
+        </StackPanel>
+
+        <Button x:ConnectionId='3' 
+            Grid.Row="3"
+            Grid.ColumnSpan="2"
+            x:Name="add_seance_btn"
+            Margin="5"
+            Width="200" Height="65"
+            FontSize="18"
+            HorizontalAlignment="Center"
+                                        
+            >
+            ajouter la séance
+        </Button>
     </Grid>
 </Page>
 

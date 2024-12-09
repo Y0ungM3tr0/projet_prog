@@ -19,9 +19,13 @@ namespace prog_final
 {
     public sealed partial class pageAjouterCategorie : Page
     {
+        int index = -1;
+        string typeModifier;
         public pageAjouterCategorie()
         {
             this.InitializeComponent();
+            SingletonCategorie.getInstance().getToutCategories();
+            gv_categorie.ItemsSource = SingletonCategorie.getInstance().getListe_des_categories();
         }
 
 
@@ -50,6 +54,47 @@ namespace prog_final
             }            
 
             return validation;
+        }
+
+        private void gv_categorie_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void btn_modifier_grid(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            if (button != null)
+            {
+                gv_categorie.SelectedItem = button.DataContext;
+
+                Categorie selectedCategorie = gv_categorie.SelectedItem as Categorie;
+
+                if (selectedCategorie != null)
+                {
+                    titreModifier.Text = "Modifier la categorie: " + selectedCategorie.Type;
+                    typeModifier = selectedCategorie.Type;
+
+                    tbxmodifier_type.Text = selectedCategorie.Type;
+                }
+            }
+        }
+
+        private void btn_Supp_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            if (button != null)
+            {
+                gv_categorie.SelectedItem = button.DataContext;
+
+                Categorie selectedCategorie = gv_categorie.SelectedItem as Categorie;
+
+                if (selectedCategorie != null)
+                {
+                    int idCategorie = selectedCategorie.IdCategorie;
+                    SingletonCategorie.getInstance().supprimerCategorie(idCategorie);
+                }
+            }
         }
     }
 }

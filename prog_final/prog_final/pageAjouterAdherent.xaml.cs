@@ -5,11 +5,13 @@ using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
+using Microsoft.UI.Xaml.Shapes;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 using Windows.Devices.Power;
@@ -24,17 +26,26 @@ namespace prog_final
         public pageAjouterAdherent()
         {
             this.InitializeComponent();
+            datepicker_date_naissance.MinYear = DateTimeOffset.Now.AddYears(-18);
         }
 
         private void addAdherentbtn_Click(object sender, RoutedEventArgs e)
         {
             if (validationInput())
             {
-                SingletonAdherent.getInstance().addAdherent(tbx_nom.Text, tbx_prenom.Text, tbx_adresse.Text, tbx_date_naissance.Text);
+                DateTime date_naissance = datepicker_date_naissance.Date.DateTime;
+                SingletonAdherent.getInstance().addAdherent(tbx_nom.Text, tbx_prenom.Text, tbx_adresse.Text, date_naissance);
+                tbx_nom.Text = "";
+                tbx_prenom.Text = "";
+                tbx_adresse.Text = "";
+                datepicker_date_naissance.SelectedDate = null;
+
                 nomErr.Text = "";
                 prenomErr.Text = "";
                 adresseErr.Text = "";
-                date_naissanceErr.Text = "";
+                datepicker_date_naissanceErr.Text = "";
+
+                titre.Text = "test";
             }
             
         }
@@ -72,31 +83,57 @@ namespace prog_final
             }*/
 
 
-            if (string.IsNullOrWhiteSpace(tbx_date_naissance.Text))
+            if (string.IsNullOrWhiteSpace(datepicker_date_naissance.SelectedDate.ToString()))
             {
-                date_naissanceErr.Text = "Remplir ce champs";
+                datepicker_date_naissanceErr.Text = "Choisir la date de la seance";
                 validation = false;
             }
-            /*
-            else if (!Regex.IsMatch(tbx_date_naissance.Text, datePattern))
+            else
             {
-                date_naissanceErr.Text = "Format ou date invalide (mm-dd-yyyy)";
-                validation = false;
-            }*/
+                datepicker_date_naissanceErr.Text = "";
+            }
 
             return validation;
         }
 
 
-
-
-        private void exporterAdherentbtn_Click(object sender, RoutedEventArgs e)
+        private async void btn_exporter_adherent_Click(object sender, RoutedEventArgs e)
         {
-            //SingletonAdherent.getInstance().ajoutCSV();
-        }
-        private void importerAdherentbtn_Click(object sender, RoutedEventArgs e)
-        {
-            //SingletonAdherent.getInstance().ajoutCSV();
+            var picker = new Windows.Storage.Pickers.FileSavePicker();
+
+            var hWnd = WinRT.Interop.WindowNative.GetWindowHandle(GestionWindow.mainWindow);
+            WinRT.Interop.InitializeWithWindow.Initialize(picker, hWnd);
+
+            picker.SuggestedFileName = "exportation_liste_adherents";
+            picker.FileTypeChoices.Add("Fichier CSV", new List<string>() { ".csv" });
+
+            Windows.Storage.StorageFile monFichier = await picker.PickSaveFileAsync();
+
+            if (monFichier != null)
+            {
+                SingletonAdherent.getInstance().getToutAdherents();
+                var listeAdherents = SingletonAdherent.getInstance().getListe_des_adherents();
+
+                StringBuilder csvContent = new StringBuilder();
+
+                foreach (var adherent in listeAdherents)
+                {
+                    string ligne =
+                        adherent.Matricule + ";" +
+                        adherent.Nom + ";" +
+                        adherent.Prenom + ";" +
+                        adherent.Adresse + ";" +
+                        adherent.Date_naissance.ToString("yyyy-MM-dd") + ";" +
+                        adherent.Age;
+                    csvContent.AppendLine(ligne);
+                }
+
+                await Windows.Storage.FileIO.WriteTextAsync(monFichier, csvContent.ToString());
+            }
+            else
+            {
+                Console.WriteLine("Aucun fichier sélectionné.");
+            }
         }
     }
 }

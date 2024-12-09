@@ -16,6 +16,10 @@ namespace prog_final
         double cout_organisation;
         double prix_vente_client;
 
+        string typeCategorie;
+
+        // statistique
+
         public Activite()
         {
             this.IdActivite = -1;
@@ -38,10 +42,21 @@ namespace prog_final
         {
             this.IdActivite = idActivite;
             this.Nom_activite = nom_activite;
-            this.IdCategorie = -1;
-            this.description = description;
+            this.IdCategorie = idCategorie;
+            this.Description = description;
             this.Cout_organisation = cout_organisation;
             this.Prix_vente_client = prix_vente_client;
+        }
+        public Activite(int idActivite, string nom_activite, int idCategorie, string description, double cout_organisation, double prix_vente_client, string typeCategorie)
+        {
+            this.IdActivite = idActivite;
+            this.Nom_activite = nom_activite;
+            this.IdCategorie = idCategorie;
+            this.Description = description;
+            this.Cout_organisation = cout_organisation;
+            this.Prix_vente_client = prix_vente_client;
+
+            this.TypeCategorie = typeCategorie;
         }
 
 
@@ -77,6 +92,17 @@ namespace prog_final
             }
 
         }
+        public string TypeCategorie
+        {
+            get => typeCategorie;
+            set
+            {
+                typeCategorie = value;
+                this.OnPropertyChanged(nameof(TypeCategorie));
+            }
+
+        }
+      
 
         public string Description
         {

@@ -4457,23 +4457,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\2366599\\.nuget\\packages\\": {},
+    "C:\\Users\\macdo\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\prog_final.csproj",
+      "projectUniqueName": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\prog_final.csproj",
       "projectName": "prog_final",
-      "projectPath": "D:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\prog_final.csproj",
-      "packagesPath": "C:\\Users\\2366599\\.nuget\\packages\\",
-      "outputPath": "D:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\obj\\",
+      "projectPath": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\prog_final.csproj",
+      "packagesPath": "C:\\Users\\macdo\\.nuget\\packages\\",
+      "outputPath": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\2366599\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\macdo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4482,7 +4482,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4499,9 +4498,8 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "all"
-      },
-      "SdkAnalysisLevel": "9.0.100"
+        "auditMode": "direct"
+      }
     },
     "frameworks": {
       "net6.0-windows10.0.19041": {
@@ -4533,55 +4531,79 @@
         "warn": true,
         "downloadDependencies": [
           {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.33, 6.0.33]"
+          },
+          {
             "name": "Microsoft.AspNetCore.App.Runtime.win-arm64",
-            "version": "[6.0.36, 6.0.36]"
+            "version": "[6.0.33, 6.0.33]"
           },
           {
             "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-            "version": "[6.0.36, 6.0.36]"
+            "version": "[6.0.33, 6.0.33]"
           },
           {
             "name": "Microsoft.AspNetCore.App.Runtime.win-x86",
-            "version": "[6.0.36, 6.0.36]"
+            "version": "[6.0.33, 6.0.33]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-arm64",
+            "version": "[6.0.33, 6.0.33]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[6.0.33, 6.0.33]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x86",
+            "version": "[6.0.33, 6.0.33]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.33, 6.0.33]"
           },
           {
             "name": "Microsoft.NETCore.App.Runtime.win-arm64",
-            "version": "[6.0.36, 6.0.36]"
+            "version": "[6.0.33, 6.0.33]"
           },
           {
             "name": "Microsoft.NETCore.App.Runtime.win-x64",
-            "version": "[6.0.36, 6.0.36]"
+            "version": "[6.0.33, 6.0.33]"
           },
           {
             "name": "Microsoft.NETCore.App.Runtime.win-x86",
-            "version": "[6.0.36, 6.0.36]"
+            "version": "[6.0.33, 6.0.33]"
           },
           {
             "name": "Microsoft.Windows.SDK.NET.Ref",
-            "version": "[10.0.19041.52, 10.0.19041.52]"
+            "version": "[10.0.19041.34, 10.0.19041.34]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.33, 6.0.33]"
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Runtime.win-arm64",
-            "version": "[6.0.36, 6.0.36]"
+            "version": "[6.0.33, 6.0.33]"
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
-            "version": "[6.0.36, 6.0.36]"
+            "version": "[6.0.33, 6.0.33]"
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Runtime.win-x86",
-            "version": "[6.0.36, 6.0.36]"
+            "version": "[6.0.33, 6.0.33]"
           }
         ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           },
-          "Microsoft.Windows.SDK.NET.Ref.Windows": {
+          "Microsoft.Windows.SDK.NET.Ref": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
@@ -4595,56 +4617,5 @@
         "#import": []
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Le package 'System.Private.Uri' 4.3.0 présente une vulnérabilité de gravité élevé(e) connue, https://github.com/advisories/GHSA-5f2m-466j-3848.",
-      "libraryId": "System.Private.Uri",
-      "targetGraphs": [
-        "net6.0-windows10.0.19041/win10-arm64",
-        "net6.0-windows10.0.19041/win10-x64",
-        "net6.0-windows10.0.19041/win10-x86"
-      ]
-    },
-    {
-      "code": "NU1902",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Le package 'System.Private.Uri' 4.3.0 présente une vulnérabilité de gravité moyenne connue, https://github.com/advisories/GHSA-x5qj-9vmx-7g6g.",
-      "libraryId": "System.Private.Uri",
-      "targetGraphs": [
-        "net6.0-windows10.0.19041/win10-arm64",
-        "net6.0-windows10.0.19041/win10-x64",
-        "net6.0-windows10.0.19041/win10-x86"
-      ]
-    },
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Le package 'System.Private.Uri' 4.3.0 présente une vulnérabilité de gravité élevé(e) connue, https://github.com/advisories/GHSA-xhfc-gr8f-ffwc.",
-      "libraryId": "System.Private.Uri",
-      "targetGraphs": [
-        "net6.0-windows10.0.19041/win10-arm64",
-        "net6.0-windows10.0.19041/win10-x64",
-        "net6.0-windows10.0.19041/win10-x86"
-      ]
-    },
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Le package 'System.Text.Json' 8.0.4 présente une vulnérabilité de gravité élevé(e) connue, https://github.com/advisories/GHSA-8g4q-xg66-9fp4.",
-      "libraryId": "System.Text.Json",
-      "targetGraphs": [
-        "net6.0-windows10.0.19041",
-        "net6.0-windows10.0.19041/win10-arm64",
-        "net6.0-windows10.0.19041/win10-x64",
-        "net6.0-windows10.0.19041/win10-x86"
-      ]
-    }
-  ]
+  }
 }

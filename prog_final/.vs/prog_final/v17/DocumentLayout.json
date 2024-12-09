@@ -1,38 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\",
+  "WorkspaceRootPath": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|d:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\singletonactivite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\singletonactivite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|d:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\singletoncategorie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\singletoncategorie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|d:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\pageajoutercategorie.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\pageajoutercategorie.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|d:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\pageajouteractivite.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\pageajouteractivite.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|d:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|e:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|d:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|e:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\pageajouteradherent.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\pageajouteradherent.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|e:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|d:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\pageajoutercategorie.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\pageajoutercategorie.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|d:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\pageajouteractivite.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\pageajouteractivite.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,115 +22,57 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "D:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\MainWindow.xaml",
+              "DocumentMoniker": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\MainWindow.xaml",
               "RelativeDocumentMoniker": "prog_final\\MainWindow.xaml",
-              "ToolTip": "D:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\MainWindow.xaml",
+              "ToolTip": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\MainWindow.xaml",
               "RelativeToolTip": "prog_final\\MainWindow.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABbAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACMAAABiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-23T15:58:51.629Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "D:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "prog_final\\MainWindow.xaml.cs",
-              "ToolTip": "D:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\MainWindow.xaml.cs",
-              "RelativeToolTip": "prog_final\\MainWindow.xaml.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAQwDUAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T16:00:16.831Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "pageAjouterActivite.xaml",
-              "DocumentMoniker": "D:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\pageAjouterActivite.xaml",
-              "RelativeDocumentMoniker": "prog_final\\pageAjouterActivite.xaml",
-              "ToolTip": "D:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\pageAjouterActivite.xaml",
-              "RelativeToolTip": "prog_final\\pageAjouterActivite.xaml",
-              "ViewState": "AgIAAIoAAAAAAAAAAAAAAKQAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-29T19:37:41.152Z",
+              "WhenOpened": "2024-12-04T20:27:13.28Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "pageAjouterCategorie.xaml.cs",
-              "DocumentMoniker": "D:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\pageAjouterCategorie.xaml.cs",
-              "RelativeDocumentMoniker": "prog_final\\pageAjouterCategorie.xaml.cs",
-              "ToolTip": "D:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\pageAjouterCategorie.xaml.cs",
-              "RelativeToolTip": "prog_final\\pageAjouterCategorie.xaml.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAADwvyEAAAAYAAAAAAAAAA==",
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "prog_final\\MainWindow.xaml.cs",
+              "ToolTip": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\MainWindow.xaml.cs",
+              "RelativeToolTip": "prog_final\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAQwBYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T19:37:18.21Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "pageAjouterCategorie.xaml",
-              "DocumentMoniker": "D:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\pageAjouterCategorie.xaml",
-              "RelativeDocumentMoniker": "prog_final\\pageAjouterCategorie.xaml",
-              "ToolTip": "D:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\pageAjouterCategorie.xaml",
-              "RelativeToolTip": "prog_final\\pageAjouterCategorie.xaml",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAIwC8AAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-29T19:37:17.552Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SingletonActivite.cs",
-              "DocumentMoniker": "D:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\SingletonActivite.cs",
-              "RelativeDocumentMoniker": "prog_final\\SingletonActivite.cs",
-              "ToolTip": "D:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\SingletonActivite.cs",
-              "RelativeToolTip": "prog_final\\SingletonActivite.cs",
-              "ViewState": "AgIAAGEAAAAAAAAAAAAcwG8AAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T18:03:57.902Z",
+              "WhenOpened": "2024-11-23T16:00:16.831Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "SingletonCategorie.cs",
-              "DocumentMoniker": "D:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\SingletonCategorie.cs",
-              "RelativeDocumentMoniker": "prog_final\\SingletonCategorie.cs",
-              "ToolTip": "D:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\SingletonCategorie.cs",
-              "RelativeToolTip": "prog_final\\SingletonCategorie.cs",
-              "ViewState": "AgIAAF8AAAAAAAAAAAAAAGgAAAAfAAAAAAAAAA==",
+              "Title": "pageAjouterAdherent.xaml.cs",
+              "DocumentMoniker": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\pageAjouterAdherent.xaml.cs",
+              "RelativeDocumentMoniker": "prog_final\\pageAjouterAdherent.xaml.cs",
+              "ToolTip": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\pageAjouterAdherent.xaml.cs",
+              "RelativeToolTip": "prog_final\\pageAjouterAdherent.xaml.cs",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAYwHYAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T19:01:14.601Z",
+              "WhenOpened": "2024-12-09T23:07:57.15Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "pageAjouterActivite.xaml.cs",
-              "DocumentMoniker": "D:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\pageAjouterActivite.xaml.cs",
-              "RelativeDocumentMoniker": "prog_final\\pageAjouterActivite.xaml.cs",
-              "ToolTip": "D:\\session_3_disc\\prog_graph\\prog_final\\prog_final\\prog_final\\pageAjouterActivite.xaml.cs",
-              "RelativeToolTip": "prog_final\\pageAjouterActivite.xaml.cs",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAQwIEAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T18:04:20.087Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             }
           ]
         }

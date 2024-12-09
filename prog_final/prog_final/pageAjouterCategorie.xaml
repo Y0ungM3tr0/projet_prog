@@ -12,27 +12,27 @@
     <Grid Background="LightGray">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
 
         <TextBlock
             Grid.Row="0"
-            Grid.Column="1"
+            Grid.Column="0"
             x:Name="titre"
-            FontSize="35"
+            FontSize="25"
             HorizontalAlignment="Center"
             >
-            gestion categories
+            ajouter une categories
         </TextBlock>
 
         <StackPanel 
-            Grid.Row="1" Grid.Column="1"
+            Grid.Row="1" Grid.Column="0"
             HorizontalAlignment="Center"
             >
             <TextBox
@@ -53,16 +53,116 @@
                 Foreground="DarkRed"
                 >   
             </TextBlock>
+            <Button
+                Width="100" Height="40"
+                HorizontalAlignment="Center"
+                Click="add_btn_Click"
+                >
+                ajouter
+            </Button>
         </StackPanel>
 
-        <Button
-            Grid.Row="2"
+       
+        
+        <TextBlock
+            Grid.Row="0"
             Grid.Column="1"
-            Width="100" Height="40"
+            x:Name="titreModifierGridv"
+            FontSize="25"
             HorizontalAlignment="Center"
-            Click="add_btn_Click"
             >
-            ajouter
-        </Button>
+            modifier une categories
+        </TextBlock>
+
+        <GridView x:Name="gv_categorie" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" SelectionChanged="gv_categorie_SelectionChanged" HorizontalAlignment="Center">
+            <GridView.ItemTemplate>
+                <DataTemplate x:DataType="local:Categorie" >
+                    <StackPanel x:Name="produitCard" Margin="15" Background="White" CornerRadius="5" Width="500" HorizontalAlignment="Stretch">
+                        <Grid Margin="5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                            <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" HorizontalAlignment="Stretch">
+                                <TextBlock Text="{x:Bind Type}" FontSize="25" Margin="15,15,0,0" FontFamily="Arial rouded" TextTrimming="WordEllipsis"/>
+                            </StackPanel>
+
+                            <Button 
+                                Click="btn_modifier_grid"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Grid.Column="1"
+                                Grid.Row="1"
+                                FontSize="19"
+                                Width="140" Height="40"
+                                >
+                                Modifier
+                            </Button>
+                            <Button 
+                                Click="btn_Supp_Click"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Grid.Row="1" Grid.Column="0"
+                                FontSize="19"
+                                Width="140" Height="40"
+                                >
+                                Supprimer
+                            </Button>
+                        </Grid>
+                    </StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+
+
+
+
+
+        <TextBlock
+            Grid.Row="0"
+            Grid.Column="2"
+            x:Name="titreModifier"
+            FontSize="25"
+            HorizontalAlignment="Center"
+            >
+            ajouter une categories
+        </TextBlock>
+
+        <StackPanel 
+            Grid.Row="1" Grid.Column="2"
+            HorizontalAlignment="Center"
+            >
+            <TextBox
+                x:Name="tbxmodifier_type"
+                Header="categorie:"
+                Margin="5"
+                Width="240" Height="75"
+                FontSize="18" 
+                PlaceholderText="ex: "
+                PlaceholderForeground="DarkGray"
+                >
+            </TextBox>
+            <TextBlock
+                x:Name="typemodifierErr"
+                FontSize="15"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Bottom"
+                Foreground="DarkRed"
+                >
+            </TextBlock>
+            <Button
+                Width="160" Height="40"
+                HorizontalAlignment="Center"
+                >
+                modifier la categorie
+            </Button>
+        </StackPanel>
+
+
     </Grid>
 </Page>

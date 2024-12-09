@@ -16,8 +16,9 @@ namespace prog_final
 
         public SingletonCategorie()
         {
-            //420335ri_gr00001_2366599-mac-donald-etienne
-            con = new MySqlConnection("Server=cours.cegep3r.info;Database=420335ri_gr00001_2366599-mac-donald-etienne;Uid=2366599;Pwd=2366599;");
+            con = new MySqlConnection(
+                SingletonUtilisateur.getInstance().getLienBd()
+                );
             liste_des_categories = new ObservableCollection<Categorie>();
         }
 
@@ -104,10 +105,43 @@ namespace prog_final
 
             return idCategorie;
         }
+        // get type de l'id
+        public string getTypeCategories(int idCategorie)
+        {
+            string type = "";
+            try
+            {
+                MySqlCommand commande = new MySqlCommand();
+                commande.Connection = con;
+                commande.CommandText = "SELECT type FROM categorie_activite WHERE idCategorie = @idCategorie;";
+
+                commande.Parameters.AddWithValue("@idCategorie", idCategorie);
+
+                con.Open();
+                MySqlDataReader r = commande.ExecuteReader();
+
+                while (r.Read())
+                {
+                    type = r.GetString("type");
+                }
+
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                // vérification que la connection est ouverte, pour la fermer
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    con.Close();
+                }
+            }
+
+            return type;
+        }
 
 
         // ajoute la categorie dans la bd
-        public void addActivite(string _type)
+        public void addCategorie(string _type)
         {
             try
             {
@@ -116,6 +150,63 @@ namespace prog_final
                 commande.CommandText = "INSERT INTO categorie_activite (type) VALUES (@type);";
 
                 commande.Parameters.AddWithValue("@type", _type);
+
+                con.Open();
+                commande.ExecuteNonQuery();
+
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    con.Close();
+                }
+
+                Console.WriteLine(ex.Message);
+            }
+            getToutCategories();
+        }
+
+        // supprime la categorie dans la bd
+        public void supprimerCategorie(int idCategorie)
+        {
+            try
+            {
+                MySqlCommand commande = new MySqlCommand();
+                commande.Connection = con;
+                commande.CommandText = "CALL Supprimer_categorie_activite(@idCategorie);";
+
+                commande.Parameters.AddWithValue("@idCategorie", idCategorie);
+
+                con.Open();
+                commande.ExecuteNonQuery();
+
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    con.Close();
+                }
+
+                Console.WriteLine(ex.Message);
+            }
+            getToutCategories();
+        }
+
+        // modifier la categorie dans la bd
+        public void modifierCategorie(int idCategorie, string type)
+        {
+            try
+            {
+                MySqlCommand commande = new MySqlCommand();
+                commande.Connection = con;
+                commande.CommandText = "CALL Modifier_categorie_activite(@idCategorie, @type);";
+
+                commande.Parameters.AddWithValue("@idCategorie", idCategorie);
+                commande.Parameters.AddWithValue("@type", type);
 
                 con.Open();
                 commande.ExecuteNonQuery();

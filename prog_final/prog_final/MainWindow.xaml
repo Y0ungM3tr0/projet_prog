@@ -9,11 +9,34 @@
 
     <NavigationView x:Name="nav" SelectionChanged="nav_SelectionChanged" IsSettingsVisible="False" IsBackButtonVisible="Collapsed">
         <NavigationView.MenuItems>
-            <NavigationViewItem Icon="ViewAll" Content="Affichage des activitées" Name="pageAffichageActivité"/>
-            <NavigationViewItem Icon="Add" Content="Gestion Adherents" Name="pageAjouterAdherent"/>
-            <NavigationViewItem Icon="Add" Content="Gestion Activites" Name="pageAjouterActivite"/>
-            <NavigationViewItem Icon="Add" Content="Gestion Categories" Name="pageAjouterCategorie"/>
-            <NavigationViewItem Icon="Add" Content="Gestion Séances" Name="pageAjouterSeance"/>
+            <TextBlock
+            x:Name="navAdherent"
+            VerticalAlignment="Bottom"
+            Visibility="Collapsed"
+            >
+            Navigation Adherent
+            </TextBlock>
+            <NavigationViewItem Icon="ViewAll" Content="Voir les futures seances" Name="pageAffichageActivité"/>
+            <NavigationViewItem Icon="ViewAll" Content="Mes reservations" Name="pageAffichageReservation" Visibility="Collapsed"/>
+            <NavigationViewItem Icon="ViewAll" Content="Noter une seance" Name="pageAjouterAppreciation" Visibility="Collapsed"/>
+            <NavigationViewItem Icon="ViewAll" Content="Appréciations" Name="pageAffichageAppréciation" Visibility="Collapsed"/>
+            <NavigationViewItemSeparator />
+            
+            <TextBlock
+                x:Name="navAdmin"
+                VerticalAlignment="Bottom"
+                Visibility="Collapsed"
+                >
+                Navigation Admin
+            </TextBlock>
+            <NavigationViewItem Icon="Add" Content="Gestion Activites" Name="pageAjouterActivite" Visibility="Collapsed"/>
+            <NavigationViewItem Icon="Manage" Content="Gestion Séances" Name="pageAjouterSeance" Visibility="Collapsed"/>
+
+            <NavigationViewItem Icon="ViewAll" Content="Affichage des Adherents" Name="pageAffichageAdherent" Visibility="Collapsed"/>
+            <NavigationViewItem Icon="Add" Content="Gestion Adherents" Name="pageAjouterAdherent" />
+            <NavigationViewItem Icon="Add" Content="Gestion Categories" Name="pageAjouterCategorie" Visibility="Collapsed"/>
+
+            <NavigationViewItem Icon="ZoomIn" Content="Statistique" Name="pageStatistique" Visibility="Collapsed"/>
             <NavigationViewItemSeparator />
             <NavigationViewItem Icon="Admin" Content="Connexion" Name="pageConnexion"/>
             <NavigationViewItem Icon="Clear" Content="Deconnexion" Name="pageDeconnexion"/>

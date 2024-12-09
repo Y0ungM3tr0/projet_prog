@@ -11,6 +11,8 @@
     <Grid Background="LightGray">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -21,17 +23,17 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <TextBlock 
-            FontSize="40"
-            FontWeight="Light"
+        <TextBlock x:ConnectionId='2' 
+            x:Name="titre"
+            FontSize="30"
             HorizontalAlignment="Center"
             Grid.Row="0"
             >
-            ajouter un adherent manuellement
+            ajouter un adherent
         </TextBlock>
 
-        <StackPanel Grid.Row="1">
-            <TextBox x:ConnectionId='9'
+        <StackPanel Grid.Row="1" Grid.Column="0">
+            <TextBox x:ConnectionId='11'
             x:Name="tbx_nom"
             Header="nom:"
             Margin="5"
@@ -41,7 +43,7 @@
             PlaceholderForeground="DarkGray"
             >
         </TextBox>
-        <TextBlock x:ConnectionId='10'
+        <TextBlock x:ConnectionId='12'
             x:Name="nomErr"
             FontSize="15"
             HorizontalAlignment="Center"
@@ -51,8 +53,8 @@
             </TextBlock>
         </StackPanel>
 
-        <StackPanel Grid.Row="2">
-            <TextBox x:ConnectionId='7'
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <TextBox x:ConnectionId='9'
                 x:Name="tbx_prenom"
                 Header="prenom:"
                 Margin="5"
@@ -62,7 +64,7 @@
                 PlaceholderForeground="DarkGray"
                 >
             </TextBox>
-            <TextBlock x:ConnectionId='8'
+            <TextBlock x:ConnectionId='10'
                 x:Name="prenomErr"
                 FontSize="15"
                 HorizontalAlignment="Center"
@@ -72,8 +74,8 @@
             </TextBlock>
         </StackPanel>
 
-        <StackPanel Grid.Row="3">
-            <TextBox x:ConnectionId='5'
+        <StackPanel Grid.Row="2" Grid.Column="0">
+            <TextBox x:ConnectionId='7'
                 x:Name="tbx_adresse"
                 Header="adresse:"
                 Margin="5"
@@ -83,7 +85,7 @@
                 PlaceholderForeground="DarkGray"
                 >
             </TextBox>
-            <TextBlock x:ConnectionId='6'
+            <TextBlock x:ConnectionId='8'
                 x:Name="adresseErr"
                 FontSize="15"
                 HorizontalAlignment="Center"
@@ -93,29 +95,28 @@
             </TextBlock>
         </StackPanel>
 
-        <StackPanel Grid.Row="4">
-            <TextBox x:ConnectionId='3'
-                x:Name="tbx_date_naissance"
-                Header="date de naissance:"
-                Margin="5"
-                Width="240" Height="75"
-                FontSize="18" 
-                PlaceholderText="votre date de naissance"
-                PlaceholderForeground="DarkGray"
-                >
-            </TextBox>
-            <TextBlock x:ConnectionId='4'
-                x:Name="date_naissanceErr"
-                FontSize="15"
+        <StackPanel Grid.Row="2" Grid.Column="1">
+            <DatePicker x:ConnectionId='5'
+                x:Name="datepicker_date_naissance"
+                Header="La date de naissance:"
                 HorizontalAlignment="Center"
-                VerticalAlignment="Bottom"
-                Foreground="DarkRed"
-                >
+                Margin="5"
+                Width="500" Height="75"
+                FontSize="18" 
+                >   
+            </DatePicker>
+            <TextBlock x:ConnectionId='6'
+                 x:Name="datepicker_date_naissanceErr"
+                 FontSize="15"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Bottom"
+                 Foreground="DarkRed"
+                 >
             </TextBlock>
         </StackPanel>
 
-        <Button x:ConnectionId='2' 
-            Grid.Row="6"
+        <Button x:ConnectionId='3' 
+            Grid.Row="3"
             x:Name="btn_add_adherent"
             Margin="5"
             Width="240" Height="75"
@@ -124,6 +125,18 @@
                                         
             >
             ajouter l'adherent
+        </Button>
+
+        <Button x:ConnectionId='4' 
+            Grid.Row="3" Grid.Column="1"
+            x:Name="btn_exporter_adherent"
+            Margin="5"
+            Width="240" Height="75"
+            FontSize="18"
+            HorizontalAlignment="Center"
+                                               
+            >
+            exporter la liste des adherents
         </Button>
     </Grid>
 </Page>

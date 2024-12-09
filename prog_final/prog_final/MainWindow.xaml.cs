@@ -41,6 +41,21 @@ namespace prog_final
                     case "pageAffichageActivité":
                         mainFrame.Navigate(typeof(pageAffichageActivité));
                         break;
+                    case "pageAffichageReservation":
+                        mainFrame.Navigate(typeof(pageAffichageReservation));
+                        break;
+                    case "pageAjouterAppreciation":
+                        mainFrame.Navigate(typeof(pageAjouterAppreciation));
+                        break;
+                    case "pageAffichageAppréciation":
+                        mainFrame.Navigate(typeof(pageAffichageAppréciation));
+                        break;
+                    case "pageAjouterSeance":
+                        mainFrame.Navigate(typeof(pageAjouterSeance));
+                        break;
+                    case "pageAffichageAdherent":
+                        mainFrame.Navigate(typeof(pageAffichageAdherent));
+                        break;
                     case "pageAjouterAdherent":
                         mainFrame.Navigate(typeof(pageAjouterAdherent));
                         break;
@@ -50,8 +65,8 @@ namespace prog_final
                     case "pageAjouterCategorie":
                         mainFrame.Navigate(typeof(pageAjouterCategorie));
                         break;
-                    case "pageAjouterSeance":
-                        mainFrame.Navigate(typeof(pageAjouterSeance));
+                    case "pageStatistique":
+                        mainFrame.Navigate(typeof(pageStatistique));
                         break;
                     case "pageConnexion":
                         connexion_btn_Click();
@@ -79,7 +94,7 @@ namespace prog_final
 
             if (dialog.AnnulerBtn != true)
             {
-                
+                // false = adherent, true = admin
                 if (SingletonUtilisateur.getInstance().StatutUtilisateur == false)
                 {
                     SingletonAdherent.getInstance().getIdentifiantAdherent(
@@ -96,8 +111,10 @@ namespace prog_final
                         );
 
                     infoUtilisateur.Text = "Bienvenue, \n" + SingletonUtilisateur.getInstance().UsernameAdmin.ToString();
-                    SingletonUtilisateur.getInstance().Connecter = true;
+                    SingletonUtilisateur.getInstance().Connecter = true;                    
                 }
+                
+                toggleNavigationAdminVisibility();
             }
         }
         private async void deconnexion_btn_Click()
@@ -110,10 +127,72 @@ namespace prog_final
 
             if (dialog.AnnulerBtnDeco != true)
             {
-                    SingletonUtilisateur.getInstance().Connecter = false;
+                SingletonUtilisateur.getInstance().Connecter = false;
+                toggleNavigationAdminVisibility();
                 infoUtilisateur.Text = "Déconnecté";
             }
         }
+
+
+        private void toggleNavigationAdminVisibility()
+        {
+            if (SingletonUtilisateur.getInstance().Connecter)
+            {
+                if (SingletonUtilisateur.getInstance().StatutUtilisateur)
+                {
+                    // render visible les page de l'administrateur
+                    navAdmin.Visibility = Visibility.Visible;
+                    pageAjouterActivite.Visibility = Visibility.Visible;
+                    pageAjouterSeance.Visibility = Visibility.Visible;
+                    pageAjouterAdherent.Visibility = Visibility.Visible;
+                    pageAjouterCategorie.Visibility = Visibility.Visible;
+
+                    pageStatistique.Visibility = Visibility.Visible;
+
+                    // render non visible les page des adhrents
+                    navAdherent.Visibility = Visibility.Collapsed;
+                    pageAffichageReservation.Visibility = Visibility.Collapsed;
+                    pageAjouterAppreciation.Visibility = Visibility.Collapsed;
+                    pageAffichageAppréciation.Visibility = Visibility.Collapsed;
+                }
+                else
+                {
+                    // render visible les page des adhrents
+                    navAdherent.Visibility = Visibility.Visible;
+                    pageAffichageReservation.Visibility = Visibility.Visible;
+                    pageAjouterAppreciation.Visibility = Visibility.Visible;
+                    pageAffichageAppréciation.Visibility = Visibility.Visible;
+
+                    // render non visible les page de l'administrateur
+                    navAdmin.Visibility = Visibility.Collapsed;
+                    pageAjouterActivite.Visibility = Visibility.Collapsed;
+                    pageAjouterSeance.Visibility = Visibility.Collapsed;
+                    pageAjouterAdherent.Visibility = Visibility.Collapsed;
+                    pageAjouterCategorie.Visibility = Visibility.Collapsed;
+
+                    pageStatistique.Visibility = Visibility.Collapsed;
+                }
+            }
+            else
+            {
+                // render non visible les page des adhrents
+                navAdherent.Visibility = Visibility.Collapsed;
+                pageAffichageReservation.Visibility = Visibility.Collapsed;
+                pageAjouterAppreciation.Visibility = Visibility.Collapsed;
+                pageAffichageAppréciation.Visibility = Visibility.Collapsed;
+
+                // render non visible les page de l'administrateur
+                navAdmin.Visibility = Visibility.Collapsed;
+                pageAjouterActivite.Visibility = Visibility.Collapsed;
+                pageAjouterSeance.Visibility = Visibility.Collapsed;
+                pageAjouterAdherent.Visibility = Visibility.Collapsed;
+                pageAjouterCategorie.Visibility = Visibility.Collapsed;
+
+                pageStatistique.Visibility = Visibility.Collapsed;
+            }
+
+        }
+
 
 
     }

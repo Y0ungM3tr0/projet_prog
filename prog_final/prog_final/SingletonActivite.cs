@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Mysqlx.Crud;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -14,10 +15,16 @@ namespace prog_final
         MySqlConnection con;
         ObservableCollection<Activite> liste_des_activites;
         static SingletonActivite instance = null;
+        // statistique
+        ObservableCollection<Activite> liste_moyenne_des_notes_par_activite;
+        ObservableCollection<Activite> liste_nbr_participant_par_activite;
+
 
         public SingletonActivite()
         {
-            con = new MySqlConnection("Server=cours.cegep3r.info;Database=420335ri_gr00001_2366599-mac-donald-etienne;Uid=2366599;Pwd=2366599;");
+            con = new MySqlConnection(
+                SingletonUtilisateur.getInstance().getLienBd()
+                );
             liste_des_activites = new ObservableCollection<Activite>();
         }
 
@@ -58,7 +65,7 @@ namespace prog_final
                     double cout_organisation = r.GetDouble("cout_organisation");
                     double prix_vente_client = r.GetDouble("prix_vente_client");
 
-                    Activite activite = new Activite(idActivite, nom_activite, idCategorie, description, cout_organisation, prix_vente_client);
+                    Activite activite = new Activite(idActivite, nom_activite, idCategorie, description, cout_organisation, prix_vente_client, SingletonCategorie.getInstance().getTypeCategories(idCategorie));
                     liste_des_activites.Add(activite);
                 }
 
@@ -100,6 +107,7 @@ namespace prog_final
             }
         }
 
+        // CRUD
         // ajoute les Activites dans la bd
         public void addActivite(string _nom, string _description, int _idCategorie, double _coutOrganisation, double _prixVente)
         {
@@ -107,7 +115,7 @@ namespace prog_final
             {
                 MySqlCommand commande = new MySqlCommand();
                 commande.Connection = con;
-                commande.CommandText = "INSERT INTO activite (nomActivite, description, idCategorie, cout_organisation, prix_vente_client) VALUES (@nomActivite, @description, @idCategorie, @cout_organisation, @prix_vente_client);";
+                commande.CommandText = "INSERT INTO activite(nomActivite, idCategorie, description, cout_organisation, prix_vente_client) VALUES(@nomActivite, @idCategorie, @description, @cout_organisation, @prix_vente_client);";
 
                 commande.Parameters.AddWithValue("@nomActivite", _nom);
                 commande.Parameters.AddWithValue("@description", _description);
@@ -131,5 +139,115 @@ namespace prog_final
             }
             getToutActivite();
         }
-    }
+        // ajoute les Activites dans la bd
+        public void modifierActivite(int idActivite, string nomActivite, int idCategorie, string description, double cout_organisation, double prix_vente_client)
+        {
+            try
+            {
+                MySqlCommand commande = new MySqlCommand();
+                commande.Connection = con;
+                commande.CommandText = "CALL Modifier_activite(@idActivite, @nomActivite, @idCategorie, @description,  @cout_organisation, @prix_vente_client);";
+
+                commande.Parameters.AddWithValue("@idActivite", idActivite);
+                commande.Parameters.AddWithValue("@nomActivite", nomActivite);
+                commande.Parameters.AddWithValue("@idCategorie", idCategorie);
+                commande.Parameters.AddWithValue("@description", description);
+                commande.Parameters.AddWithValue("@cout_organisation", cout_organisation);
+                commande.Parameters.AddWithValue("@prix_vente_client", prix_vente_client);
+
+                con.Open();
+                commande.ExecuteNonQuery();
+
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    con.Close();
+                }
+
+                Console.WriteLine(ex.Message);
+            }
+            getToutActivite();
+        }
+        // ajoute les Activites dans la bd
+        public void supprimerActivite(int idActivite)
+        {
+            try
+            {
+                MySqlCommand commande = new MySqlCommand();
+                commande.Connection = con;
+                commande.CommandText = "CALL Supprimer_activite(@idActivite);";
+                commande.Parameters.AddWithValue("@idActivite", idActivite);
+
+                con.Open();
+                commande.ExecuteNonQuery();
+
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    con.Close();
+                }
+
+                Console.WriteLine(ex.Message);
+            }
+            getToutActivite();
+        }
+
+        // get idActivite
+        public int getIdActivite(string nomActivite)
+        {
+            int idActivite = 0;
+            try
+            {
+                MySqlCommand commande = new MySqlCommand();
+                commande.Connection = con;
+                commande.CommandText = "SELECT idActivite FROM activite WHERE nomActivite = @nomActivite;";
+
+                commande.Parameters.AddWithValue("@nomActivite", nomActivite);
+
+                con.Open();
+                MySqlDataReader r = commande.ExecuteReader();
+
+                while (r.Read())
+                {
+                    idActivite = r.GetInt32("idActivite");
+                }
+
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                // vérification que la connection est ouverte, pour la fermer
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    con.Close();
+                }
+            }
+
+            return idActivite;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }    
 }

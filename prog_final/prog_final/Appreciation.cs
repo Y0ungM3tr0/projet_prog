@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Org.BouncyCastle.Utilities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -14,6 +15,15 @@ namespace prog_final
         string matricule;
         double note_appreciation;
 
+        // statistique
+        // Afficher moyenne des notes par activité
+        double moy_note_par_activite;
+        int idActivite;
+        string nomActivite;
+        // Afficher la moyenne des notes d'appréciation pour toutes les activités
+        double moy_note_toutes_activites;
+
+
         public Appreciation()
         {
             this.IdAppreciation = -1;
@@ -28,6 +38,21 @@ namespace prog_final
             this.IdSeance = idSeance;
             this.Matricule = matricule;
             this.Note_appreciation = note_appreciation;
+        }
+
+        // statistique
+        // Afficher moyenne des notes par activité
+        public Appreciation(int idAppreciation, double moy_note_par_activite, int idActivite, string nomActivite)
+        {
+            this.idAppreciation = idAppreciation;
+            this.moy_note_par_activite = moy_note_par_activite;
+            this.idActivite = idActivite;
+            this.nomActivite = nomActivite;
+        }
+        // Afficher la moyenne des notes d'appréciation pour toutes les activités
+        public Appreciation(double moy_note_toutes_activites )
+        {
+            this.moy_note_toutes_activites = moy_note_toutes_activites;
         }
 
         public int IdAppreciation
@@ -70,6 +95,51 @@ namespace prog_final
             }
         }
 
+        // statistique
+        // Afficher moyenne des notes par activité
+        public double Moy_note_par_activite
+        {
+            get => moy_note_par_activite;
+            set
+            {
+                moy_note_par_activite = value;
+                this.OnPropertyChanged(nameof(Moy_note_par_activite));
+            }
+        }
+
+        public int IdActivite
+        {
+            get => idActivite;
+            set
+            {
+                idActivite = value;
+                this.OnPropertyChanged(nameof(IdActivite));
+            }
+        }
+        public string NomActivite
+        {
+            get => nomActivite;
+            set
+            {
+                nomActivite = value;
+                this.OnPropertyChanged(nameof(NomActivite));
+            }
+        }
+        // Afficher la moyenne des notes d'appréciation pour toutes les activités
+        public double Moy_note_toutes_activites
+        {
+            get => moy_note_toutes_activites;
+            set
+            {
+                moy_note_toutes_activites = value;
+                this.OnPropertyChanged(nameof(Moy_note_toutes_activites));
+            }
+        }
+
+        public string Moy_note_toutes_activites_string
+        {
+            get => moy_note_toutes_activites.ToString("0.0");
+        }
 
 
         public event PropertyChangedEventHandler PropertyChanged;

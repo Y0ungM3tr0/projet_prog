@@ -15,73 +15,79 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
+            <RowDefinition Height="10*" />
         </Grid.RowDefinitions>
 
+        <TextBlock x:Name="titre" Grid.Row="0" FontSize="30" Margin="5" HorizontalAlignment="Center">
+            sceances
+        </TextBlock>
 
-        <GridView x:Name="gv_activite" SelectionChanged="gv_activite_SelectionChanged" HorizontalAlignment="Center">
+        <GridView x:Name="gv_seance" Grid.Row="1" SelectionChanged="gv_seance_SelectionChanged" HorizontalAlignment="Center">
             <GridView.ItemTemplate>
-                <DataTemplate x:DataType="local:Activite" >
-                    <StackPanel x:Name="produitCard" Margin="15" Background="White" CornerRadius="5" Width="975" HorizontalAlignment="Stretch">
+                <DataTemplate x:DataType="local:Seance" >
+                    <StackPanel x:Name="produitCard" Margin="15" Background="White" CornerRadius="5" Width="700" HorizontalAlignment="Stretch">
                         <Grid Margin="5">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="4*" />
-                                <ColumnDefinition Width="4*" />
-                                <ColumnDefinition Width="3*" />
+                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="2*" />
                                 <RowDefinition Height="*" />
-                                <RowDefinition Height="2*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
                             </Grid.RowDefinitions>
 
                             <StackPanel Grid.Column="0" Grid.Row="0" HorizontalAlignment="Stretch">
-                                <TextBlock Text="{x:Bind Nom_activite}" FontSize="25" Margin="15,15,0,0" FontFamily="Arial rouded" TextTrimming="WordEllipsis"/>
+                                <TextBlock Text="{x:Bind NomActivite}" FontSize="25" Margin="15,15,0,0" FontFamily="Arial rouded" TextTrimming="WordEllipsis"/>
+                            </StackPanel>
 
-                                <TextBlock FontSize="20" Margin="15">
-                                    <Run Text="Description:"/>
-                                    <LineBreak></LineBreak>
-                                    <Run FontWeight="Light" Text="{x:Bind Description}"/>
+
+                            <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" Margin="15,20,0,0" HorizontalAlignment="Stretch">
+                                <TextBlock FontSize="20" Margin="5">
+                                    <Run Text="Date:"/>
+                                    <Run FontWeight="Light" Text="{x:Bind Date_seance_string}"/>
+                                </TextBlock>
+                            </StackPanel>
+                            <StackPanel Grid.Column="0" Grid.Row="2" Margin="15,20,0,0" HorizontalAlignment="Stretch">
+                                <TextBlock FontSize="20" Margin="5">
+                                    <Run Text="Heure:"/>
+                                    <Run FontWeight="Light" Text="{x:Bind Heure}"/>
+                                </TextBlock>
+                            </StackPanel>
+                            <StackPanel Grid.Column="0" Grid.Row="3" Margin="15,20,0,0" HorizontalAlignment="Stretch">
+                                <TextBlock FontSize="20" Margin="5">
+                                    <Run Text="Nombre d'inscription:"/>
+                                    <Run FontWeight="Light" Text="{x:Bind Nbr_inscription}"/>
+                                </TextBlock>
+                            </StackPanel>
+                            <StackPanel Grid.Column="0" Grid.Row="4" Margin="15,20,0,0" HorizontalAlignment="Stretch">
+                                <TextBlock FontSize="20" Margin="5">
+                                    <Run Text="Nombre de place(s):"/>
+                                    <Run FontWeight="Light" Text="{x:Bind Nbr_place_disponible}"/>
+                                </TextBlock>
+                            </StackPanel>
+                            <StackPanel Grid.Column="0" Grid.Row="5" Margin="15,20,0,0" HorizontalAlignment="Stretch">
+                                <TextBlock FontSize="20" Margin="5">
+                                    <Run Text="Moyenne de l'appréciation:"/>
+                                    <Run FontWeight="Light" Text="{x:Bind Moyenne_appreciation}"/>
                                 </TextBlock>
                             </StackPanel>
 
-                            <StackPanel Grid.Column="1" Grid.Row="0" Margin="0,20,0,0" HorizontalAlignment="Stretch">
-                                <TextBlock FontSize="20" Margin="5">
-                                    <Run Text="Type d'activité:"/>
-                                    <Run FontWeight="Light" Text="{x:Bind IdCategorie}"/>
-                                </TextBlock>
-                                <TextBlock FontSize="20" Margin="5">
-                                    <Run Text="Cout de l'organisation:"/>
-                                    <Run FontWeight="Light" Text="{x:Bind Cout_organisation}"/>
-                                    <Run FontWeight="Light" Text="$"/>
-                                </TextBlock>
-                                <TextBlock FontSize="20" Margin="5">
-                                    <Run Text="Prix d'inscription:"/>
-                                    <Run FontWeight="Light" Text="{x:Bind Prix_vente_client}"/>
-                                    <Run FontWeight="Light" Text="$"/>
-                                </TextBlock>
-                            </StackPanel>
 
                             <Button 
-                                Click="btn_inscription"
+                                Click="btn_inscription_click"
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center"
                                 Grid.Column="2"
-                                Grid.Row="0"
+                                Grid.Row="5" Grid.ColumnSpan="2"
                                 FontSize="19"
                                 Width="150" Height="40"
+                                Visibility="{x:Bind Afficher}"
                                 >           
                                 S'inscrire
-                            </Button>
-                            <Button 
-                                Click="btn_Supp_Click"
-                                HorizontalAlignment="Center"
-                                VerticalAlignment="Center"
-                                Grid.Column="2"
-                                Grid.Row="1"
-                                FontSize="19"
-                                Width="150" Height="40"
-                                >
-                                Supprimer
                             </Button>
                         </Grid>
                     </StackPanel>

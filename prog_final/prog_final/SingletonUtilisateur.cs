@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Microsoft.UI.Xaml;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace prog_final
@@ -22,13 +24,24 @@ namespace prog_final
             return instance;
         }
 
+        // lien bd
+        public string getLienBd()
+        {
+            string sim = "Server=cours.cegep3r.info;Database=420345ri_gr00001_2356374-simon-cartier;Uid=2356374;Pwd=2356374;";
+            string etienne = "Server=cours.cegep3r.info;Database=420345ri_gr00001_2366599-etienne-mac-donald;Uid=2366599;Pwd=2366599;";
+            return etienne;
+        }
+        
+
 
         bool statutUtilisateur; // false = adherent, true = admin
         bool connecter; // est ce que quelqu'un est connecté? false = non, true = oui
 
         string usernameAdmin;
         string mdp;
+
         string usernameAdherent;
+        string matriculeAdherent;
 
         public bool StatutUtilisateur
         {
@@ -80,9 +93,26 @@ namespace prog_final
                 usernameAdherent = value;
                 this.OnPropertyChanged(nameof(UsernameAdherent));
             }
-
         }
-
+        public Visibility Afficher
+        {
+            get
+            {
+                if (SingletonUtilisateur.getInstance().Connecter == true)
+                    return Visibility.Visible;
+                else
+                    return Visibility.Collapsed;
+            }
+        }
+        public string MatriculeAdherent
+        {
+            get => matriculeAdherent;
+            set
+            {
+                matriculeAdherent = value;
+                this.OnPropertyChanged(nameof(MatriculeAdherent));
+            }
+        }
 
 
         // remettre toutes les informations nulle

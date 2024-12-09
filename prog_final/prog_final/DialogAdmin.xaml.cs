@@ -96,7 +96,6 @@ namespace prog_final
 
                             SingletonUtilisateur.getInstance().StatutUtilisateur = false;
                             SingletonUtilisateur.getInstance().UsernameAdherent = tbx_userAdherent.Text;
-                            // jsp trop quoi faire
                             break;
                         default:
                             messageErr_tbx_userAdherent.Text = "Une erreur s'est produite.";

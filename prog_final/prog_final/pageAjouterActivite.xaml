@@ -11,9 +11,9 @@
 
     <Grid Background="LightGray">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -24,19 +24,21 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-
+       
+        
+        
         <TextBlock
             Grid.Row="0"
-            Grid.Column="1"
+            Grid.Column="0"
             x:Name="titre"
             FontSize="35"
             HorizontalAlignment="Center"
             >
-            gestion activitées
+            ajouter une activitée
         </TextBlock>
 
         <StackPanel 
-            Grid.Row="1" Grid.Column="1"
+            Grid.Row="1" Grid.Column="0"
             HorizontalAlignment="Center"
             >
             <TextBox
@@ -60,7 +62,7 @@
         </StackPanel>
 
         <StackPanel 
-            Grid.Row="2" Grid.Column="1"
+            Grid.Row="2" Grid.Column="0"
             HorizontalAlignment="Center"
             >
             <ComboBox
@@ -82,7 +84,7 @@
         </StackPanel>
 
         <StackPanel 
-            Grid.Row="3" Grid.Column="1"
+            Grid.Row="3" Grid.Column="0"
             HorizontalAlignment="Center"
             >
             <TextBox
@@ -107,7 +109,7 @@
 
 
         <StackPanel 
-            Grid.Row="4" Grid.Column="1"
+            Grid.Row="4" Grid.Column="0"
             HorizontalAlignment="Center"
             >
             <TextBox
@@ -131,7 +133,7 @@
         </StackPanel>
 
         <StackPanel 
-            Grid.Row="5" Grid.Column="1"
+            Grid.Row="5" Grid.Column="0"
             HorizontalAlignment="Center"
             >
             <TextBox
@@ -156,13 +158,244 @@
 
         <Button
             Grid.Row="6"
-            Grid.Column="1"
+            Grid.Column="0"
             Width="100" Height="40"
             HorizontalAlignment="Center"
             Click="add_btn_Click"
             >
             ajouter
         </Button>
+
+
+
+        <TextBox 
+            Header="recherche activite (par nom)"
+            PlaceholderText="ex: gym"
+            Grid.Column="1"
+            Grid.Row="0"
+            Height="90" Width="400"
+            FontSize="18"
+            >
+            
+        </TextBox>
+        
+        <GridView x:Name="gv_activite" SelectionChanged="gv_activite_SelectionChanged" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="1" Grid.RowSpan="6">
+            <GridView.ItemTemplate>
+                <DataTemplate x:DataType="local:Activite" >
+                    <StackPanel x:Name="produitCard" Margin="15" Background="White" CornerRadius="5" Width="450" HorizontalAlignment="Stretch">
+                        <Grid Margin="5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                            <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" HorizontalAlignment="Stretch">
+                                <TextBlock Text="{x:Bind Nom_activite}" FontSize="25" Margin="15,15,0,0" FontFamily="Arial rouded" TextTrimming="WordEllipsis"/>
+                                <TextBlock Text="{x:Bind Description}" FontSize="25" Margin="15,15,0,0" FontFamily="Arial rouded" TextTrimming="WordEllipsis"/>
+                                <TextBlock Text="{x:Bind TypeCategorie}" FontSize="25" Margin="15,15,0,0" FontFamily="Arial rouded" TextTrimming="WordEllipsis"/>
+                                <TextBlock Text="{x:Bind Cout_organisation}" FontSize="25" Margin="15,15,0,0" FontFamily="Arial rouded" TextTrimming="WordEllipsis"/>
+                                <TextBlock Text="{x:Bind Prix_vente_client}" FontSize="25" Margin="15,15,0,0" FontFamily="Arial rouded" TextTrimming="WordEllipsis"/>
+                            </StackPanel>
+
+                            <Button 
+                                Click="btn_modifier"
+                                HorizontalAlignment="Center"
+                                Grid.Column="0"
+                                Grid.Row="5"
+                                FontSize="19"
+                                Width="150" Height="40"
+                                >
+                                modifier
+                            </Button>
+                            <Button 
+                                Click="btn_Supp_Click"
+                                HorizontalAlignment="Center"
+                                Grid.Column="1"
+                                Grid.Row="5"
+                                FontSize="19"
+                                Width="150" Height="40"
+                                >   
+                                Supprimer
+                            </Button>
+                        </Grid>
+                    </StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+
+
+
+
+
+
+
+
+
+
+
+
+        <TextBlock
+            Grid.Row="0"
+            Grid.Column="2"
+            x:Name="titre_modifier"
+            FontSize="35"
+            HorizontalAlignment="Center"
+            >
+            modifier une activitée
+        </TextBlock>
+
+        <StackPanel 
+            Grid.Row="1" Grid.Column="2"
+            HorizontalAlignment="Center"
+            >
+            <TextBox
+                x:Name="tbxModifier_nom_activite"
+                Header="nom_activite:"
+                Margin="5"
+                Width="240" Height="75"
+                FontSize="18" 
+                PlaceholderText="ex: "
+                PlaceholderForeground="DarkGray"
+                >   
+            </TextBox>
+            <TextBlock
+                x:Name="nom_activiteErrModifier"
+                FontSize="15"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Bottom"
+                Foreground="DarkRed"
+                >
+            </TextBlock>
+        </StackPanel>
+
+        <StackPanel 
+            Grid.Row="2" Grid.Column="2"
+            HorizontalAlignment="Center"
+            >
+            <ComboBox
+                x:Name="cbxModifier_type"
+                Header="Categorie:"
+                Margin="5"
+                Width="240" Height="75"
+                FontSize="18" 
+                >
+            </ComboBox>
+            <TextBlock
+                x:Name="typeErrModifier"
+                FontSize="15"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Bottom"
+                Foreground="DarkRed"
+                >
+            </TextBlock>
+        </StackPanel>
+
+        <StackPanel 
+            Grid.Row="3" Grid.Column="2"
+            HorizontalAlignment="Center"
+            >
+            <TextBox
+                x:Name="tbxModifier_description"
+                Header="description:"
+                Margin="5"
+                Width="240" Height="75"
+                FontSize="18" 
+                PlaceholderText="ex: "
+                PlaceholderForeground="DarkGray"
+                >
+            </TextBox>
+            <TextBlock
+                x:Name="descriptionErrModifier"
+                FontSize="15"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Bottom"
+                Foreground="DarkRed"
+                >
+            </TextBlock>
+        </StackPanel>
+
+        <StackPanel 
+            Grid.Row="4" Grid.Column="2"
+            HorizontalAlignment="Center"
+            >
+            <TextBox
+                x:Name="tbxModifier_cout_organisation"
+                Header="tbx_cout_organisation:"
+                Margin="5"
+                Width="240" Height="75"
+                FontSize="18" 
+                PlaceholderText="ex: "
+                PlaceholderForeground="DarkGray"
+                >
+            </TextBox>
+            <TextBlock
+                x:Name="cout_organisationErrModifier"
+                FontSize="15"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Bottom"
+                Foreground="DarkRed"
+                >
+            </TextBlock>
+        </StackPanel>
+
+        <StackPanel 
+            Grid.Row="5" Grid.Column="2"
+            HorizontalAlignment="Center"
+            >
+            <TextBox
+                x:Name="tbxModifier_prix_vente_client"
+                Header="tbx_prix_vente_client:"
+                Margin="5"
+                Width="240" Height="75"
+                FontSize="18" 
+                PlaceholderText="ex: "
+                PlaceholderForeground="DarkGray"
+                >
+            </TextBox>
+            <TextBlock
+                x:Name="prix_vente_clientErrModifier"
+                FontSize="15"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Bottom"
+                Foreground="DarkRed"
+                >
+            </TextBlock>
+        </StackPanel>
+
+        <Button
+            Grid.Row="6"
+            Grid.Column="2"
+            Width="100" Height="40"
+            HorizontalAlignment="Center"
+            Click="modifier_btn_Click"
+            >
+            modifier
+        </Button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     </Grid>
 </Page>

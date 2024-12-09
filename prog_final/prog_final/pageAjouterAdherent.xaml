@@ -11,6 +11,8 @@
     <Grid Background="LightGray">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -22,15 +24,15 @@
         </Grid.RowDefinitions>
 
         <TextBlock 
-            FontSize="40"
-            FontWeight="Light"
+            x:Name="titre"
+            FontSize="30"
             HorizontalAlignment="Center"
             Grid.Row="0"
             >
-            ajouter un adherent manuellement
+            ajouter un adherent
         </TextBlock>
 
-        <StackPanel Grid.Row="1">
+        <StackPanel Grid.Row="1" Grid.Column="0">
             <TextBox
             x:Name="tbx_nom"
             Header="nom:"
@@ -51,7 +53,7 @@
             </TextBlock>
         </StackPanel>
 
-        <StackPanel Grid.Row="2">
+        <StackPanel Grid.Row="1" Grid.Column="1">
             <TextBox
                 x:Name="tbx_prenom"
                 Header="prenom:"
@@ -72,7 +74,7 @@
             </TextBlock>
         </StackPanel>
 
-        <StackPanel Grid.Row="3">
+        <StackPanel Grid.Row="2" Grid.Column="0">
             <TextBox
                 x:Name="tbx_adresse"
                 Header="adresse:"
@@ -93,29 +95,28 @@
             </TextBlock>
         </StackPanel>
 
-        <StackPanel Grid.Row="4">
-            <TextBox
-                x:Name="tbx_date_naissance"
-                Header="date de naissance:"
-                Margin="5"
-                Width="240" Height="75"
-                FontSize="18" 
-                PlaceholderText="votre date de naissance"
-                PlaceholderForeground="DarkGray"
-                >
-            </TextBox>
-            <TextBlock
-                x:Name="date_naissanceErr"
-                FontSize="15"
+        <StackPanel Grid.Row="2" Grid.Column="1">
+            <DatePicker
+                x:Name="datepicker_date_naissance"
+                Header="La date de naissance:"
                 HorizontalAlignment="Center"
-                VerticalAlignment="Bottom"
-                Foreground="DarkRed"
-                >
+                Margin="5"
+                Width="500" Height="75"
+                FontSize="18" 
+                >   
+            </DatePicker>
+            <TextBlock
+                 x:Name="datepicker_date_naissanceErr"
+                 FontSize="15"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Bottom"
+                 Foreground="DarkRed"
+                 >
             </TextBlock>
         </StackPanel>
 
         <Button 
-            Grid.Row="6"
+            Grid.Row="3"
             x:Name="btn_add_adherent"
             Margin="5"
             Width="240" Height="75"
@@ -124,6 +125,18 @@
             Click="addAdherentbtn_Click"
             >
             ajouter l'adherent
+        </Button>
+
+        <Button 
+            Grid.Row="3" Grid.Column="1"
+            x:Name="btn_exporter_adherent"
+            Margin="5"
+            Width="240" Height="75"
+            FontSize="18"
+            HorizontalAlignment="Center"
+            Click="btn_exporter_adherent_Click"
+            >
+            exporter la liste des adherents
         </Button>
     </Grid>
 </Page>

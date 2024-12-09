@@ -18,8 +18,9 @@ namespace prog_final
 
         public SingletonAdmin()
         {
-            //420335ri_gr00001_2366599-mac-donald-etienne
-            con = new MySqlConnection("Server=cours.cegep3r.info;Database=420335ri_gr00001_2366599-mac-donald-etienne;Uid=2366599;Pwd=2366599;");
+            con = new MySqlConnection(
+                SingletonUtilisateur.getInstance().getLienBd()
+                );
             liste_admin = new ObservableCollection<Administrateur>();
         }
 

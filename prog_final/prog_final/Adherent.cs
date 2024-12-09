@@ -14,8 +14,15 @@ namespace prog_final
         string nom;
         string prenom;
         string adresse;
-        string date_naissance;
+        DateTimeOffset date_naissance;
         int age;
+
+        // statistique
+        // adherent au plus de séances
+        int nb_seances;
+        // prix moyen payé pour chaque adherent
+        double moy_prix_activite;
+
 
         public Adherent()
         {
@@ -23,11 +30,11 @@ namespace prog_final
             this.nom = "nom";
             this.prenom = "prenom";
             this.adresse = "adresse";
-            this.date_naissance = "date_naissance";
+            this.date_naissance = new DateTime();
             this.age = -1;
         }
-
-        public Adherent(string nom, string prenom, string adresse, string date_naissance)
+        
+        public Adherent(string nom, string prenom, string adresse, DateTime date_naissance)
         {
             this.nom = nom;
             this.prenom = prenom;
@@ -35,7 +42,7 @@ namespace prog_final
             this.date_naissance = date_naissance;
         }
 
-        public Adherent(string matricule, string nom, string prenom, string adresse, string date_naissance)
+        public Adherent(string matricule, string nom, string prenom, string adresse, DateTime date_naissance)
         {
             this.matricule = matricule;
             this.nom = nom;
@@ -44,7 +51,7 @@ namespace prog_final
             this.date_naissance = date_naissance;
         }
 
-        public Adherent(string matricule, string nom, string prenom, string adresse, string date_naissance, int age)
+        public Adherent(string matricule, string nom, string prenom, string adresse, DateTime date_naissance, int age)
         {
             this.matricule = matricule;
             this.nom = nom;
@@ -53,6 +60,25 @@ namespace prog_final
             this.date_naissance = date_naissance;
             this.age = age;
         }
+
+        // adherent au plus de séances
+        public Adherent(string matricule, string nom, string prenom, int nb_seances)
+        {
+            this.matricule = matricule;
+            this.nom = nom;
+            this.prenom = prenom;
+            this.nb_seances = nb_seances;
+        }
+        // prix moyen par activité pour chaque adherent
+        public Adherent(string matricule, string nom, string prenom, double moy_prix_activite)
+        {
+            this.matricule = matricule;
+            this.nom = nom;
+            this.prenom = prenom;
+            this.moy_prix_activite = moy_prix_activite;
+        }
+
+
 
 
         public string Matricule
@@ -63,7 +89,6 @@ namespace prog_final
                 matricule = value;
                 this.OnPropertyChanged(nameof(Matricule));
             }
-
         }
 
         public string Nom
@@ -74,7 +99,6 @@ namespace prog_final
                 nom = value;
                 this.OnPropertyChanged(nameof(Nom));
             }
-
         }
 
         public string Prenom
@@ -85,7 +109,6 @@ namespace prog_final
                 prenom = value;
                 this.OnPropertyChanged(nameof(Prenom));
             }
-
         }
 
         public string Adresse
@@ -96,10 +119,9 @@ namespace prog_final
                 adresse = value;
                 this.OnPropertyChanged(nameof(Adresse));
             }
-
         }
 
-        public string Date_naissance
+        public DateTimeOffset Date_naissance
         {
             get => date_naissance;
             set
@@ -107,6 +129,11 @@ namespace prog_final
                 date_naissance = value;
                 this.OnPropertyChanged(nameof(Date_naissance));
             }
+        }
+
+        public string Date_naissance_string
+        {
+            get => date_naissance.ToString("yyyy-mm-dd");
 
         }
 
@@ -118,8 +145,32 @@ namespace prog_final
                 age = value;
                 this.OnPropertyChanged(nameof(Age));
             }
-
         }
+
+        // adherent au plus de séances
+        public int Nb_seances
+        {
+            get => nb_seances;
+            set
+            {
+                nb_seances = value;
+                this.OnPropertyChanged(nameof(Nb_seances));
+            }
+        }
+        // prix moyen payé pour chaque adherent 
+
+        public double Moyenne_par_activite
+        {
+            get => moy_prix_activite;
+            set
+            {
+                moy_prix_activite = value;
+                this.OnPropertyChanged(nameof(moy_prix_activite));
+            }
+        }
+
+
+
 
 
 
