@@ -450,6 +450,12 @@ SELECT matricule,
 FROM adherent;
 
 
+-- Afficher le nombre d'activités total
+CREATE VIEW nb_activites AS
+SELECT COUNT(idActivite) AS nb_activite
+FROM activite;
+
+
 
 -- Procédures stockées
 
