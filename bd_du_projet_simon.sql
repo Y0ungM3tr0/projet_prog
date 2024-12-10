@@ -264,6 +264,27 @@ END//
 DELIMITER ;
 
 
+-- Empêcher l'inscription d'un adhérent sur une séance s'il est déja inscrit avant son insertion
+DELIMITER //
+CREATE TRIGGER prevent_ajout_sur_seance
+BEFORE INSERT
+ON reservation
+FOR EACH ROW
+BEGIN
+    IF EXISTS(
+        SELECT 1
+        FROM reservation
+        WHERE idSeance = NEW.idSeance
+        AND matricule = NEW.matricule
+    ) THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = "Cet adhérent est déja inscrit à cette séance.";
+    END IF;
+END//
+DELIMITER ;
+
+
+
 -- Insertion des données
 
 -- Données table adherent
@@ -448,6 +469,35 @@ SELECT matricule,
        adresse,
        dateNaissance
 FROM adherent;
+
+
+-- Afficher les informations d'une séance avec son activité (au lieu de l'id de l'activite)
+CREATE VIEW infos_seance AS
+SELECT s.idSeance,
+       s.idActivite,
+       a.nomActivite,
+       s.date_seance,
+       s.heure,
+       s.nbr_place_disponible,
+       s.nbr_inscription,
+       s.moyenne_appreciation
+FROM seance s
+INNER JOIN activite a on s.idActivite = a.idActivite;
+
+
+-- Afficher les informations d'une réservation avec sa séance et son adhérent (prénom et nom) (au lieu de l'id de la séance et le matricule de l'adhérent)
+CREATE VIEW infos_reservation AS
+SELECT r.idReservation,
+       r.idSeance,
+       s.idActivite,
+       a.nomActivite,
+       r.matricule,
+       a2.prenom,
+       a2.nom
+FROM reservation r
+INNER JOIN seance s on r.idSeance = s.idSeance
+INNER JOIN activite a on s.idActivite = a.idActivite
+INNER JOIN adherent a2 on r.matricule = a2.matricule;
 
 
 -- Afficher le nombre d'activités total
@@ -638,12 +688,17 @@ BEGIN
         SET MESSAGE_TEXT = 'Cet identification d\'activité est inexistant.';
     END IF;
 
+    IF EXISTS(SELECT idActivite FROM seance WHERE idActivite = p_idActivite) THEN
+        SIGNAL SQLSTATE '23000'
+        SET MESSAGE_TEXT = 'Impossible de supprimer cette activité car elle est associée à une ou plusieurs séances.';
+    END IF;
+
     DELETE FROM activite WHERE idActivite = p_idActivite;
 END//
 DELIMITER ;
 
 -- Appel à la procédure
--- CALL Supprimer_activite(11);
+-- CALL Supprimer_activite(10);
 
 
 -- Ajouter une séance
