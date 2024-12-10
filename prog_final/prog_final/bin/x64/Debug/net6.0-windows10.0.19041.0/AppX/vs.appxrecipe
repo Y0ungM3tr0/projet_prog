@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>SB0134-59528</Machine>
+    <Machine>SB0134-59522</Machine>
     <WindowsUser>2356374</WindowsUser>
     <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
@@ -29,29 +29,29 @@
     <AppXManifest Include="D:\SESSION 3\PROG INTERFACE\GitHub\projet_prog\prog_final\prog_final\bin\x64\Debug\net6.0-windows10.0.19041.0\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-12-10T15:39:49.471</Modified>
+      <Modified>2024-12-10T20:01:20.447</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\SESSION 3\PROG INTERFACE\GitHub\projet_prog\prog_final\prog_final\bin\x64\Debug\net6.0-windows10.0.19041.0\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-12-10T15:39:49.356</Modified>
+      <Modified>2024-12-10T19:44:05.522</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\SESSION 3\PROG INTERFACE\GitHub\projet_prog\prog_final\prog_final\bin\x64\Debug\net6.0-windows10.0.19041.0\prog_final.runtimeconfig.json">
       <PackagePath>prog_final.runtimeconfig.json</PackagePath>
-      <Modified>2024-12-10T15:39:49.123</Modified>
+      <Modified>2024-12-10T19:44:05.457</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\SESSION 3\PROG INTERFACE\GitHub\projet_prog\prog_final\prog_final\bin\x64\Debug\net6.0-windows10.0.19041.0\prog_final.dll">
       <PackagePath>prog_final.dll</PackagePath>
-      <Modified>2024-12-10T15:39:48.099</Modified>
+      <Modified>2024-12-10T20:01:20.353</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\SESSION 3\PROG INTERFACE\GitHub\projet_prog\prog_final\prog_final\obj\x64\Debug\net6.0-windows10.0.19041.0\apphost.exe">
       <PackagePath>prog_final.exe</PackagePath>
-      <Modified>2024-12-10T15:39:48.160</Modified>
+      <Modified>2024-12-10T20:01:20.353</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\SESSION 3\PROG INTERFACE\GitHub\projet_prog\prog_final\prog_final\bin\x64\Debug\net6.0-windows10.0.19041.0\prog_final.deps.json">
       <PackagePath>prog_final.deps.json</PackagePath>
-      <Modified>2024-12-10T15:39:48.978</Modified>
+      <Modified>2024-12-10T19:44:05.457</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2356374\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.52\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>

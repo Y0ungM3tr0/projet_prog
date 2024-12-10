@@ -79,7 +79,8 @@ namespace prog_final
                     int age= r.GetInt32("age");
 
                     Adherent adherent = new Adherent(matricule, nom, prenom, adresse, date_naissance, age);
-                    liste_des_adherents.Add(adherent);
+                    Adherent adherentTest = new Adherent("ED-2000-01", "Mac Donald", "Etienne", "123 Rue Test", new DateTime(2000 - 01 - 01), 25);
+                    liste_des_adherents.Add(adherentTest);
                 }
 
                 con.Close();
@@ -226,19 +227,16 @@ namespace prog_final
 
             catch (MySqlException ex)
             {
-                if (ex.SqlState == "02000")
-                {
-                    var dialog = new ContentDialog
-                    {
-                        Content = ex.Message,
-                    };
-                    _ = dialog.ShowAsync();
-                    Console.WriteLine($"{ex.Message}");
-                }
-                else
-                {
-                    Console.WriteLine($"Erreur innatendue: {ex.Message}");
-                }
+                //if (ex.SqlState == "02000")
+                //{
+                //    Console.WriteLine($"Trigger Error: {ex.Message}");
+                //}
+                //else
+                //{
+                //    Console.WriteLine($"Erreur innatendue: {ex.Message}");
+                //}
+
+                /*MySqlExceptionHandler.HandleMySqlException(ex, "seance")*/;
             }
             getToutAdherents();
         }

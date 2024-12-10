@@ -2,6 +2,7 @@ App.xbf
 BlankPage1.xbf
 DialogAdmin.xbf
 DialogDeconnexion.xbf
+DialogErreur.xbf
 MainWindow.xbf
 pageAffichageActivité.xbf
 pageAffichageAdherent.xbf
