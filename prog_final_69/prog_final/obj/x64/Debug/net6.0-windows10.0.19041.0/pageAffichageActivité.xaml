@@ -41,7 +41,11 @@
                             </Grid.RowDefinitions>
 
                             <StackPanel Grid.Column="0" Grid.Row="0" HorizontalAlignment="Stretch">
+<<<<<<< HEAD:prog_final_69/prog_final/obj/x64/Debug/net6.0-windows10.0.19041.0/pageAffichageActivité.xaml
                                 <TextBlock x:ConnectionId='12'                             FontSize="27" Margin="15 15 0 0" FontFamily="Arial rouded" TextTrimming="WordEllipsis"/>
+=======
+                                <TextBlock x:ConnectionId='12'                             FontSize="25" Margin="15 15 0 0" FontFamily="Arial rouded" TextTrimming="WordEllipsis"/>
+>>>>>>> 323ec648f6df40d1c2a70837411bea857bd0e2f3:prog_final/prog_final/obj/x64/Debug/net6.0-windows10.0.19041.0/pageAffichageActivité.xaml
                             </StackPanel>
 
 

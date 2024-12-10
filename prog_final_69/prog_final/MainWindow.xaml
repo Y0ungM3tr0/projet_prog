@@ -38,11 +38,23 @@
             </StackPanel>
         </NavigationView.PaneCustomContent>
         <NavigationView.MenuItems>
+<<<<<<< HEAD:prog_final_69/prog_final/MainWindow.xaml
             
             <NavigationViewItem Icon="ViewAll" Content="Voir les futures seances" Name="pageAffichageActivité"/>
+=======
+            <TextBlock
+            x:Name="navAdherent"
+            VerticalAlignment="Bottom"
+            Visibility="Collapsed"
+            >
+            Navigation Adherent
+            </TextBlock>
+            <NavigationViewItem Icon="Calendar" Content="Voir les seances" Name="pageAffichageActivité"/>
+>>>>>>> 323ec648f6df40d1c2a70837411bea857bd0e2f3:prog_final/prog_final/MainWindow.xaml
             <NavigationViewItem Icon="ViewAll" Content="Mes reservations" Name="pageAffichageReservation" Visibility="Collapsed"/>
             <NavigationViewItem Icon="ViewAll" Content="Noter une seance" Name="pageAjouterAppreciation" Visibility="Collapsed"/>
             <NavigationViewItemSeparator />
+<<<<<<< HEAD:prog_final_69/prog_final/MainWindow.xaml
 
             <NavigationViewItem Icon="Add" Content="Gestion Activites" Name="pageAjouterActivite" Visibility="Collapsed"/>
             <NavigationViewItem Icon="Manage" Content="Ajouter Séances" Name="pageAjouterSeance" />
@@ -51,8 +63,24 @@
             <NavigationViewItem Icon="ViewAll" Content="Affichage des Adherents" Name="pageAffichageAdherent" Visibility="Collapsed"/>
             <NavigationViewItem Icon="Add" Content="Ajouter Adherents" Name="pageAjouterAdherent" Visibility="Collapsed"/>
             <NavigationViewItem Icon="Add" Content="Gestion Categories" Name="pageAjouterCategorie" Visibility="Collapsed"/>
+=======
+            
+            <TextBlock
+                x:Name="navAdmin"
+                VerticalAlignment="Bottom"
+                Visibility="Collapsed"
+                >
+                Navigation Admin
+            </TextBlock>
+            <NavigationViewItem Icon="PhoneBook" Content="Gestion des activités" Name="pageAjouterActivite"/>
+            <NavigationViewItem Icon="Manage" Content="Gestion des séances" Name="pageAjouterSeance"/>
 
-            <NavigationViewItem Icon="ZoomIn" Content="Statistique" Name="pageStatistique" Visibility="Collapsed"/>
+            <NavigationViewItem Icon="PhoneBook" Content="Affichage des Adherents" Name="pageAffichageAdherent"/>
+            <NavigationViewItem Icon="Add" Content="Gestion Adherents" Name="pageAjouterAdherent" />
+            <NavigationViewItem Icon="Add" Content="Gestion Categories" Name="pageAjouterCategorie"/>
+>>>>>>> 323ec648f6df40d1c2a70837411bea857bd0e2f3:prog_final/prog_final/MainWindow.xaml
+
+            <NavigationViewItem Icon="ZoomIn" Content="Statistique" Name="pageStatistique"/>
             <NavigationViewItemSeparator />
             <NavigationViewItem Icon="Admin" Content="Connexion" Name="pageConnexion"/>
             <NavigationViewItem Icon="Clear" Content="Deconnexion" Name="pageDeconnexion"/>

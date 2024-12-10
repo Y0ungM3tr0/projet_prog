@@ -14,7 +14,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("prog_final")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< HEAD:prog_final_69/prog_final/obj/x64/Debug/net6.0-windows10.0.19041.0/prog_final.AssemblyInfo.cs
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ac981af0156583982489dc1548e894f81405af86")]
+>>>>>>> 323ec648f6df40d1c2a70837411bea857bd0e2f3:prog_final/prog_final/obj/x64/Debug/net6.0-windows10.0.19041.0/prog_final.AssemblyInfo.cs
 [assembly: System.Reflection.AssemblyProductAttribute("prog_final")]
 [assembly: System.Reflection.AssemblyTitleAttribute("prog_final")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

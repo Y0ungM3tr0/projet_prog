@@ -45,7 +45,11 @@
                 x:Name="tbx_nom_activite"
                 Header="Nom de l'activité:"
                 Margin="5"
+<<<<<<< HEAD:prog_final_69/prog_final/pageAjouterActivite.xaml
                 Width="280" Height="75"
+=======
+                Width="260" Height="75"
+>>>>>>> 323ec648f6df40d1c2a70837411bea857bd0e2f3:prog_final/prog_final/pageAjouterActivite.xaml
                 FontSize="18"
                 PlaceholderForeground="DarkGray"
                 >
@@ -68,7 +72,11 @@
                 x:Name="cbx_type"
                 Header="Catégorie de l'activité:"
                 Margin="5"
+<<<<<<< HEAD:prog_final_69/prog_final/pageAjouterActivite.xaml
                 Width="280" Height="75"
+=======
+                Width="260" Height="75"
+>>>>>>> 323ec648f6df40d1c2a70837411bea857bd0e2f3:prog_final/prog_final/pageAjouterActivite.xaml
                 FontSize="18" 
                 >
             </ComboBox>
@@ -90,13 +98,21 @@
                 x:Name="tbx_description"
                 Header="Description de l'activité:"
                 Margin="5 0 5 5"
+<<<<<<< HEAD:prog_final_69/prog_final/pageAjouterActivite.xaml
                 Width="280" Height="100"
+=======
+                Width="260" Height="100"
+>>>>>>> 323ec648f6df40d1c2a70837411bea857bd0e2f3:prog_final/prog_final/pageAjouterActivite.xaml
                 FontSize="18"
                 PlaceholderForeground="DarkGray"
                 AcceptsReturn="True"
                 TextWrapping="Wrap"
                 ScrollViewer.VerticalScrollBarVisibility="Auto"
+<<<<<<< HEAD:prog_final_69/prog_final/pageAjouterActivite.xaml
                 >
+=======
+                >   
+>>>>>>> 323ec648f6df40d1c2a70837411bea857bd0e2f3:prog_final/prog_final/pageAjouterActivite.xaml
             </TextBox>
             <TextBlock
                 x:Name="descriptionErr"
@@ -117,7 +133,11 @@
                 x:Name="tbx_cout_organisation"
                 Header="Coût d'organisation:"
                 Margin="5"
+<<<<<<< HEAD:prog_final_69/prog_final/pageAjouterActivite.xaml
                 Width="280" Height="75"
+=======
+                Width="260" Height="75"
+>>>>>>> 323ec648f6df40d1c2a70837411bea857bd0e2f3:prog_final/prog_final/pageAjouterActivite.xaml
                 FontSize="18"
                 PlaceholderForeground="DarkGray"
                 >
@@ -140,7 +160,11 @@
                 x:Name="tbx_prix_vente_client"
                 Header="Prix de vente par client:"
                 Margin="5"
+<<<<<<< HEAD:prog_final_69/prog_final/pageAjouterActivite.xaml
                 Width="280" Height="75"
+=======
+                Width="260" Height="75"
+>>>>>>> 323ec648f6df40d1c2a70837411bea857bd0e2f3:prog_final/prog_final/pageAjouterActivite.xaml
                 FontSize="18"
                 PlaceholderForeground="DarkGray"
                 >
@@ -177,6 +201,24 @@
         Liste des activités
         </TextBlock>
 
+<<<<<<< HEAD:prog_final_69/prog_final/pageAjouterActivite.xaml
+=======
+
+
+
+
+        <TextBlock
+        Grid.Row="0"
+        Grid.Column="1"
+        x:Name="titre_1"
+        FontSize="35"
+        HorizontalAlignment="Center"
+        Margin="5 25 5 0"
+        >
+        Liste des activités
+        </TextBlock>
+        
+>>>>>>> 323ec648f6df40d1c2a70837411bea857bd0e2f3:prog_final/prog_final/pageAjouterActivite.xaml
         <GridView x:Name="gv_activite" SelectionChanged="gv_activite_SelectionChanged" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="1" Grid.RowSpan="6">
             <GridView.ItemTemplate>
                 <DataTemplate x:DataType="local:Activite" >
@@ -267,7 +309,11 @@
                 x:Name="tbxModifier_nom_activite"
                 Header="Nom de l'activité:"
                 Margin="5"
+<<<<<<< HEAD:prog_final_69/prog_final/pageAjouterActivite.xaml
                 Width="280" Height="75"
+=======
+                Width="260" Height="75"
+>>>>>>> 323ec648f6df40d1c2a70837411bea857bd0e2f3:prog_final/prog_final/pageAjouterActivite.xaml
                 FontSize="18"
                 PlaceholderForeground="DarkGray"
                 >
@@ -290,7 +336,11 @@
                 x:Name="cbxModifier_type"
                 Header="Catégorie:"
                 Margin="5"
+<<<<<<< HEAD:prog_final_69/prog_final/pageAjouterActivite.xaml
                 Width="280" Height="75"
+=======
+                Width="260" Height="75"
+>>>>>>> 323ec648f6df40d1c2a70837411bea857bd0e2f3:prog_final/prog_final/pageAjouterActivite.xaml
                 FontSize="18" 
                 >
             </ComboBox>
@@ -312,7 +362,11 @@
                 x:Name="tbxModifier_description"
                 Header="Description de l'activité:"
                 Margin="5"
+<<<<<<< HEAD:prog_final_69/prog_final/pageAjouterActivite.xaml
                 Width="280" Height="100"
+=======
+                Width="260" Height="100"
+>>>>>>> 323ec648f6df40d1c2a70837411bea857bd0e2f3:prog_final/prog_final/pageAjouterActivite.xaml
                 FontSize="18"
                 PlaceholderForeground="DarkGray"
                 AcceptsReturn="True"
@@ -338,7 +392,11 @@
                 x:Name="tbxModifier_cout_organisation"
                 Header="Coût d'organisation:"
                 Margin="5"
+<<<<<<< HEAD:prog_final_69/prog_final/pageAjouterActivite.xaml
                 Width="280" Height="75"
+=======
+                Width="260" Height="75"
+>>>>>>> 323ec648f6df40d1c2a70837411bea857bd0e2f3:prog_final/prog_final/pageAjouterActivite.xaml
                 FontSize="18"
                 PlaceholderForeground="DarkGray"
                 >
@@ -361,7 +419,11 @@
                 x:Name="tbxModifier_prix_vente_client"
                 Header="Prix de vente par client:"
                 Margin="5"
+<<<<<<< HEAD:prog_final_69/prog_final/pageAjouterActivite.xaml
                 Width="280" Height="75"
+=======
+                Width="260" Height="75"
+>>>>>>> 323ec648f6df40d1c2a70837411bea857bd0e2f3:prog_final/prog_final/pageAjouterActivite.xaml
                 FontSize="18"
                 PlaceholderForeground="DarkGray"
                 >

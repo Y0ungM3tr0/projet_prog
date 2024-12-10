@@ -1,0 +1,235 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\SESSION 3\\PROG INTERFACE\\GitHub\\projet_prog\\prog_final\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|e:\\session 3\\prog interface\\github\\projet_prog\\prog_final\\prog_final\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|e:\\session 3\\prog interface\\github\\projet_prog\\prog_final\\prog_final\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|e:\\session 3\\prog interface\\github\\projet_prog\\prog_final\\prog_final\\pageajouteractivite.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\pageajouteractivite.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|e:\\session 3\\prog interface\\github\\projet_prog\\prog_final\\prog_final\\pageaffichageactivit\u00E9.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\pageaffichageactivit\u00E9.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|e:\\session 3\\prog interface\\github\\projet_prog\\prog_final\\prog_final\\pageaffichageadherent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\pageaffichageadherent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|e:\\session 3\\prog interface\\github\\projet_prog\\prog_final\\prog_final\\adherent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\adherent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|e:\\session 3\\prog interface\\github\\projet_prog\\prog_final\\prog_final\\pageajouteradherent.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\pageajouteradherent.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|e:\\session 3\\prog interface\\github\\projet_prog\\prog_final\\prog_final\\pageaffichageadherent.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\pageaffichageadherent.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|e:\\session 3\\prog interface\\github\\projet_prog\\prog_final\\prog_final\\pagestatistique.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\pagestatistique.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|e:\\session 3\\prog interface\\github\\projet_prog\\prog_final\\prog_final\\usercontrol1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\usercontrol1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|e:\\session 3\\prog interface\\github\\projet_prog\\prog_final\\prog_final\\blankpage1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\blankpage1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|e:\\session 3\\prog interface\\github\\projet_prog\\prog_final\\prog_final\\pageajouterseance.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\pageajouterseance.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "E:\\SESSION 3\\PROG INTERFACE\\GitHub\\projet_prog\\prog_final\\prog_final\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "prog_final\\MainWindow.xaml",
+              "ToolTip": "E:\\SESSION 3\\PROG INTERFACE\\GitHub\\projet_prog\\prog_final\\prog_final\\MainWindow.xaml",
+              "RelativeToolTip": "prog_final\\MainWindow.xaml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAB8AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-04T20:27:13.28Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "E:\\SESSION 3\\PROG INTERFACE\\GitHub\\projet_prog\\prog_final\\prog_final\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "prog_final\\MainWindow.xaml.cs",
+              "ToolTip": "E:\\SESSION 3\\PROG INTERFACE\\GitHub\\projet_prog\\prog_final\\prog_final\\MainWindow.xaml.cs",
+              "RelativeToolTip": "prog_final\\MainWindow.xaml.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAmwB8AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T16:00:16.831Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "pageAjouterAdherent.xaml.cs",
+              "DocumentMoniker": "E:\\SESSION 3\\PROG INTERFACE\\GitHub\\projet_prog\\prog_final\\prog_final\\pageAjouterAdherent.xaml.cs",
+              "RelativeDocumentMoniker": "prog_final\\pageAjouterAdherent.xaml.cs",
+              "ToolTip": "E:\\SESSION 3\\PROG INTERFACE\\GitHub\\projet_prog\\prog_final\\prog_final\\pageAjouterAdherent.xaml.cs",
+              "RelativeToolTip": "prog_final\\pageAjouterAdherent.xaml.cs",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAYwGoAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T23:07:57.15Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "pageAffichageAdherent.xaml.cs",
+              "DocumentMoniker": "E:\\SESSION 3\\PROG INTERFACE\\GitHub\\projet_prog\\prog_final\\prog_final\\pageAffichageAdherent.xaml.cs",
+              "RelativeDocumentMoniker": "prog_final\\pageAffichageAdherent.xaml.cs",
+              "ToolTip": "E:\\SESSION 3\\PROG INTERFACE\\GitHub\\projet_prog\\prog_final\\prog_final\\pageAffichageAdherent.xaml.cs",
+              "RelativeToolTip": "prog_final\\pageAffichageAdherent.xaml.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowDAAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T00:46:28.671Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Adherent.cs",
+              "DocumentMoniker": "E:\\SESSION 3\\PROG INTERFACE\\GitHub\\projet_prog\\prog_final\\prog_final\\Adherent.cs",
+              "RelativeDocumentMoniker": "prog_final\\Adherent.cs",
+              "ToolTip": "E:\\SESSION 3\\PROG INTERFACE\\GitHub\\projet_prog\\prog_final\\prog_final\\Adherent.cs",
+              "RelativeToolTip": "prog_final\\Adherent.cs",
+              "ViewState": "AgIAAIQAAAAAAAAAAAAswIkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T00:23:17.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "pageAffichageAdherent.xaml",
+              "DocumentMoniker": "E:\\SESSION 3\\PROG INTERFACE\\GitHub\\projet_prog\\prog_final\\prog_final\\pageAffichageAdherent.xaml",
+              "RelativeDocumentMoniker": "prog_final\\pageAffichageAdherent.xaml",
+              "ToolTip": "E:\\SESSION 3\\PROG INTERFACE\\GitHub\\projet_prog\\prog_final\\prog_final\\pageAffichageAdherent.xaml",
+              "RelativeToolTip": "prog_final\\pageAffichageAdherent.xaml",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAEIAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-10T00:22:14.504Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "pageAjouterActivite.xaml",
+              "DocumentMoniker": "E:\\SESSION 3\\PROG INTERFACE\\GitHub\\projet_prog\\prog_final\\prog_final\\pageAjouterActivite.xaml",
+              "RelativeDocumentMoniker": "prog_final\\pageAjouterActivite.xaml",
+              "ToolTip": "E:\\SESSION 3\\PROG INTERFACE\\GitHub\\projet_prog\\prog_final\\prog_final\\pageAjouterActivite.xaml",
+              "RelativeToolTip": "prog_final\\pageAjouterActivite.xaml",
+              "ViewState": "AgIAAEEBAAAAAAAAAAAAAEkBAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-10T00:06:03.204Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "pageAffichageActivit\u00E9.xaml",
+              "DocumentMoniker": "E:\\SESSION 3\\PROG INTERFACE\\GitHub\\projet_prog\\prog_final\\prog_final\\pageAffichageActivit\u00E9.xaml",
+              "RelativeDocumentMoniker": "prog_final\\pageAffichageActivit\u00E9.xaml",
+              "ToolTip": "E:\\SESSION 3\\PROG INTERFACE\\GitHub\\projet_prog\\prog_final\\prog_final\\pageAffichageActivit\u00E9.xaml",
+              "RelativeToolTip": "prog_final\\pageAffichageActivit\u00E9.xaml",
+              "ViewState": "AgIAACYAAAAAAAAAAAAAADAAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-10T00:04:59.843Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "pageStatistique.xaml",
+              "DocumentMoniker": "E:\\SESSION 3\\PROG INTERFACE\\GitHub\\projet_prog\\prog_final\\prog_final\\pageStatistique.xaml",
+              "RelativeDocumentMoniker": "prog_final\\pageStatistique.xaml",
+              "ToolTip": "E:\\SESSION 3\\PROG INTERFACE\\GitHub\\projet_prog\\prog_final\\prog_final\\pageStatistique.xaml",
+              "RelativeToolTip": "prog_final\\pageStatistique.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-10T00:04:52.018Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UserControl1.xaml",
+              "DocumentMoniker": "E:\\SESSION 3\\PROG INTERFACE\\GitHub\\projet_prog\\prog_final\\prog_final\\UserControl1.xaml",
+              "RelativeDocumentMoniker": "prog_final\\UserControl1.xaml",
+              "ToolTip": "E:\\SESSION 3\\PROG INTERFACE\\GitHub\\projet_prog\\prog_final\\prog_final\\UserControl1.xaml",
+              "RelativeToolTip": "prog_final\\UserControl1.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-10T00:04:44.45Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BlankPage1.xaml",
+              "DocumentMoniker": "E:\\SESSION 3\\PROG INTERFACE\\GitHub\\projet_prog\\prog_final\\prog_final\\BlankPage1.xaml",
+              "RelativeDocumentMoniker": "prog_final\\BlankPage1.xaml",
+              "ToolTip": "E:\\SESSION 3\\PROG INTERFACE\\GitHub\\projet_prog\\prog_final\\prog_final\\BlankPage1.xaml",
+              "RelativeToolTip": "prog_final\\BlankPage1.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-10T00:04:01.711Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "pageAjouterSeance.xaml",
+              "DocumentMoniker": "E:\\SESSION 3\\PROG INTERFACE\\GitHub\\projet_prog\\prog_final\\prog_final\\pageAjouterSeance.xaml",
+              "RelativeDocumentMoniker": "prog_final\\pageAjouterSeance.xaml",
+              "ToolTip": "E:\\SESSION 3\\PROG INTERFACE\\GitHub\\projet_prog\\prog_final\\prog_final\\pageAjouterSeance.xaml",
+              "RelativeToolTip": "prog_final\\pageAjouterSeance.xaml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAACEAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-10T00:02:52.504Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

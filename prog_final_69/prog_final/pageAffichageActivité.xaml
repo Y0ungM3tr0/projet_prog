@@ -41,7 +41,11 @@
                             </Grid.RowDefinitions>
 
                             <StackPanel Grid.Column="0" Grid.Row="0" HorizontalAlignment="Stretch">
+<<<<<<< HEAD:prog_final_69/prog_final/pageAffichageActivité.xaml
                                 <TextBlock Text="{x:Bind NomActivite}" FontSize="27" Margin="15 15 0 0" FontFamily="Arial rouded" TextTrimming="WordEllipsis"/>
+=======
+                                <TextBlock Text="{x:Bind NomActivite}" FontSize="25" Margin="15 15 0 0" FontFamily="Arial rouded" TextTrimming="WordEllipsis"/>
+>>>>>>> 323ec648f6df40d1c2a70837411bea857bd0e2f3:prog_final/prog_final/pageAffichageActivité.xaml
                             </StackPanel>
 
 
