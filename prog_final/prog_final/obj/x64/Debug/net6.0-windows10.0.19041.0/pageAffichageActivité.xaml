@@ -18,8 +18,8 @@
             <RowDefinition Height="10*" />
         </Grid.RowDefinitions>
 
-        <TextBlock x:ConnectionId='2' x:Name="titre" Grid.Row="0" FontSize="30" Margin="5" HorizontalAlignment="Center">
-            sceances
+        <TextBlock x:ConnectionId='2' x:Name="titre" Grid.Row="0" FontSize="35" Margin="5 25 5 20" HorizontalAlignment="Center">
+            Page d'affichage des séances
         </TextBlock>
 
         <GridView x:ConnectionId='3' x:Name="gv_seance" Grid.Row="1"                                               HorizontalAlignment="Center">
@@ -41,36 +41,36 @@
                             </Grid.RowDefinitions>
 
                             <StackPanel Grid.Column="0" Grid.Row="0" HorizontalAlignment="Stretch">
-                                <TextBlock x:ConnectionId='12'                             FontSize="25" Margin="15,15,0,0" FontFamily="Arial rouded" TextTrimming="WordEllipsis"/>
+                                <TextBlock x:ConnectionId='12'                             FontSize="25" Margin="15 15 0 0" FontFamily="Arial rouded" TextTrimming="WordEllipsis"/>
                             </StackPanel>
 
 
-                            <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" Margin="15,20,0,0" HorizontalAlignment="Stretch">
-                                <TextBlock FontSize="20" Margin="5">
+                            <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" Margin="15 20 0 0" HorizontalAlignment="Stretch">
+                                <TextBlock FontSize="25" Margin="5">
                                     <Run Text="Date:"/>
                                     <Run x:ConnectionId='11' FontWeight="Light"                                   />
                                 </TextBlock>
                             </StackPanel>
-                            <StackPanel Grid.Column="0" Grid.Row="2" Margin="15,20,0,0" HorizontalAlignment="Stretch">
-                                <TextBlock FontSize="20" Margin="5">
+                            <StackPanel Grid.Column="0" Grid.Row="2" Margin="15 20 0 0" HorizontalAlignment="Stretch">
+                                <TextBlock FontSize="25" Margin="5">
                                     <Run Text="Heure:"/>
                                     <Run x:ConnectionId='10' FontWeight="Light"                      />
                                 </TextBlock>
                             </StackPanel>
-                            <StackPanel Grid.Column="0" Grid.Row="3" Margin="15,20,0,0" HorizontalAlignment="Stretch">
-                                <TextBlock FontSize="20" Margin="5">
+                            <StackPanel Grid.Column="0" Grid.Row="3" Margin="15 20 0 0" HorizontalAlignment="Stretch">
+                                <TextBlock FontSize="25" Margin="5">
                                     <Run Text="Nombre d'inscription:"/>
                                     <Run x:ConnectionId='9' FontWeight="Light"                                />
                                 </TextBlock>
                             </StackPanel>
-                            <StackPanel Grid.Column="0" Grid.Row="4" Margin="15,20,0,0" HorizontalAlignment="Stretch">
-                                <TextBlock FontSize="20" Margin="5">
+                            <StackPanel Grid.Column="0" Grid.Row="4" Margin="15 20 0 0" HorizontalAlignment="Stretch">
+                                <TextBlock FontSize="25" Margin="5">
                                     <Run Text="Nombre de place(s):"/>
                                     <Run x:ConnectionId='8' FontWeight="Light"                                     />
                                 </TextBlock>
                             </StackPanel>
-                            <StackPanel Grid.Column="0" Grid.Row="5" Margin="15,20,0,0" HorizontalAlignment="Stretch">
-                                <TextBlock FontSize="20" Margin="5">
+                            <StackPanel Grid.Column="0" Grid.Row="5" Margin="15 20 0 15" HorizontalAlignment="Stretch">
+                                <TextBlock FontSize="25" Margin="5">
                                     <Run Text="Moyenne de l'appréciation:"/>
                                     <Run x:ConnectionId='7' FontWeight="Light"                                     />
                                 </TextBlock>
@@ -86,7 +86,7 @@
                                 FontSize="19"
                                 Width="150" Height="40"
                                                               
-                                >           
+                                >
                                 S'inscrire
                             </Button>
                         </Grid>

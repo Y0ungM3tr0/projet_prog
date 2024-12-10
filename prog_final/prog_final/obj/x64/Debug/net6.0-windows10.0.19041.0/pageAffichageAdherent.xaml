@@ -25,7 +25,7 @@
                     <StackPanel x:ConnectionId='14' x:Name="produitCard" Margin="15" Background="White" CornerRadius="5" Width="650" HorizontalAlignment="Center">
                         <Grid Margin="5">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="4*" />
+                                <ColumnDefinition Width="5*" />
                                 <ColumnDefinition Width="4*" />
                                 <ColumnDefinition Width="3*" />
                             </Grid.ColumnDefinitions>
@@ -39,7 +39,7 @@
                                 <TextBlock x:ConnectionId='17'                           FontSize="25" Margin="15,15,0,0" FontFamily="Arial rouded" TextTrimming="WordEllipsis"/>
                                 <TextBlock x:ConnectionId='18'                     FontSize="25" Margin="15,15,0,0" FontFamily="Arial rouded" TextTrimming="WordEllipsis"/>
                                 <TextBlock x:ConnectionId='19'                        FontSize="25" Margin="15,15,0,0" FontFamily="Arial rouded" TextTrimming="WordEllipsis"/>
-                                <TextBlock x:ConnectionId='20'                                FontSize="25" Margin="15,15,0,0" FontFamily="Arial rouded" TextTrimming="WordEllipsis"/>
+                                <TextBlock x:ConnectionId='20'                                       FontSize="25" Margin="15,15,0,0" FontFamily="Arial rouded" TextTrimming="WordEllipsis"/>
                                 <TextBlock x:ConnectionId='21'                     FontSize="25" Margin="15,15,0,0" FontFamily="Arial rouded" TextTrimming="WordEllipsis"/>
                                 <TextBlock x:ConnectionId='22'                         FontSize="25" Margin="15,15,0,0" FontFamily="Arial rouded" TextTrimming="WordEllipsis"/>
                             </StackPanel>

@@ -16,7 +16,7 @@
             >
             Navigation Adherent
             </TextBlock>
-            <NavigationViewItem x:ConnectionId='4' Icon="ViewAll" Content="Voir les futures seances" Name="pageAffichageActivité"/>
+            <NavigationViewItem x:ConnectionId='4' Icon="Calendar" Content="Voir les seances" Name="pageAffichageActivité"/>
             <NavigationViewItem x:ConnectionId='5' Icon="ViewAll" Content="Mes reservations" Name="pageAffichageReservation" Visibility="Collapsed"/>
             <NavigationViewItem x:ConnectionId='6' Icon="ViewAll" Content="Noter une seance" Name="pageAjouterAppreciation" Visibility="Collapsed"/>
             <NavigationViewItem x:ConnectionId='7' Icon="ViewAll" Content="Appréciations" Name="pageAffichageAppréciation" Visibility="Collapsed"/>
@@ -29,14 +29,14 @@
                 >
                 Navigation Admin
             </TextBlock>
-            <NavigationViewItem x:ConnectionId='9' Icon="Add" Content="Gestion Activites" Name="pageAjouterActivite" Visibility="Collapsed"/>
-            <NavigationViewItem x:ConnectionId='10' Icon="Manage" Content="Gestion Séances" Name="pageAjouterSeance" Visibility="Collapsed"/>
+            <NavigationViewItem x:ConnectionId='9' Icon="Add" Content="Gestion Activites" Name="pageAjouterActivite"/>
+            <NavigationViewItem x:ConnectionId='10' Icon="Manage" Content="Gestion Séances" Name="pageAjouterSeance"/>
 
-            <NavigationViewItem x:ConnectionId='11' Icon="ViewAll" Content="Affichage des Adherents" Name="pageAffichageAdherent" Visibility="Collapsed"/>
+            <NavigationViewItem x:ConnectionId='11' Icon="ViewAll" Content="Affichage des Adherents" Name="pageAffichageAdherent"/>
             <NavigationViewItem x:ConnectionId='12' Icon="Add" Content="Gestion Adherents" Name="pageAjouterAdherent" />
-            <NavigationViewItem x:ConnectionId='13' Icon="Add" Content="Gestion Categories" Name="pageAjouterCategorie" Visibility="Collapsed"/>
+            <NavigationViewItem x:ConnectionId='13' Icon="Add" Content="Gestion Categories" Name="pageAjouterCategorie"/>
 
-            <NavigationViewItem x:ConnectionId='14' Icon="ZoomIn" Content="Statistique" Name="pageStatistique" Visibility="Collapsed"/>
+            <NavigationViewItem x:ConnectionId='14' Icon="ZoomIn" Content="Statistique" Name="pageStatistique"/>
             <NavigationViewItemSeparator />
             <NavigationViewItem x:ConnectionId='15' Icon="Admin" Content="Connexion" Name="pageConnexion"/>
             <NavigationViewItem x:ConnectionId='16' Icon="Clear" Content="Deconnexion" Name="pageDeconnexion"/>

@@ -133,7 +133,7 @@ namespace prog_final
 
         public string Date_naissance_string
         {
-            get => date_naissance.ToString("yyyy-mm-dd");
+            get => date_naissance.ToString("yyyy-MM-dd");
 
         }
 

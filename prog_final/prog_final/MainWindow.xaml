@@ -16,7 +16,7 @@
             >
             Navigation Adherent
             </TextBlock>
-            <NavigationViewItem Icon="ViewAll" Content="Voir les futures seances" Name="pageAffichageActivité"/>
+            <NavigationViewItem Icon="Calendar" Content="Voir les seances" Name="pageAffichageActivité"/>
             <NavigationViewItem Icon="ViewAll" Content="Mes reservations" Name="pageAffichageReservation" Visibility="Collapsed"/>
             <NavigationViewItem Icon="ViewAll" Content="Noter une seance" Name="pageAjouterAppreciation" Visibility="Collapsed"/>
             <NavigationViewItem Icon="ViewAll" Content="Appréciations" Name="pageAffichageAppréciation" Visibility="Collapsed"/>
@@ -29,14 +29,14 @@
                 >
                 Navigation Admin
             </TextBlock>
-            <NavigationViewItem Icon="Add" Content="Gestion Activites" Name="pageAjouterActivite" Visibility="Collapsed"/>
-            <NavigationViewItem Icon="Manage" Content="Gestion Séances" Name="pageAjouterSeance" Visibility="Collapsed"/>
+            <NavigationViewItem Icon="PhoneBook" Content="Gestion des activités" Name="pageAjouterActivite"/>
+            <NavigationViewItem Icon="Manage" Content="Gestion des séances" Name="pageAjouterSeance"/>
 
-            <NavigationViewItem Icon="ViewAll" Content="Affichage des Adherents" Name="pageAffichageAdherent" Visibility="Collapsed"/>
+            <NavigationViewItem Icon="PhoneBook" Content="Affichage des Adherents" Name="pageAffichageAdherent"/>
             <NavigationViewItem Icon="Add" Content="Gestion Adherents" Name="pageAjouterAdherent" />
-            <NavigationViewItem Icon="Add" Content="Gestion Categories" Name="pageAjouterCategorie" Visibility="Collapsed"/>
+            <NavigationViewItem Icon="Add" Content="Gestion Categories" Name="pageAjouterCategorie"/>
 
-            <NavigationViewItem Icon="ZoomIn" Content="Statistique" Name="pageStatistique" Visibility="Collapsed"/>
+            <NavigationViewItem Icon="ZoomIn" Content="Statistique" Name="pageStatistique"/>
             <NavigationViewItemSeparator />
             <NavigationViewItem Icon="Admin" Content="Connexion" Name="pageConnexion"/>
             <NavigationViewItem Icon="Clear" Content="Deconnexion" Name="pageDeconnexion"/>
