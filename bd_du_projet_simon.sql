@@ -471,6 +471,18 @@ SELECT matricule,
 FROM adherent;
 
 
+-- Afficher les informations d'une activité avec sa catégorie (au lieu de l'id de la catégorie)
+CREATE VIEW infos_activite AS
+SELECT a.idActivite,
+       a.nomActivite,
+       ca.type,
+       a.description,
+       a.cout_organisation,
+       a.prix_vente_client
+FROM activite a
+INNER JOIN categorie_activite ca on a.idCategorie = ca.idCategorie;
+
+
 -- Afficher les informations d'une séance avec son activité (au lieu de l'id de l'activite)
 CREATE VIEW infos_seance AS
 SELECT s.idSeance,
