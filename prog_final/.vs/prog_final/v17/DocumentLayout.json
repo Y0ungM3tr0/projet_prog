@@ -66,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
@@ -79,8 +79,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-12-04T20:27:13.28Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -93,8 +92,7 @@
               "ViewState": "AgIAALUAAAAAAAAAAAAkwB8AAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-23T16:00:16.831Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -107,8 +105,15 @@
               "ViewState": "AgIAAI8AAAAAAAAAAAAkwGoAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-09T23:07:57.15Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
@@ -118,7 +123,7 @@
               "RelativeDocumentMoniker": "prog_final\\App.xaml.cs",
               "ToolTip": "D:\\SESSION 3\\PROG INTERFACE\\GitHub\\projet_prog\\prog_final\\prog_final\\App.xaml.cs",
               "RelativeToolTip": "prog_final\\App.xaml.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAgwCgAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACgAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-10T15:09:21.323Z",
               "EditorCaption": ""
@@ -133,16 +138,7 @@
               "RelativeToolTip": "prog_final\\App.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-10T15:28:09.794Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "WhenOpened": "2024-12-10T15:28:09.794Z"
             },
             {
               "$type": "Document",
@@ -154,8 +150,7 @@
               "RelativeToolTip": "prog_final\\pageAffichageAdherent.xaml.cs",
               "ViewState": "AgIAAHEAAAAAAAAAAAAqwDAAAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T00:46:28.671Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T00:46:28.671Z"
             },
             {
               "$type": "Document",
@@ -167,8 +162,7 @@
               "RelativeToolTip": "prog_final\\Adherent.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAIkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T00:23:17.596Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T00:23:17.596Z"
             },
             {
               "$type": "Document",
@@ -180,8 +174,7 @@
               "RelativeToolTip": "prog_final\\pageAffichageAdherent.xaml",
               "ViewState": "AgIAAMkAAAAAAAAAAAAAAEIAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-10T00:22:14.504Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T00:22:14.504Z"
             },
             {
               "$type": "Document",
@@ -193,8 +186,7 @@
               "RelativeToolTip": "prog_final\\pageAjouterActivite.xaml",
               "ViewState": "AgIAAKcBAAAAAAAAAAAAAEkBAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-10T00:06:03.204Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T00:06:03.204Z"
             },
             {
               "$type": "Document",
@@ -206,8 +198,7 @@
               "RelativeToolTip": "prog_final\\pageAffichageActivit\u00E9.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-10T00:04:59.843Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T00:04:59.843Z"
             },
             {
               "$type": "Document",
@@ -219,8 +210,7 @@
               "RelativeToolTip": "prog_final\\pageStatistique.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-10T00:04:52.018Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T00:04:52.018Z"
             },
             {
               "$type": "Document",
@@ -232,8 +222,7 @@
               "RelativeToolTip": "prog_final\\UserControl1.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-10T00:04:44.45Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T00:04:44.45Z"
             },
             {
               "$type": "Document",
@@ -245,8 +234,7 @@
               "RelativeToolTip": "prog_final\\BlankPage1.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-10T00:04:01.711Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T00:04:01.711Z"
             },
             {
               "$type": "Document",
@@ -258,8 +246,7 @@
               "RelativeToolTip": "prog_final\\pageAjouterSeance.xaml",
               "ViewState": "AgIAAB4AAAAAAAAAAIBZwCEAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-10T00:02:52.504Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T00:02:52.504Z"
             }
           ]
         }
