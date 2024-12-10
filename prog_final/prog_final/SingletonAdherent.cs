@@ -214,14 +214,31 @@ namespace prog_final
 
                 con.Close();
             }
-            catch (Exception ex)
-            {
-                if (con.State == System.Data.ConnectionState.Open)
-                {
-                    con.Close();
-                }
+            //catch (Exception ex)
+            //{
+            //    if (con.State == System.Data.ConnectionState.Open)
+            //    {
+            //        con.Close();
+            //    }
 
-                Console.WriteLine(ex.Message);
+            //    Console.WriteLine(ex.Message);
+            //}
+
+            catch (MySqlException ex)
+            {
+                if (ex.SqlState == "02000")
+                {
+                    var dialog = new ContentDialog
+                    {
+                        Content = ex.Message,
+                    };
+                    _ = dialog.ShowAsync();
+                    Console.WriteLine($"{ex.Message}");
+                }
+                else
+                {
+                    Console.WriteLine($"Erreur innatendue: {ex.Message}");
+                }
             }
             getToutAdherents();
         }

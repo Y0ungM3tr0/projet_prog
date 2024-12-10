@@ -15,6 +15,7 @@
     <None Remove="BlankPage1.xaml" />
     <None Remove="DialogAdmin.xaml" />
     <None Remove="DialogDeconnexion.xaml" />
+    <None Remove="DialogErreur.xaml" />
     <None Remove="pageAffichageActivité.xaml" />
     <None Remove="pageAffichageAdherent.xaml" />
     <None Remove="pageAffichageAppréciation.xaml" />
@@ -55,6 +56,11 @@
   -->
   <ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
     <ProjectCapability Include="Msix" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="DialogErreur.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="pageStatistique3.xaml">
