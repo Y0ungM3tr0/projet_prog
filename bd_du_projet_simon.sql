@@ -883,3 +883,20 @@ DELIMITER ;
 
 
 -- MODIFICATIONS À VÉRIFIER
+DELIMITER //
+
+CREATE FUNCTION VerifierCategorieAssociee(p_idCategorie VARCHAR(110))
+RETURNS INT
+DETERMINISTIC
+BEGIN
+    DECLARE result INT DEFAULT 0;
+
+    -- Vérifier si la catégorie est associée à des activités
+    IF EXISTS(SELECT 1 FROM activite WHERE idCategorie = p_idCategorie) THEN
+        SET result = 1; -- Retourne 1 si la catégorie est utilisée dans des activités
+    END IF;
+
+    RETURN result;
+END //
+
+DELIMITER ;
