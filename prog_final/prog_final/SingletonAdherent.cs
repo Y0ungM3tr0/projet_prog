@@ -79,8 +79,7 @@ namespace prog_final
                     int age= r.GetInt32("age");
 
                     Adherent adherent = new Adherent(matricule, nom, prenom, adresse, date_naissance, age);
-                    Adherent adherentTest = new Adherent("ED-2000-01", "Mac Donald", "Etienne", "123 Rue Test", new DateTime(2000 - 01 - 01), 25);
-                    liste_des_adherents.Add(adherentTest);
+                    liste_des_adherents.Add(adherent);
                 }
 
                 con.Close();
@@ -215,28 +214,14 @@ namespace prog_final
 
                 con.Close();
             }
-            //catch (Exception ex)
-            //{
-            //    if (con.State == System.Data.ConnectionState.Open)
-            //    {
-            //        con.Close();
-            //    }
-
-            //    Console.WriteLine(ex.Message);
-            //}
-
-            catch (MySqlException ex)
+            catch (Exception ex)
             {
-                //if (ex.SqlState == "02000")
-                //{
-                //    Console.WriteLine($"Trigger Error: {ex.Message}");
-                //}
-                //else
-                //{
-                //    Console.WriteLine($"Erreur innatendue: {ex.Message}");
-                //}
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    con.Close();
+                }
 
-                /*MySqlExceptionHandler.HandleMySqlException(ex, "seance")*/;
+                Console.WriteLine(ex.Message);
             }
             getToutAdherents();
         }

@@ -88,10 +88,10 @@
 
             <TextBlock 
                 x:Name="titre"
-                FontSize="40"
-                FontWeight="Light"
+                FontSize="35"
                 HorizontalAlignment="Center"
                 Grid.Row="0"
+                Margin="5 25 5 5"
                 >
                 Modifier l'adherent: 
             </TextBlock>

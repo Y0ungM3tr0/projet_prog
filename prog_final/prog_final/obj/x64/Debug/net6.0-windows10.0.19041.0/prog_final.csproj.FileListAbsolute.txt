@@ -1017,11 +1017,6 @@ D:\SESSION 3\PROG INTERFACE\GitHub\projet_prog\prog_final\prog_final\obj\x64\Deb
 D:\SESSION 3\PROG INTERFACE\GitHub\projet_prog\prog_final\prog_final\obj\x64\Debug\net6.0-windows10.0.19041.0\qualifiers.txt.intermediate
 D:\SESSION 3\PROG INTERFACE\GitHub\projet_prog\prog_final\prog_final\obj\x64\Debug\net6.0-windows10.0.19041.0\MultipleQualifiersPerDimensionFound.txt
 D:\SESSION 3\PROG INTERFACE\GitHub\projet_prog\prog_final\prog_final\obj\x64\Debug\net6.0-windows10.0.19041.0\ProjectArchitectures.txt
-D:\SESSION 3\PROG INTERFACE\GitHub\projet_prog\prog_final\prog_final\bin\x64\Debug\net6.0-windows10.0.19041.0\DialogErreur.xbf
-D:\SESSION 3\PROG INTERFACE\GitHub\projet_prog\prog_final\prog_final\obj\x64\Debug\net6.0-windows10.0.19041.0\DialogErreur.g.i.cs
-D:\SESSION 3\PROG INTERFACE\GitHub\projet_prog\prog_final\prog_final\obj\x64\Debug\net6.0-windows10.0.19041.0\DialogErreur.g.cs
-D:\SESSION 3\PROG INTERFACE\GitHub\projet_prog\prog_final\prog_final\obj\x64\Debug\net6.0-windows10.0.19041.0\DialogErreur.xaml
-D:\SESSION 3\PROG INTERFACE\GitHub\projet_prog\prog_final\prog_final\obj\x64\Debug\net6.0-windows10.0.19041.0\DialogErreur.xbf
 Z:\D\SESSION 3\PROG INTERFACE\GitHub\projet_prog\prog_final\prog_final\bin\x64\Debug\net6.0-windows10.0.19041.0\prog_final.exe
 Z:\D\SESSION 3\PROG INTERFACE\GitHub\projet_prog\prog_final\prog_final\bin\x64\Debug\net6.0-windows10.0.19041.0\App.xbf
 Z:\D\SESSION 3\PROG INTERFACE\GitHub\projet_prog\prog_final\prog_final\bin\x64\Debug\net6.0-windows10.0.19041.0\BlankPage1.xbf

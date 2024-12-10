@@ -25,11 +25,12 @@
 
         <TextBlock 
             x:Name="titre"
-            FontSize="30"
+            FontSize="35"
             HorizontalAlignment="Center"
             Grid.Row="0"
+            Margin="5 25 5 5"
             >
-            ajouter un adherent
+            Ajouter un adhérent
         </TextBlock>
 
         <StackPanel Grid.Row="1" Grid.Column="0">

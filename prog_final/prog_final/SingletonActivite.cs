@@ -1,4 +1,6 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+using MySql.Data.MySqlClient;
 using Mysqlx.Crud;
 using System;
 using System.Collections.Generic;
@@ -172,7 +174,7 @@ namespace prog_final
             getToutActivite();
         }
         // ajoute les Activites dans la bd
-        public void supprimerActivite(int idActivite)
+        public async void supprimerActivite(int idActivite)
         {
             try
             {

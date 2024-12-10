@@ -25,10 +25,11 @@
             Grid.Row="0"
             Grid.Column="0"
             x:Name="titre"
-            FontSize="25"
+            FontSize="35"
             HorizontalAlignment="Center"
+            Margin="5 25 5 5"
             >
-            ajouter une categories
+            Ajouter une catégorie
         </TextBlock>
 
         <StackPanel 
@@ -37,11 +38,10 @@
             >
             <TextBox
                 x:Name="tbx_type"
-                Header="categorie:"
+                Header="Catégorie:"
                 Margin="5"
                 Width="240" Height="75"
-                FontSize="18" 
-                PlaceholderText="ex: "
+                FontSize="18"
                 PlaceholderForeground="DarkGray"
                 >   
             </TextBox>
