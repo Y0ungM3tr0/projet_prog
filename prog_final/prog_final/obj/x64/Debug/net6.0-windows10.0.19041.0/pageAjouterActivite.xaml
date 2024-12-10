@@ -12,7 +12,7 @@
     <Grid Background="LightGray">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="3*"/>
-            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="5*"/>
             <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -33,25 +33,25 @@
             x:Name="titre"
             FontSize="35"
             HorizontalAlignment="Center"
+            Margin="5 25 5 5"
             >
-            ajouter une activitée
+            Ajouter une activité
         </TextBlock>
 
         <StackPanel 
             Grid.Row="1" Grid.Column="0"
             HorizontalAlignment="Center"
             >
-            <TextBox x:ConnectionId='34'
+            <TextBox x:ConnectionId='35'
                 x:Name="tbx_nom_activite"
-                Header="nom_activite:"
+                Header="Nom de l'activité:"
                 Margin="5"
-                Width="240" Height="75"
-                FontSize="18" 
-                PlaceholderText="ex: "
+                Width="260" Height="75"
+                FontSize="18"
                 PlaceholderForeground="DarkGray"
                 >
             </TextBox>
-            <TextBlock x:ConnectionId='35'
+            <TextBlock x:ConnectionId='36'
                 x:Name="nom_activiteErr"
                 FontSize="15"
                 HorizontalAlignment="Center"
@@ -65,15 +65,15 @@
             Grid.Row="2" Grid.Column="0"
             HorizontalAlignment="Center"
             >
-            <ComboBox x:ConnectionId='32'
+            <ComboBox x:ConnectionId='33'
                 x:Name="cbx_type"
-                Header="Categorie:"
+                Header="Catégorie de l'activité:"
                 Margin="5"
-                Width="240" Height="75"
+                Width="260" Height="75"
                 FontSize="18" 
                 >
             </ComboBox>
-            <TextBlock x:ConnectionId='33'
+            <TextBlock x:ConnectionId='34'
                 x:Name="typeErr"
                 FontSize="15"
                 HorizontalAlignment="Center"
@@ -87,17 +87,19 @@
             Grid.Row="3" Grid.Column="0"
             HorizontalAlignment="Center"
             >
-            <TextBox x:ConnectionId='30'
+            <TextBox x:ConnectionId='31'
                 x:Name="tbx_description"
-                Header="description:"
-                Margin="5"
-                Width="240" Height="75"
-                FontSize="18" 
-                PlaceholderText="ex: "
+                Header="Description de l'activité:"
+                Margin="5 0 5 5"
+                Width="260" Height="100"
+                FontSize="18"
                 PlaceholderForeground="DarkGray"
+                AcceptsReturn="True"
+                TextWrapping="Wrap"
+                ScrollViewer.VerticalScrollBarVisibility="Auto"
                 >   
             </TextBox>
-            <TextBlock x:ConnectionId='31'
+            <TextBlock x:ConnectionId='32'
                 x:Name="descriptionErr"
                 FontSize="15"
                 HorizontalAlignment="Center"
@@ -112,17 +114,16 @@
             Grid.Row="4" Grid.Column="0"
             HorizontalAlignment="Center"
             >
-            <TextBox x:ConnectionId='28'
+            <TextBox x:ConnectionId='29'
                 x:Name="tbx_cout_organisation"
-                Header="tbx_cout_organisation:"
+                Header="Coût d'organisation:"
                 Margin="5"
-                Width="240" Height="75"
-                FontSize="18" 
-                PlaceholderText="ex: "
+                Width="260" Height="75"
+                FontSize="18"
                 PlaceholderForeground="DarkGray"
                 >
             </TextBox>
-            <TextBlock x:ConnectionId='29'
+            <TextBlock x:ConnectionId='30'
                 x:Name="cout_organisationErr"
                 FontSize="15"
                 HorizontalAlignment="Center"
@@ -136,17 +137,16 @@
             Grid.Row="5" Grid.Column="0"
             HorizontalAlignment="Center"
             >
-            <TextBox x:ConnectionId='26'
+            <TextBox x:ConnectionId='27'
                 x:Name="tbx_prix_vente_client"
-                Header="tbx_prix_vente_client:"
+                Header="Prix de vente par client:"
                 Margin="5"
-                Width="240" Height="75"
-                FontSize="18" 
-                PlaceholderText="ex: "
+                Width="260" Height="75"
+                FontSize="18"
                 PlaceholderForeground="DarkGray"
                 >
             </TextBox>
-            <TextBlock x:ConnectionId='27'
+            <TextBlock x:ConnectionId='28'
                 x:Name="prix_vente_clientErr"
                 FontSize="15"
                 HorizontalAlignment="Center"
@@ -162,27 +162,31 @@
             Width="100" Height="40"
             HorizontalAlignment="Center"
                                  
+            FontSize="15"
             >
-            ajouter
+            <SymbolIcon Symbol="Add"/>
         </Button>
 
 
 
-        <TextBox 
-            Header="recherche activite (par nom)"
-            PlaceholderText="ex: gym"
-            Grid.Column="1"
-            Grid.Row="0"
-            Height="90" Width="400"
-            FontSize="18"
-            >
-            
-        </TextBox>
+
+
+
+        <TextBlock x:ConnectionId='4'
+        Grid.Row="0"
+        Grid.Column="1"
+        x:Name="titre_1"
+        FontSize="35"
+        HorizontalAlignment="Center"
+        Margin="5 25 5 0"
+        >
+        Liste des activités
+        </TextBlock>
         
-        <GridView x:ConnectionId='4' x:Name="gv_activite"                                                 HorizontalAlignment="Center" Grid.Column="1" Grid.Row="1" Grid.RowSpan="6">
+        <GridView x:ConnectionId='5' x:Name="gv_activite"                                                 HorizontalAlignment="Center" Grid.Column="1" Grid.Row="1" Grid.RowSpan="6">
             <GridView.ItemTemplate>
                 <DataTemplate                             >
-                    <StackPanel x:ConnectionId='18' x:Name="produitCard" Margin="15" Background="White" CornerRadius="5" Width="450" HorizontalAlignment="Stretch">
+                    <StackPanel x:ConnectionId='19' x:Name="produitCard" Margin="15" Background="White" CornerRadius="5" Width="575" Height="285" HorizontalAlignment="Stretch">
                         <Grid Margin="5">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*" />
@@ -197,15 +201,34 @@
                                 <RowDefinition Height="*" />
                             </Grid.RowDefinitions>
 
-                            <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" HorizontalAlignment="Stretch">
-                                <TextBlock x:ConnectionId='21'                              FontSize="25" Margin="15,15,0,0" FontFamily="Arial rouded" TextTrimming="WordEllipsis"/>
-                                <TextBlock x:ConnectionId='22'                             FontSize="25" Margin="15,15,0,0" FontFamily="Arial rouded" TextTrimming="WordEllipsis"/>
-                                <TextBlock x:ConnectionId='23'                               FontSize="25" Margin="15,15,0,0" FontFamily="Arial rouded" TextTrimming="WordEllipsis"/>
-                                <TextBlock x:ConnectionId='24'                                   FontSize="25" Margin="15,15,0,0" FontFamily="Arial rouded" TextTrimming="WordEllipsis"/>
-                                <TextBlock x:ConnectionId='25'                                   FontSize="25" Margin="15,15,0,0" FontFamily="Arial rouded" TextTrimming="WordEllipsis"/>
+                            <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" HorizontalAlignment="Stretch" Margin="15 5 15 0">
+                                <TextBlock FontSize="20" Margin="5">
+                                    <Run Text="Activité:"/>
+                                    <Run x:ConnectionId='26' FontWeight="Light"                             />
+                                </TextBlock>
+
+                                <TextBlock FontSize="20" Margin="5" TextWrapping="Wrap">
+                                    <Run Text="Description:"/>
+                                    <Run x:ConnectionId='25' FontWeight="Light"                            />
+                                </TextBlock>
+
+                                <TextBlock FontSize="20" Margin="5">
+                                    <Run Text="Catégorie:"/>
+                                    <Run x:ConnectionId='24' FontWeight="Light"                              />
+                                </TextBlock>
+
+                                <TextBlock FontSize="20" Margin="5">
+                                    <Run Text="Coût d'organisation:"/>
+                                    <Run x:ConnectionId='23' FontWeight="Light"                                  />
+                                </TextBlock>
+
+                                <TextBlock FontSize="20" Margin="5">
+                                    <Run Text="Prix de vente par client:"/>
+                                    <Run x:ConnectionId='22' FontWeight="Light"                                  />
+                                </TextBlock>
                             </StackPanel>
 
-                            <Button x:ConnectionId='19' 
+                            <Button x:ConnectionId='20' 
                                                     
                                 HorizontalAlignment="Center"
                                 Grid.Column="0"
@@ -213,17 +236,17 @@
                                 FontSize="19"
                                 Width="150" Height="40"
                                 >
-                                modifier
+                                <SymbolIcon Symbol="Edit"/>
                             </Button>
-                            <Button x:ConnectionId='20' 
+                            <Button x:ConnectionId='21' 
                                                       
                                 HorizontalAlignment="Center"
                                 Grid.Column="1"
                                 Grid.Row="5"
                                 FontSize="19"
                                 Width="150" Height="40"
-                                >   
-                                Supprimer
+                                >
+                                <SymbolIcon Symbol="Delete" Foreground="Red"/>
                             </Button>
                         </Grid>
                     </StackPanel>
@@ -242,31 +265,31 @@
 
 
 
-        <TextBlock x:ConnectionId='5'
+        <TextBlock x:ConnectionId='6'
             Grid.Row="0"
             Grid.Column="2"
             x:Name="titre_modifier"
             FontSize="35"
             HorizontalAlignment="Center"
+            Margin="5 25 5 5"
             >
-            modifier une activitée
+            Modifier une activité
         </TextBlock>
 
         <StackPanel 
             Grid.Row="1" Grid.Column="2"
             HorizontalAlignment="Center"
             >
-            <TextBox x:ConnectionId='15'
+            <TextBox x:ConnectionId='16'
                 x:Name="tbxModifier_nom_activite"
-                Header="nom_activite:"
+                Header="Nom de l'activité:"
                 Margin="5"
-                Width="240" Height="75"
-                FontSize="18" 
-                PlaceholderText="ex: "
+                Width="260" Height="75"
+                FontSize="18"
                 PlaceholderForeground="DarkGray"
                 >   
             </TextBox>
-            <TextBlock x:ConnectionId='16'
+            <TextBlock x:ConnectionId='17'
                 x:Name="nom_activiteErrModifier"
                 FontSize="15"
                 HorizontalAlignment="Center"
@@ -280,15 +303,15 @@
             Grid.Row="2" Grid.Column="2"
             HorizontalAlignment="Center"
             >
-            <ComboBox x:ConnectionId='13'
+            <ComboBox x:ConnectionId='14'
                 x:Name="cbxModifier_type"
-                Header="Categorie:"
+                Header="Catégorie:"
                 Margin="5"
-                Width="240" Height="75"
+                Width="260" Height="75"
                 FontSize="18" 
                 >
             </ComboBox>
-            <TextBlock x:ConnectionId='14'
+            <TextBlock x:ConnectionId='15'
                 x:Name="typeErrModifier"
                 FontSize="15"
                 HorizontalAlignment="Center"
@@ -302,17 +325,19 @@
             Grid.Row="3" Grid.Column="2"
             HorizontalAlignment="Center"
             >
-            <TextBox x:ConnectionId='11'
+            <TextBox x:ConnectionId='12'
                 x:Name="tbxModifier_description"
-                Header="description:"
+                Header="Description de l'activité:"
                 Margin="5"
-                Width="240" Height="75"
-                FontSize="18" 
-                PlaceholderText="ex: "
+                Width="260" Height="100"
+                FontSize="18"
                 PlaceholderForeground="DarkGray"
+                AcceptsReturn="True"
+                TextWrapping="Wrap"
+                ScrollViewer.VerticalScrollBarVisibility="Auto"
                 >
             </TextBox>
-            <TextBlock x:ConnectionId='12'
+            <TextBlock x:ConnectionId='13'
                 x:Name="descriptionErrModifier"
                 FontSize="15"
                 HorizontalAlignment="Center"
@@ -326,17 +351,16 @@
             Grid.Row="4" Grid.Column="2"
             HorizontalAlignment="Center"
             >
-            <TextBox x:ConnectionId='9'
+            <TextBox x:ConnectionId='10'
                 x:Name="tbxModifier_cout_organisation"
-                Header="tbx_cout_organisation:"
+                Header="Coût d'organisation:"
                 Margin="5"
-                Width="240" Height="75"
-                FontSize="18" 
-                PlaceholderText="ex: "
+                Width="260" Height="75"
+                FontSize="18"
                 PlaceholderForeground="DarkGray"
                 >
             </TextBox>
-            <TextBlock x:ConnectionId='10'
+            <TextBlock x:ConnectionId='11'
                 x:Name="cout_organisationErrModifier"
                 FontSize="15"
                 HorizontalAlignment="Center"
@@ -350,17 +374,16 @@
             Grid.Row="5" Grid.Column="2"
             HorizontalAlignment="Center"
             >
-            <TextBox x:ConnectionId='7'
+            <TextBox x:ConnectionId='8'
                 x:Name="tbxModifier_prix_vente_client"
-                Header="tbx_prix_vente_client:"
+                Header="Prix de vente par client:"
                 Margin="5"
-                Width="240" Height="75"
-                FontSize="18" 
-                PlaceholderText="ex: "
+                Width="260" Height="75"
+                FontSize="18"
                 PlaceholderForeground="DarkGray"
                 >
             </TextBox>
-            <TextBlock x:ConnectionId='8'
+            <TextBlock x:ConnectionId='9'
                 x:Name="prix_vente_clientErrModifier"
                 FontSize="15"
                 HorizontalAlignment="Center"
@@ -370,14 +393,15 @@
             </TextBlock>
         </StackPanel>
 
-        <Button x:ConnectionId='6'
+        <Button x:ConnectionId='7'
             Grid.Row="6"
             Grid.Column="2"
             Width="100" Height="40"
             HorizontalAlignment="Center"
                                       
+            FontSize="15"
             >
-            modifier
+            <SymbolIcon Symbol="Edit"/>
         </Button>
 
 
