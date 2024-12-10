@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentDialog
+    x:Class="prog_final.DialogAdmin"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:prog_final"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    >
+
+    <StackPanel>
+        <StackPanel Margin="15" HorizontalAlignment="Center">
+            <CheckBox x:ConnectionId='11' 
+                x:Name="cbxAdmin"
+                                                
+                >
+                Adminstrateur
+            </CheckBox>
+            <CheckBox x:ConnectionId='12'
+                x:Name="cbxAdherent"
+                                                   
+                >
+                Adherent
+            </CheckBox>
+            <TextBlock x:ConnectionId='13'
+                x:Name="messageErr_checkbx"
+                Foreground="DarkRed"
+                HorizontalAlignment="Center"
+                FontSize="15"
+                Margin="2"
+                >
+            </TextBlock>
+        </StackPanel>
+
+        <StackPanel x:ConnectionId='2' x:Name="stckpnl_admin" HorizontalAlignment="Center" Width="350" Visibility="Collapsed">
+            <TextBox x:ConnectionId='8' 
+                x:Name="tbx_userAdmin" 
+                Margin="5"
+                PlaceholderText="numéro d'identification"
+            />
+            <PasswordBox x:ConnectionId='9' 
+                x:Name="pwd_userAdmin" 
+                Margin="5" 
+                PlaceholderText="mot de passe"
+            />
+            <TextBlock x:ConnectionId='10'
+                x:Name="messageErr_tbx_userAdmin"
+                Foreground="DarkRed"
+                HorizontalAlignment="Center"
+                FontSize="15"
+                Margin="2"
+                >
+            </TextBlock>
+        </StackPanel>
+
+        <StackPanel x:ConnectionId='3' x:Name="stckpnl_adherent" HorizontalAlignment="Center" Width="350">
+            <TextBox x:ConnectionId='6' 
+                x:Name="tbx_userAdherent" 
+                Margin="5"
+                PlaceholderText="matricule"
+            />
+            <TextBlock x:ConnectionId='7'
+                x:Name="messageErr_tbx_userAdherent"
+                Foreground="DarkRed"
+                HorizontalAlignment="Center"
+                FontSize="15"
+                Margin="2"
+                >
+            </TextBlock>
+        </StackPanel>
+
+        <Grid Margin="0,20,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <Button x:ConnectionId='4'
+                x:Name="loginbtn"
+                Grid.Column="0"
+                HorizontalAlignment="Left"
+                                    
+                >
+                Se connecter
+            </Button>
+            <Button x:ConnectionId='5'
+                x:Name="closeBtn"
+                Grid.Column="1"
+                HorizontalAlignment="Right"
+                                      
+                >
+                Annuler
+            </Button>
+        </Grid>
+    </StackPanel>
+</ContentDialog>
+

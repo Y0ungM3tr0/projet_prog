@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="prog_final.pageAffichageAdherent"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:prog_final"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="LightGray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+
+        <GridView x:Name="gv_adherent" SelectionChanged="gv_adherent_SelectionChanged" HorizontalAlignment="Center">
+            <GridView.ItemTemplate>
+                <DataTemplate x:DataType="local:Adherent" >
+                    <StackPanel x:Name="produitCard" Margin="15" Background="White" CornerRadius="5" Width="650" HorizontalAlignment="Center">
+                        <Grid Margin="5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="7*" />
+                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition Width="3*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="2*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="2*" />
+                            </Grid.RowDefinitions>
+
+                            <StackPanel Grid.Column="0" Grid.Row="0" HorizontalAlignment="Stretch">
+                                <TextBlock Margin="15,15,0,0" FontSize="25">
+                                    <Run Text="Matricule:"/>
+                                    <Run FontWeight="Light" Text="{x:Bind Matricule}"/>
+                                </TextBlock>
+                                <TextBlock Margin="15,15,0,0" FontSize="25">
+                                    <Run Text="Prenom:"/>
+                                    <Run FontWeight="Light" Text="{x:Bind Prenom}"/>
+                                </TextBlock>
+                                <TextBlock Margin="15,15,0,0" FontSize="25">
+                                    <Run Text="Nom:"/>
+                                    <Run FontWeight="Light" Text="{x:Bind Nom}"/>
+                                </TextBlock>
+                                <TextBlock Margin="15,15,0,0" FontSize="25">
+                                    <Run Text="Adresse:"/>
+                                    <Run FontWeight="Light" Text="{x:Bind Adresse}"/>
+                                </TextBlock>
+                                <TextBlock Margin="15,15,0,0" FontSize="25">
+                                    <Run Text="Date de naissance:"/>
+                                    <Run FontWeight="Light" Text="{x:Bind Date_naissance_string}"/>
+                                </TextBlock>
+                                <TextBlock Margin="15,15,0,0" FontSize="25">
+                                    <Run Text="Age:"/>
+                                    <Run FontWeight="Light" Text="{x:Bind Age}"/>
+                                </TextBlock>
+                            </StackPanel>
+
+                            <Button 
+                                Click="btn_modifier_Click"
+                                VerticalAlignment="Center"
+                                Grid.Column="2"
+                                Grid.Row="0"
+                                FontSize="19"
+                                Width="150" Height="40"
+                                >
+                                <SymbolIcon Symbol="Edit"/>
+                            </Button>
+
+                            <Button 
+                                Click="btn_Supp_Click"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Grid.Column="2"
+                                Grid.Row="1"
+                                FontSize="19"
+                                Width="150" Height="40"
+                                >
+                                <SymbolIcon Symbol="Delete" Foreground="Red"/>
+                            </Button>
+                        </Grid>
+                    </StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+
+        <Grid Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock 
+                x:Name="titre"
+                FontSize="40"
+                Margin="0 30 0 0"
+                FontWeight="Light"
+                HorizontalAlignment="Center"
+                Grid.Row="0"
+                >
+                Modifier l'adherent:
+            </TextBlock>
+
+            <StackPanel Grid.Row="1">
+                <TextBox
+                    x:Name="tbx_nom"
+                    Header="Nom:"
+                    Margin="5"
+                    Width="280" Height="75"
+                    FontSize="18" 
+                    PlaceholderText="Votre nom de famille"
+                    PlaceholderForeground="DarkGray"
+                    >
+                </TextBox>
+                <TextBlock
+                    x:Name="nomErr"
+                    FontSize="15"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Foreground="DarkRed"
+                    >
+                </TextBlock>
+            </StackPanel>
+
+            <StackPanel Grid.Row="2">
+                <TextBox
+                    x:Name="tbx_prenom"
+                    Header="Prénom:"
+                    Margin="5"
+                    Width="280" Height="75"
+                    FontSize="18" 
+                    PlaceholderText="Votre prénom"
+                    PlaceholderForeground="DarkGray"
+                    >
+                </TextBox>
+                <TextBlock
+                    x:Name="prenomErr"
+                    FontSize="15"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Foreground="DarkRed"
+                    >
+                </TextBlock>
+            </StackPanel>
+
+            <StackPanel Grid.Row="3">
+                <TextBox
+                    x:Name="tbx_adresse"
+                    Header="Adresse:"
+                    Margin="5"
+                    Width="280" Height="75"
+                    FontSize="18" 
+                    PlaceholderText="123 Rue Guilbert"
+                    PlaceholderForeground="DarkGray"
+                    >
+                </TextBox>
+                <TextBlock
+                    x:Name="adresseErr"
+                    FontSize="15"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Foreground="DarkRed"
+                    >
+                </TextBlock>
+            </StackPanel>
+
+            <StackPanel Grid.Row="4">
+                <DatePicker
+                    x:Name="datepicker_date_seance"
+                    Header="Choisir la date:"
+                    Margin="5"
+                    Width="500" Height="75"
+                    FontSize="18" 
+                    HorizontalAlignment="Center"
+                    >
+                </DatePicker>
+                <TextBlock
+                     x:Name="datepicker_date_seanceErr"
+                     FontSize="15"
+                     HorizontalAlignment="Center"
+                     VerticalAlignment="Bottom"
+                     Foreground="DarkRed"
+                     >
+                </TextBlock>
+            </StackPanel>
+
+            <Button 
+                Grid.Row="6"
+                x:Name="btn_modifier_bd"
+                Margin="5"
+                Width="240" Height="65"
+                FontSize="18"
+                HorizontalAlignment="Center"
+                Click="btn_modifier_bd_Click"
+                >
+                Modifier l'adherent
+            </Button>
+        </Grid>
+
+
+
+
+
+    </Grid>
+</Page>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="prog_final.pageModifierSeance"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:prog_final"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="LightGray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+        <TextBlock 
+            x:Name="titre_gv"
+            FontSize="30"
+            HorizontalAlignment="Center"
+            Margin="0 15 0 0"
+            Grid.Row="0"
+            Grid.Column="0"
+            >
+            Sélectionner une séance pour la modifier
+        </TextBlock>
+
+        <GridView x:Name="gv_seance" Grid.Column="0" Grid.Row="1" Grid.RowSpan="6" Margin="0 -50 0 0" SelectionChanged="gv_seance_SelectionChanged" HorizontalAlignment="Center">
+            <GridView.ItemTemplate>
+                <DataTemplate x:DataType="local:Seance" >
+                    <StackPanel x:Name="produitCard" Margin="15" Background="White" CornerRadius="5" Width="700" HorizontalAlignment="Stretch">
+                        <Grid Margin="5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                            <StackPanel Grid.Column="0" Grid.Row="0" HorizontalAlignment="Stretch">
+                                <TextBlock Text="{x:Bind NomActivite}" FontSize="27" Margin="15 15 0 0" FontFamily="Arial rouded" TextTrimming="WordEllipsis"/>
+                            </StackPanel>
+
+
+                            <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" Margin="15 20 0 0" HorizontalAlignment="Stretch">
+                                <TextBlock FontSize="25" Margin="5">
+                                    <Run Text="Date:"/>
+                                    <Run FontWeight="Light" Text="{x:Bind Date_seance_string}"/>
+                                </TextBlock>
+                            </StackPanel>
+                            <StackPanel Grid.Column="0" Grid.Row="2" Margin="15 20 0 0" HorizontalAlignment="Stretch">
+                                <TextBlock FontSize="25" Margin="5">
+                                    <Run Text="Heure:"/>
+                                    <Run FontWeight="Light" Text="{x:Bind Heure}"/>
+                                </TextBlock>
+                            </StackPanel>
+                            <StackPanel Grid.Column="0" Grid.Row="3" Margin="15 20 0 0" HorizontalAlignment="Stretch">
+                                <TextBlock FontSize="25" Margin="5">
+                                    <Run Text="Nombre d'inscription:"/>
+                                    <Run FontWeight="Light" Text="{x:Bind Nbr_inscription}"/>
+                                </TextBlock>
+                            </StackPanel>
+                            <StackPanel Grid.Column="0" Grid.Row="4" Margin="15 20 0 0" HorizontalAlignment="Stretch">
+                                <TextBlock FontSize="25" Margin="5">
+                                    <Run Text="Nombre de place(s):"/>
+                                    <Run FontWeight="Light" Text="{x:Bind Nbr_place_disponible}"/>
+                                </TextBlock>
+                            </StackPanel>
+                            <StackPanel Grid.Column="0" Grid.Row="5" Margin="15 20 0 15" HorizontalAlignment="Stretch">
+                                <TextBlock FontSize="25" Margin="5">
+                                    <Run Text="Moyenne de l'appréciation:"/>
+                                    <Run FontWeight="Light" Text="{x:Bind Moyenne_appreciation}"/>
+                                </TextBlock>
+                            </StackPanel>
+
+                            <Button 
+                                Click="btn_modifier_Click"
+                                VerticalAlignment="Center"
+                                Grid.Column="1"
+                                Grid.Row="3"
+                                FontSize="19"
+                                Width="150" Height="40"
+                                HorizontalAlignment="Center"
+                                >
+                                <SymbolIcon Symbol="Edit"/>
+                            </Button>
+
+                            <Button 
+                                Click="btn_Supp_Click"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Grid.Column="1"
+                                Grid.Row="5"
+                                FontSize="19"
+                                Width="150" Height="40"
+                                >
+                                <SymbolIcon Symbol="Delete" Foreground="Red"/>
+                            </Button>
+                        </Grid>
+                    </StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+
+        <TextBlock 
+            x:Name="titre"
+            FontSize="30"
+            HorizontalAlignment="Center"
+            Margin="0 15 0 0"
+            Grid.Row="0"
+            Grid.Column="1"
+            >
+            Modifier une Scéance
+        </TextBlock>
+
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <ComboBox
+                x:Name="cbx_Activite"
+                Header="Choisir l'activité:"
+                Margin="5"
+                HorizontalAlignment="Center"
+                Width="280" Height="75"
+                FontSize="18" 
+                >
+            </ComboBox>
+            <TextBlock
+                 x:Name="cbx_ActiviteErr"
+                 FontSize="15"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Bottom"
+                 Foreground="DarkRed"
+                 >
+            </TextBlock>
+        </StackPanel>
+
+        <StackPanel Grid.Row="4" Grid.Column="1">
+            <DatePicker
+                x:Name="datepicker_date_seance"
+                Header="Choisir la date:"
+                Margin="5"
+                HorizontalAlignment="Center"
+                Width="500" Height="75"
+                FontSize="18" 
+                >
+            </DatePicker>
+            <TextBlock
+                 x:Name="datepicker_date_seanceErr"
+                 FontSize="15"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Bottom"
+                 Foreground="DarkRed"
+                 >
+            </TextBlock>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Grid.Column="1">
+            <TextBox
+                 x:Name="tbx_heure"
+                 Header="Heure:"
+                 Margin="5"
+                 Width="280" Height="75"
+                 FontSize="18" 
+                 PlaceholderText="ex: 12:00"
+                 PlaceholderForeground="DarkGray"
+                 >
+            </TextBox>
+            <TextBlock
+                 x:Name="tbx_heureErr"
+                 FontSize="15"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Bottom"
+                 Foreground="DarkRed"
+                 >
+            </TextBlock>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="1">
+            <TextBox
+                 x:Name="tbx_nbrPlaceDispo"
+                 Header="Nombre de place disponible:"
+                 Margin="5"
+                 Width="280" Height="75"
+                 FontSize="18" 
+                 PlaceholderText="ex: 20"
+                 PlaceholderForeground="DarkGray"
+                 >
+            </TextBox>
+            <TextBlock
+                 x:Name="tbx_nbrPlaceDispoErr"
+                 FontSize="15"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Bottom"
+                 Foreground="DarkRed"
+                 >
+            </TextBlock>
+        </StackPanel>
+
+        <Button 
+            Grid.Row="5"
+            Grid.Column="1"
+            x:Name="add_seance_btn"
+            Margin="5"
+            Width="150" Height="40"
+            FontSize="18"
+            HorizontalAlignment="Center"
+            Click="add_seance_btn_click"
+            >
+            <SymbolIcon Symbol="Add"/>
+        </Button>
+
+
+
+
+
+
+
+
+
+
+
+
+    </Grid>
+</Page>

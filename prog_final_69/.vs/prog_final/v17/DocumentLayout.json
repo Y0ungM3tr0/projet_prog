@@ -1,0 +1,163 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\session_3_disc\\prog_graph\\prog_final_69\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|d:\\session_3_disc\\prog_graph\\prog_final_69\\prog_final\\pagemodifierseance.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\pagemodifierseance.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|d:\\session_3_disc\\prog_graph\\prog_final_69\\prog_final\\singletonseance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\singletonseance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|d:\\session_3_disc\\prog_graph\\prog_final_69\\prog_final\\pagemodifierseance.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\pagemodifierseance.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|d:\\session_3_disc\\prog_graph\\prog_final_69\\prog_final\\pageajouterseance.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\pageajouterseance.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|d:\\session_3_disc\\prog_graph\\prog_final_69\\prog_final\\pageaffichageadherent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\pageaffichageadherent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|d:\\session_3_disc\\prog_graph\\prog_final_69\\prog_final\\pageajouterseance.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\pageajouterseance.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|d:\\session_3_disc\\prog_graph\\prog_final_69\\prog_final\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|d:\\session_3_disc\\prog_graph\\prog_final_69\\prog_final\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\session_3_disc\\prog_graph\\prog_final_69\\prog_final\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "prog_final\\MainWindow.xaml",
+              "ToolTip": "D:\\session_3_disc\\prog_graph\\prog_final_69\\prog_final\\MainWindow.xaml",
+              "RelativeToolTip": "prog_final\\MainWindow.xaml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADAAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-04T20:27:13.28Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\session_3_disc\\prog_graph\\prog_final_69\\prog_final\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "prog_final\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\session_3_disc\\prog_graph\\prog_final_69\\prog_final\\MainWindow.xaml.cs",
+              "RelativeToolTip": "prog_final\\MainWindow.xaml.cs",
+              "ViewState": "AgIAALEAAAAAAAAAAAAWwMYAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T16:00:16.831Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "pageModifierSeance.xaml",
+              "DocumentMoniker": "D:\\session_3_disc\\prog_graph\\prog_final_69\\prog_final\\pageModifierSeance.xaml",
+              "RelativeDocumentMoniker": "prog_final\\pageModifierSeance.xaml",
+              "ToolTip": "D:\\session_3_disc\\prog_graph\\prog_final_69\\prog_final\\pageModifierSeance.xaml",
+              "RelativeToolTip": "prog_final\\pageModifierSeance.xaml",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAmwFwAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-10T15:19:19.944Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "pageModifierSeance.xaml.cs",
+              "DocumentMoniker": "D:\\session_3_disc\\prog_graph\\prog_final_69\\prog_final\\pageModifierSeance.xaml.cs",
+              "RelativeDocumentMoniker": "prog_final\\pageModifierSeance.xaml.cs",
+              "ToolTip": "D:\\session_3_disc\\prog_graph\\prog_final_69\\prog_final\\pageModifierSeance.xaml.cs",
+              "RelativeToolTip": "prog_final\\pageModifierSeance.xaml.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwCMAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T15:19:27.903Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "pageAjouterSeance.xaml",
+              "DocumentMoniker": "D:\\session_3_disc\\prog_graph\\prog_final_69\\prog_final\\pageAjouterSeance.xaml",
+              "RelativeDocumentMoniker": "prog_final\\pageAjouterSeance.xaml",
+              "ToolTip": "D:\\session_3_disc\\prog_graph\\prog_final_69\\prog_final\\pageAjouterSeance.xaml",
+              "RelativeToolTip": "prog_final\\pageAjouterSeance.xaml",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAAAIEAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-10T15:23:35.809Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "pageAjouterSeance.xaml.cs",
+              "DocumentMoniker": "D:\\session_3_disc\\prog_graph\\prog_final_69\\prog_final\\pageAjouterSeance.xaml.cs",
+              "RelativeDocumentMoniker": "prog_final\\pageAjouterSeance.xaml.cs",
+              "ToolTip": "D:\\session_3_disc\\prog_graph\\prog_final_69\\prog_final\\pageAjouterSeance.xaml.cs",
+              "RelativeToolTip": "prog_final\\pageAjouterSeance.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T15:23:49.298Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SingletonSeance.cs",
+              "DocumentMoniker": "D:\\session_3_disc\\prog_graph\\prog_final_69\\prog_final\\SingletonSeance.cs",
+              "RelativeDocumentMoniker": "prog_final\\SingletonSeance.cs",
+              "ToolTip": "D:\\session_3_disc\\prog_graph\\prog_final_69\\prog_final\\SingletonSeance.cs",
+              "RelativeToolTip": "prog_final\\SingletonSeance.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAqwHYAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T15:25:58.37Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "pageAffichageAdherent.xaml",
+              "DocumentMoniker": "D:\\session_3_disc\\prog_graph\\prog_final_69\\prog_final\\pageAffichageAdherent.xaml",
+              "RelativeDocumentMoniker": "prog_final\\pageAffichageAdherent.xaml",
+              "ToolTip": "D:\\session_3_disc\\prog_graph\\prog_final_69\\prog_final\\pageAffichageAdherent.xaml",
+              "RelativeToolTip": "prog_final\\pageAffichageAdherent.xaml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAEQAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-10T15:23:53.169Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
