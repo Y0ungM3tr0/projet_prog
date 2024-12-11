@@ -54,8 +54,8 @@ CREATE TABLE seance (
     idActivite INT NOT NULL,
     date_seance DATE NOT NULL,
     heure VARCHAR(100) NOT NULL,
-    nbr_place_disponible INT NOT NULL,
-    nbr_inscription INT NOT NULL,
+    nbr_place_disponible INT DEFAULT 0 NOT NULL,
+    nbr_inscription INT DEFAULT 0.0 NOT NULL,
     moyenne_appreciation DOUBLE NOT NULL,
     FOREIGN KEY (idActivite) REFERENCES activite(idActivite)
 );
@@ -280,6 +280,20 @@ BEGIN
         SIGNAL SQLSTATE '45000'
         SET MESSAGE_TEXT = "Cet adhérent est déja inscrit à cette séance.";
     END IF;
+END//
+DELIMITER ;
+
+
+-- Retirer toutes les entrées reliées à une séance qui a été retirée
+DELIMITER //
+CREATE TRIGGER delete_infos_seance
+BEFORE DELETE
+ON seance
+FOR EACH ROW
+BEGIN
+    DELETE FROM appreciation WHERE idSeance = OLD.idSeance;
+
+    DELETE FROM reservation WHERE idSeance = OLD.idSeance;
 END//
 DELIMITER ;
 
@@ -620,7 +634,7 @@ DELIMITER ;
 
 
 -- Supprimer une catégorie
-DELIMITER //
+/*DELIMITER //
 CREATE PROCEDURE Supprimer_categorie_activite(
     IN p_idCategorie VARCHAR(110))
 BEGIN
@@ -632,11 +646,12 @@ BEGIN
     IF EXISTS(SELECT idCategorie FROM activite WHERE idCategorie = p_idCategorie) THEN
         SIGNAL SQLSTATE '23000'
         SET MESSAGE_TEXT = 'Impossible de supprimer cette catégorie car elle est associée à une ou plusieurs activités.';
+        -- SET MESSAGE_TEXT = 'Supprimer cette catégorie supprimera également l\'activité ou les activités reliées.';
     END IF;
 
     DELETE FROM categorie_activite WHERE idCategorie = p_idCategorie;
 END//
-DELIMITER ;
+DELIMITER ;*/
 
 -- Appel à la procédure
 -- CALL Supprimer_categorie_activite(22);
@@ -701,8 +716,8 @@ BEGIN
     END IF;
 
     IF EXISTS(SELECT idActivite FROM seance WHERE idActivite = p_idActivite) THEN
-        SIGNAL SQLSTATE '23000'
-        SET MESSAGE_TEXT = 'Impossible de supprimer cette activité car elle est associée à une ou plusieurs séances.';
+        SIGNAL SQLSTATE '01000'
+        SET MESSAGE_TEXT = 'Supprimer cette activité supprimera également la ou les séances auquelles elle est reliée.';
     END IF;
 
     DELETE FROM activite WHERE idActivite = p_idActivite;
@@ -719,17 +734,15 @@ CREATE procedure Ajouter_seance(
     IN p_idActivite INT,
     IN p_date_seance DATE,
     IN p_heure VARCHAR(100),
-    IN p_nbr_place_disponible INT,
-    IN p_nbr_inscription INT,
-    IN p_moyenne_appreciation DOUBLE)
+    IN p_nbr_place_disponible INT)
 BEGIN
-    INSERT INTO seance(idActivite, date_seance, heure, nbr_place_disponible, nbr_inscription, moyenne_appreciation)
-    VALUES (p_idActivite, p_date_seance, p_heure, p_nbr_place_disponible, p_nbr_inscription, p_moyenne_appreciation);
+    INSERT INTO seance(idActivite, date_seance, heure, nbr_place_disponible)
+    VALUES (p_idActivite, p_date_seance, p_heure, p_nbr_place_disponible);
 END//
 DELIMITER ;
 
 -- Appel à la procédure
-CALL Ajouter_seance(10, '2024-12-05', '18:00', 10, 0, 0.0);
+CALL Ajouter_seance(10, '2024-12-05', '18:00', 10);
 
 -- DROP PROCEDURE Ajouter_seance;
 
@@ -771,9 +784,20 @@ BEGIN
         SET MESSAGE_TEXT = 'Cet identification de séance est inexistant.';
     END IF;
 
+    IF EXISTS(SELECT idSeance FROM reservation WHERE idSeance = p_idSeance) THEN
+        SIGNAL SQLSTATE '01000'
+        SET MESSAGE_TEXT = 'Supprimer cette séance supprimera également la ou les réservations auquelles elle est reliée.';
+    END IF;
+
+    IF EXISTS(SELECT idSeance FROM appreciation WHERE idSeance = p_idSeance) THEN
+        SIGNAL SQLSTATE '01000'
+        SET MESSAGE_TEXT = 'Supprimer cette activité supprimera également la ou les appréciations auquelles elle est reliée.';
+    END IF;
+
     DELETE FROM seance WHERE idSeance = p_idSeance;
 END//
 DELIMITER ;
+
 
 -- Appel à la procédure
 -- CALL Supprimer_seance(10);
