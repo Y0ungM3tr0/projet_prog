@@ -23,7 +23,7 @@ CREATE TABLE activite
     nomActivite VARCHAR(100) NOT NULL,
     idCategorie INT NOT NULL,
     description VARCHAR(250) NOT NULL,
-    cout_organisation DOUBLE DEFAULT NOT NULL,
+    cout_organisation DOUBLE NOT NULL,
     prix_vente_client DOUBLE NOT NULL,
     FOREIGN KEY (idCategorie) REFERENCES categorie_activite(idCategorie)
 );
@@ -36,7 +36,7 @@ CREATE TABLE seance (
     heure VARCHAR(100) NOT NULL,
     nbr_place_disponible INT NOT NULL,
     nbr_inscription INT DEFAULT 0 NOT NULL,
-    moyenne_appreciation DOUBLE 0.0 NOT NULL,
+    moyenne_appreciation DOUBLE DEFAULT 0.0 NOT NULL,
     FOREIGN KEY (idActivite) REFERENCES activite(idActivite)
 );
 
