@@ -25,8 +25,8 @@
                     <StackPanel x:ConnectionId='14' x:Name="produitCard" Margin="15" Background="White" CornerRadius="5" Width="650" HorizontalAlignment="Center">
                         <Grid Margin="5">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="5*" />
-                                <ColumnDefinition Width="4*" />
+                                <ColumnDefinition Width="7*" />
+                                <ColumnDefinition Width="2*" />
                                 <ColumnDefinition Width="3*" />
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
@@ -53,8 +53,9 @@
                             FontSize="19"
                             Width="150" Height="40"
                             >
-                                modifier
+                                <SymbolIcon Symbol="Edit"/>
                             </Button>
+                            
                             <Button x:ConnectionId='16' 
                                                   
                             HorizontalAlignment="Center"
@@ -64,7 +65,7 @@
                             FontSize="19"
                             Width="150" Height="40"
                             >
-                                Supprimer
+                                <SymbolIcon Symbol="Delete" Foreground="Red"/>
                             </Button>
                         </Grid>
                     </StackPanel>
@@ -92,17 +93,17 @@
                 HorizontalAlignment="Center"
                 Grid.Row="0"
                 >
-                modifier l'adherent: 
+                Modifier l'adherent: 
             </TextBlock>
 
             <StackPanel Grid.Row="1">
                 <TextBox x:ConnectionId='11'
                     x:Name="tbx_nom"
-                    Header="nom:"
+                    Header="Nom:"
                     Margin="5"
                     Width="240" Height="75"
                     FontSize="18" 
-                    PlaceholderText="votre nom de famille"
+                    PlaceholderText="Votre nom de famille"
                     PlaceholderForeground="DarkGray"
                     >   
                 </TextBox>
@@ -119,11 +120,11 @@
             <StackPanel Grid.Row="2">
                 <TextBox x:ConnectionId='9'
                     x:Name="tbx_prenom"
-                    Header="prenom:"
+                    Header="Prénom:"
                     Margin="5"
                     Width="240" Height="75"
                     FontSize="18" 
-                    PlaceholderText="votre premier nom"
+                    PlaceholderText="Votre prénom"
                     PlaceholderForeground="DarkGray"
                     >
                 </TextBox>
@@ -140,11 +141,11 @@
             <StackPanel Grid.Row="3">
                 <TextBox x:ConnectionId='7'
                     x:Name="tbx_adresse"
-                    Header="adresse:"
+                    Header="Adresse:"
                     Margin="5"
                     Width="240" Height="75"
                     FontSize="18" 
-                    PlaceholderText="1111 nom complet de votre rue"
+                    PlaceholderText="123 Rue Guilbert"
                     PlaceholderForeground="DarkGray"
                     >
                 </TextBox>
@@ -161,7 +162,7 @@
             <StackPanel Grid.Row="4">
                 <TextBox x:ConnectionId='5'
                     x:Name="tbx_date_naissance"
-                    Header="date de naissance:"
+                    Header="Date de naissance:"
                     Margin="5"
                     Width="240" Height="75"
                     FontSize="18" 
@@ -188,7 +189,7 @@
                 HorizontalAlignment="Center"
                                              
                 >
-                modifier l'adherent
+                Modifier l'adherent
             </Button>
         </Grid>
 

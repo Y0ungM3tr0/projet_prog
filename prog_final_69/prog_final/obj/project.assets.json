@@ -4457,39 +4457,23 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD:prog_final_69/prog_final/obj/project.assets.json
-    "C:\\Users\\2366599\\.nuget\\packages\\": {},
-=======
-    "C:\\Users\\simca\\.nuget\\packages\\": {},
->>>>>>> 323ec648f6df40d1c2a70837411bea857bd0e2f3:prog_final/prog_final/obj/project.assets.json
+    "C:\\Users\\2356374\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD:prog_final_69/prog_final/obj/project.assets.json
-      "projectUniqueName": "D:\\session_3_disc\\prog_graph\\prog_final_69\\prog_final\\prog_final.csproj",
+      "projectUniqueName": "D:\\SESSION 3\\PROG INTERFACE\\GitHub\\projet_prog\\prog_final\\prog_final\\prog_final.csproj",
       "projectName": "prog_final",
-      "projectPath": "D:\\session_3_disc\\prog_graph\\prog_final_69\\prog_final\\prog_final.csproj",
-      "packagesPath": "C:\\Users\\2366599\\.nuget\\packages\\",
-      "outputPath": "D:\\session_3_disc\\prog_graph\\prog_final_69\\prog_final\\obj\\",
-=======
-      "projectUniqueName": "E:\\SESSION 3\\PROG INTERFACE\\GitHub\\projet_prog\\prog_final\\prog_final\\prog_final.csproj",
-      "projectName": "prog_final",
-      "projectPath": "E:\\SESSION 3\\PROG INTERFACE\\GitHub\\projet_prog\\prog_final\\prog_final\\prog_final.csproj",
-      "packagesPath": "C:\\Users\\simca\\.nuget\\packages\\",
-      "outputPath": "E:\\SESSION 3\\PROG INTERFACE\\GitHub\\projet_prog\\prog_final\\prog_final\\obj\\",
->>>>>>> 323ec648f6df40d1c2a70837411bea857bd0e2f3:prog_final/prog_final/obj/project.assets.json
+      "projectPath": "D:\\SESSION 3\\PROG INTERFACE\\GitHub\\projet_prog\\prog_final\\prog_final\\prog_final.csproj",
+      "packagesPath": "C:\\Users\\2356374\\.nuget\\packages\\",
+      "outputPath": "D:\\SESSION 3\\PROG INTERFACE\\GitHub\\projet_prog\\prog_final\\prog_final\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-<<<<<<< HEAD:prog_final_69/prog_final/obj/project.assets.json
-        "C:\\Users\\2366599\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-        "C:\\Users\\simca\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 323ec648f6df40d1c2a70837411bea857bd0e2f3:prog_final/prog_final/obj/project.assets.json
+        "C:\\Users\\2356374\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4515,7 +4499,7 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "all"
+        "auditMode": "direct"
       },
       "SdkAnalysisLevel": "9.0.100"
     },
@@ -4597,11 +4581,7 @@
             "privateAssets": "all"
           }
         },
-<<<<<<< HEAD:prog_final_69/prog_final/obj/project.assets.json
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100\\RuntimeIdentifierGraph.json"
-=======
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404\\RuntimeIdentifierGraph.json"
->>>>>>> 323ec648f6df40d1c2a70837411bea857bd0e2f3:prog_final/prog_final/obj/project.assets.json
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
@@ -4615,56 +4595,5 @@
         "#import": []
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Le package 'System.Private.Uri' 4.3.0 présente une vulnérabilité de gravité élevé(e) connue, https://github.com/advisories/GHSA-5f2m-466j-3848.",
-      "libraryId": "System.Private.Uri",
-      "targetGraphs": [
-        "net6.0-windows10.0.19041/win10-arm64",
-        "net6.0-windows10.0.19041/win10-x64",
-        "net6.0-windows10.0.19041/win10-x86"
-      ]
-    },
-    {
-      "code": "NU1902",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Le package 'System.Private.Uri' 4.3.0 présente une vulnérabilité de gravité moyenne connue, https://github.com/advisories/GHSA-x5qj-9vmx-7g6g.",
-      "libraryId": "System.Private.Uri",
-      "targetGraphs": [
-        "net6.0-windows10.0.19041/win10-arm64",
-        "net6.0-windows10.0.19041/win10-x64",
-        "net6.0-windows10.0.19041/win10-x86"
-      ]
-    },
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Le package 'System.Private.Uri' 4.3.0 présente une vulnérabilité de gravité élevé(e) connue, https://github.com/advisories/GHSA-xhfc-gr8f-ffwc.",
-      "libraryId": "System.Private.Uri",
-      "targetGraphs": [
-        "net6.0-windows10.0.19041/win10-arm64",
-        "net6.0-windows10.0.19041/win10-x64",
-        "net6.0-windows10.0.19041/win10-x86"
-      ]
-    },
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Le package 'System.Text.Json' 8.0.4 présente une vulnérabilité de gravité élevé(e) connue, https://github.com/advisories/GHSA-8g4q-xg66-9fp4.",
-      "libraryId": "System.Text.Json",
-      "targetGraphs": [
-        "net6.0-windows10.0.19041",
-        "net6.0-windows10.0.19041/win10-arm64",
-        "net6.0-windows10.0.19041/win10-x64",
-        "net6.0-windows10.0.19041/win10-x86"
-      ]
-    }
-  ]
+  }
 }

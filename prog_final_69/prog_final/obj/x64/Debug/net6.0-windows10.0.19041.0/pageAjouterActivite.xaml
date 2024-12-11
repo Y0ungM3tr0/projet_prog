@@ -24,8 +24,9 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-
-
+       
+        
+        
         <TextBlock x:ConnectionId='2'
             Grid.Row="0"
             Grid.Column="0"
@@ -45,7 +46,7 @@
                 x:Name="tbx_nom_activite"
                 Header="Nom de l'activité:"
                 Margin="5"
-                Width="280" Height="75"
+                Width="260" Height="75"
                 FontSize="18"
                 PlaceholderForeground="DarkGray"
                 >
@@ -56,7 +57,7 @@
                 HorizontalAlignment="Center"
                 VerticalAlignment="Bottom"
                 Foreground="DarkRed"
-                >
+                >   
             </TextBlock>
         </StackPanel>
 
@@ -68,7 +69,7 @@
                 x:Name="cbx_type"
                 Header="Catégorie de l'activité:"
                 Margin="5"
-                Width="280" Height="75"
+                Width="260" Height="75"
                 FontSize="18" 
                 >
             </ComboBox>
@@ -90,13 +91,13 @@
                 x:Name="tbx_description"
                 Header="Description de l'activité:"
                 Margin="5 0 5 5"
-                Width="280" Height="100"
+                Width="260" Height="100"
                 FontSize="18"
                 PlaceholderForeground="DarkGray"
                 AcceptsReturn="True"
                 TextWrapping="Wrap"
                 ScrollViewer.VerticalScrollBarVisibility="Auto"
-                >
+                >   
             </TextBox>
             <TextBlock x:ConnectionId='32'
                 x:Name="descriptionErr"
@@ -117,7 +118,7 @@
                 x:Name="tbx_cout_organisation"
                 Header="Coût d'organisation:"
                 Margin="5"
-                Width="280" Height="75"
+                Width="260" Height="75"
                 FontSize="18"
                 PlaceholderForeground="DarkGray"
                 >
@@ -140,7 +141,7 @@
                 x:Name="tbx_prix_vente_client"
                 Header="Prix de vente par client:"
                 Margin="5"
-                Width="280" Height="75"
+                Width="260" Height="75"
                 FontSize="18"
                 PlaceholderForeground="DarkGray"
                 >
@@ -166,6 +167,11 @@
             <SymbolIcon Symbol="Add"/>
         </Button>
 
+
+
+
+
+
         <TextBlock x:ConnectionId='4'
         Grid.Row="0"
         Grid.Column="1"
@@ -176,7 +182,7 @@
         >
         Liste des activités
         </TextBlock>
-
+        
         <GridView x:ConnectionId='5' x:Name="gv_activite"                                                 HorizontalAlignment="Center" Grid.Column="1" Grid.Row="1" Grid.RowSpan="6">
             <GridView.ItemTemplate>
                 <DataTemplate                             >
@@ -248,6 +254,17 @@
             </GridView.ItemTemplate>
         </GridView>
 
+
+
+
+
+
+
+
+
+
+
+
         <TextBlock x:ConnectionId='6'
             Grid.Row="0"
             Grid.Column="2"
@@ -267,10 +284,10 @@
                 x:Name="tbxModifier_nom_activite"
                 Header="Nom de l'activité:"
                 Margin="5"
-                Width="280" Height="75"
+                Width="260" Height="75"
                 FontSize="18"
                 PlaceholderForeground="DarkGray"
-                >
+                >   
             </TextBox>
             <TextBlock x:ConnectionId='17'
                 x:Name="nom_activiteErrModifier"
@@ -290,7 +307,7 @@
                 x:Name="cbxModifier_type"
                 Header="Catégorie:"
                 Margin="5"
-                Width="280" Height="75"
+                Width="260" Height="75"
                 FontSize="18" 
                 >
             </ComboBox>
@@ -312,7 +329,7 @@
                 x:Name="tbxModifier_description"
                 Header="Description de l'activité:"
                 Margin="5"
-                Width="280" Height="100"
+                Width="260" Height="100"
                 FontSize="18"
                 PlaceholderForeground="DarkGray"
                 AcceptsReturn="True"
@@ -338,7 +355,7 @@
                 x:Name="tbxModifier_cout_organisation"
                 Header="Coût d'organisation:"
                 Margin="5"
-                Width="280" Height="75"
+                Width="260" Height="75"
                 FontSize="18"
                 PlaceholderForeground="DarkGray"
                 >
@@ -361,7 +378,7 @@
                 x:Name="tbxModifier_prix_vente_client"
                 Header="Prix de vente par client:"
                 Margin="5"
-                Width="280" Height="75"
+                Width="260" Height="75"
                 FontSize="18"
                 PlaceholderForeground="DarkGray"
                 >
@@ -386,6 +403,24 @@
             >
             <SymbolIcon Symbol="Edit"/>
         </Button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </Grid>
 </Page>
 
