@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_projet\\prog_vs_final\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|e:\\session_3_disc\\prog_graph\\prog_final\\prog_projet\\prog_vs_final\\prog_final\\singletonutilisateur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\singletonutilisateur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|e:\\session_3_disc\\prog_graph\\prog_final\\prog_projet\\prog_vs_final\\prog_final\\pagestatistique3.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\pagestatistique3.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -34,11 +38,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_projet\\prog_vs_final\\prog_final\\MainWindow.xaml",
               "RelativeDocumentMoniker": "prog_final\\MainWindow.xaml",
@@ -47,12 +51,11 @@
               "ViewState": "AgIAAAMAAAAAAAAAAAAAACwAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-12-04T20:27:13.28Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_projet\\prog_vs_final\\prog_final\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "prog_final\\MainWindow.xaml.cs",
@@ -65,7 +68,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "pageStatistique3.xaml",
               "DocumentMoniker": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_projet\\prog_vs_final\\prog_final\\pageStatistique3.xaml",
               "RelativeDocumentMoniker": "prog_final\\pageStatistique3.xaml",
@@ -74,12 +77,11 @@
               "ViewState": "AgIAAIEAAAAAAAAAAAAAAJUAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-12-11T18:17:43.837Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "pageStatistique3.xaml.cs",
               "DocumentMoniker": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_projet\\prog_vs_final\\prog_final\\pageStatistique3.xaml.cs",
               "RelativeDocumentMoniker": "prog_final\\pageStatistique3.xaml.cs",
@@ -93,7 +95,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "pageStatistique2.xaml",
               "DocumentMoniker": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_projet\\prog_vs_final\\prog_final\\pageStatistique2.xaml",
               "RelativeDocumentMoniker": "prog_final\\pageStatistique2.xaml",
@@ -102,12 +104,11 @@
               "ViewState": "AgIAAIoAAAAAAAAAAAAAAJoAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-12-11T18:08:02.577Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "pageStatistique2.xaml.cs",
               "DocumentMoniker": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_projet\\prog_vs_final\\prog_final\\pageStatistique2.xaml.cs",
               "RelativeDocumentMoniker": "prog_final\\pageStatistique2.xaml.cs",
@@ -116,8 +117,7 @@
               "ViewState": "AgIAABkAAAAAAAAAAAAQwEAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-11T18:08:03.12Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -126,6 +126,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SingletonUtilisateur.cs",
+              "DocumentMoniker": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_projet\\prog_vs_final\\prog_final\\SingletonUtilisateur.cs",
+              "RelativeDocumentMoniker": "prog_final\\SingletonUtilisateur.cs",
+              "ToolTip": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_projet\\prog_vs_final\\prog_final\\SingletonUtilisateur.cs",
+              "RelativeToolTip": "prog_final\\SingletonUtilisateur.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T18:27:17.965Z",
+              "EditorCaption": ""
             }
           ]
         }

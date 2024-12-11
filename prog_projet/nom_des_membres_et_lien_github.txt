@@ -1,0 +1,14 @@
+Membre de l'équipe:
+- Étienne Mac Donald
+- Simon Cartier
+
+Lien github:
+https://github.com/Y0ungM3tr0/projet_prog.git
+
+nom des utilisateurs:
+Étienne Mac Donald: justachillguy69 
+Simon Cartier: Y0ungM3tr0
+
+
+Lien de la BD (se trouve dans le singleton utilisateur):
+"Server=cours.cegep3r.info;Database=420345ri_gr00001_2356374-simon-cartier;Uid=2356374;Pwd=2356374;";
