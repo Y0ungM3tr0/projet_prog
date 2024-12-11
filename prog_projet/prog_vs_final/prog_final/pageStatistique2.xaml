@@ -77,7 +77,7 @@
             HorizontalAlignment="Center"
             FontSize="25"
             >
-            Moyenne des notes de toutes les actvités
+            Moyenne des notes de toutes les activités:
         </TextBlock>
 
         <GridView x:Name="gv_moy_note_toutes_activite" Grid.Row="2" Grid.Column="1" SelectionChanged="gv_moy_note_toutes_activite_SelectionChanged" HorizontalAlignment="Center">
@@ -108,7 +108,7 @@
             HorizontalAlignment="Center"
             FontSize="25"
             >
-            Nombre de participant par activités
+            Nombre de participant par activités:
         </TextBlock>
 
         <GridView x:Name="gv_nbr_participant_par_activite" Grid.Row="4" Grid.RowSpan="4" Grid.Column="1" SelectionChanged="gv_nbr_participant_par_activite_SelectionChanged" HorizontalAlignment="Center">
@@ -152,7 +152,7 @@
             HorizontalAlignment="Center"
             FontSize="25"
             >
-            Moyenne des notes par actvités
+            Moyenne des notes par activités:
         </TextBlock>
 
         <GridView x:Name="gv_moy_note_par_activite" Grid.Row="2" Grid.RowSpan="6" Grid.Column="0" SelectionChanged="gv_moy_note_par_activite_SelectionChanged" HorizontalAlignment="Center">
@@ -179,7 +179,7 @@
                             <StackPanel Grid.Row="1" Margin="15,20,0,0" HorizontalAlignment="Stretch">
                                 <TextBlock FontSize="20" Margin="5">
                                     <Run Text="Moyenne des notes:"/>
-                                    <Run FontWeight="Light" Text="{x:Bind Moy_note_par_activite}"/>
+                                    <Run FontWeight="Light" Text="{x:Bind Moy_note_par_activite_string}"/>
                                 </TextBlock>
                             </StackPanel>
                         </Grid>

@@ -68,7 +68,7 @@ namespace prog_final
             bool validation = true;
 
             string nbrPattern = @"^[0-9]*$";
-            string heurePattern = @"^[0-2][0-9]:[0-5][0-9]*$";
+            string heurePattern = @"^([01][0-9]|2[0-3]):[0-5][0-9]$";
 
             if (cbx_Activite.SelectedValue == null)
             {
@@ -92,7 +92,7 @@ namespace prog_final
             }
             else if (!Regex.IsMatch(tbx_heure.Text, heurePattern))
             {
-                tbx_heureErr.Text = "Doit être une heure dans le format 00:00";
+                tbx_heureErr.Text = "Doit être une heure valide dans le format 00:00";
                 validation = false;
             }
             else

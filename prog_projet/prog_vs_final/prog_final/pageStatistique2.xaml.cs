@@ -30,6 +30,38 @@ namespace prog_final
 
             SingletonReservation.getInstance().getNbr_participant_par_activite();
             gv_nbr_participant_par_activite.ItemsSource = SingletonReservation.getInstance().getListe_nbr_participant_par_activite();
+
+            validation_listes();
+        }
+
+        private void validation_listes()
+        {
+            if (SingletonAppreciation.getInstance().getListe_moy_note_par_activite().Count == 0)
+            {
+                header_moy_note_par_activite.Text = "Moyenne des notes par activités, (aucune appréciation)";
+            }
+            else
+            {
+                header_moy_note_par_activite.Text = "Moyenne des notes par activités:";
+            }
+
+            if (SingletonAppreciation.getInstance().getListe_moy_toutes_activite().Count == 0)
+            {
+                header_moy_note_toutes_activite.Text = "Moyenne des notes de toutes les activités, (aucune appréciation)";
+            }
+            else
+            {
+                header_moy_note_toutes_activite.Text = "Moyenne des notes de toutes les activités:";
+            }
+
+            if (SingletonReservation.getInstance().getListe_nbr_participant_par_activite().Count == 0)
+            {
+                header_nbr_participant_par_activite.Text = "Nombre de participant par activités, (aucune réservation)";
+            }
+            else
+            {
+                header_nbr_participant_par_activite.Text = "Nombre de participant par activités:";
+            }
         }
 
         private void btn_prev_click(object sender, RoutedEventArgs e)

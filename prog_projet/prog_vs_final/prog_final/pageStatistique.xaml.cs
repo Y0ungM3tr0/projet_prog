@@ -28,6 +28,29 @@ namespace prog_final
 
             SingletonAdherent.getInstance().getPrixMoyenPayéParAdherent();
             gv_adherent_prix_moy_par_activite.ItemsSource = SingletonAdherent.getInstance().getListe_prix_moyen_payé_par_adherent();
+
+            validation_listes();
+        }
+
+        private void validation_listes()
+        {
+            if (SingletonAdherent.getInstance().getListe_prix_moyen_payé_par_adherent().Count == 0)
+            {
+                header_prix_moy_par_activite.Text = "Prix moyen des activite par adherent, (aucune réservation)";
+            }
+            else
+            {
+                header_prix_moy_par_activite.Text = "Prix moyen des activite par adherent:";
+            }
+
+            if (SingletonAdherent.getInstance().getListe_adherent_plus_de_seance().Count == 0)
+            {
+                header_adherent_plus_seance.Text = "L'adherent qui a le plus de séances, (aucune réservation)";
+            }
+            else
+            {
+                header_adherent_plus_seance.Text = "L'adherent qui a le plus de séances:";
+            }
         }
 
         private void btn_prev_click(object sender, RoutedEventArgs e)

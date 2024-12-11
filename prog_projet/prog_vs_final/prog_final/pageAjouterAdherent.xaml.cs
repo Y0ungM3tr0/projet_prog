@@ -45,8 +45,6 @@ namespace prog_final
                 prenomErr.Text = "";
                 adresseErr.Text = "";
                 datepicker_date_naissanceErr.Text = "";
-
-                titre.Text = "test";
             }
             
         }

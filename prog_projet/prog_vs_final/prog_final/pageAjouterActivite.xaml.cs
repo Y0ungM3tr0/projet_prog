@@ -61,7 +61,7 @@ namespace prog_final
                 tbx_prix_vente_client.Text = "";
 
                 message_reussite.Visibility = Visibility.Visible;
-                message_reussite.Text = "Ajout réussi";
+                message_reussite.Text = "Ajout réussi (à la fin de la liste)";
             }
         }
 
@@ -340,7 +340,7 @@ namespace prog_final
                         validation = false;
                     }
 
-                    if (Convert.ToDouble(tbx_cout_organisation.Text) >= Convert.ToDouble(tbxModifier_prix_vente_client.Text))
+                    if (Convert.ToDouble(tbxModifier_cout_organisation.Text) >= Convert.ToDouble(tbxModifier_prix_vente_client.Text))
                     {
                         cout_organisationErrModifier.Text = "Le cout de l'organisation doit être moins élevé \n  que le prix de vente.";
                         prix_vente_clientErrModifier.Text = "Le prix de vente doit être plus élevé \n que cout de l'organisation.";

@@ -4463,11 +4463,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\école\\projet_final_bd_prog\\prog_projet\\prog_vs_final\\prog_final\\prog_final.csproj",
+      "projectUniqueName": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_projet\\prog_vs_final\\prog_final\\prog_final.csproj",
       "projectName": "prog_final",
-      "projectPath": "C:\\école\\projet_final_bd_prog\\prog_projet\\prog_vs_final\\prog_final\\prog_final.csproj",
+      "projectPath": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_projet\\prog_vs_final\\prog_final\\prog_final.csproj",
       "packagesPath": "C:\\Users\\macdo\\.nuget\\packages\\",
-      "outputPath": "C:\\école\\projet_final_bd_prog\\prog_projet\\prog_vs_final\\prog_final\\obj\\",
+      "outputPath": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_projet\\prog_vs_final\\prog_final\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

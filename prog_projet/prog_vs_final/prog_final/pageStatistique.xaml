@@ -135,7 +135,7 @@
             HorizontalAlignment="Center"
             FontSize="25"
             >
-            Prix moyen des activite par adherent
+            Prix moyen des activite par adherent:
         </TextBlock>
 
         <GridView x:Name="gv_adherent_prix_moy_par_activite" Grid.Row="2" Grid.RowSpan="5" Grid.Column="1" SelectionChanged="gv_adherent_prix_moy_par_activite_SelectionChanged" HorizontalAlignment="Center">

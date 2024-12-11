@@ -37,8 +37,8 @@ CREATE TABLE seance (
     date_seance DATE NOT NULL,
     heure VARCHAR(100) NOT NULL,
     nbr_place_disponible INT NOT NULL,
-    nbr_inscription INT NOT NULL,
-    moyenne_appreciation DOUBLE NOT NULL,
+    nbr_inscription INT DEFAULT 0 NOT NULL,
+    moyenne_appreciation DOUBLE 0.0 NOT NULL,
     FOREIGN KEY (idActivite) REFERENCES activite(idActivite)
 );
 
@@ -377,8 +377,8 @@ BEGIN
     END IF;
 
     IF EXISTS(SELECT idActivite FROM seance WHERE idActivite = p_idActivite) THEN
-        SIGNAL SQLSTATE '23000'
-        SET MESSAGE_TEXT = 'Impossible de supprimer cette activité car elle est associée à une ou plusieurs séances.';
+        SIGNAL SQLSTATE '01000'
+        SET MESSAGE_TEXT = 'En supprimant cette activité, la ou les séances ayant cette activité seront également supprimées.';
     END IF;
 
     DELETE FROM activite WHERE idActivite = p_idActivite;
@@ -478,7 +478,7 @@ DELIMITER ;
 -- Appel à la procédure
 -- CALL Modifier_categorie_activite(33, 'E-Sportif');
 
--- Supprimer une catégorie
+-- Supprimer une catégorie (pas inclu dans le programme)
 DELIMITER //
 CREATE PROCEDURE Supprimer_categorie_activite(
     IN p_idCategorie VARCHAR(110))
@@ -605,7 +605,7 @@ DELIMITER ;
 -- Appel à la procédure
 -- CALL Ajouter_reservation(10, 'BP-1990-778');
 
--- Afficher les reservations de l'utilisateur
+-- Afficher les reservations de l'utilisateur pour noter les séances
 DELIMITER //
 CREATE procedure infos_seance_reservations_utilisateur_pour_appreciation(
     IN p_matricule VARCHAR(110))
@@ -625,7 +625,7 @@ BEGIN
     FROM reservation
     INNER JOIN seance s on reservation.idSeance = s.idSeance
     INNER JOIN activite a on s.idActivite = a.idActivite
-    WHERE matricule = p_matricule;
+    WHERE matricule = p_matricule AND date_seance < CURDATE();
 END//
 DELIMITER ;
 

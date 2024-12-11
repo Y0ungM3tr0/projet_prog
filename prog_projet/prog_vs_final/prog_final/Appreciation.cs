@@ -104,6 +104,10 @@ namespace prog_final
                 this.OnPropertyChanged(nameof(Moy_note_par_activite));
             }
         }
+        public string Moy_note_par_activite_string
+        {
+            get => moy_note_par_activite.ToString("0.0");
+        }
         public string NomActivite
         {
             get => nomActivite;

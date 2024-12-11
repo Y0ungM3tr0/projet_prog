@@ -1,22 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\\u00E9cole\\projet_final_bd_prog\\prog_projet\\prog_vs_final\\",
+  "WorkspaceRootPath": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_projet\\prog_vs_final\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|c:\\\u00E9cole\\projet_final_bd_prog\\prog_projet\\prog_vs_final\\prog_final\\pagemodifierseance.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\pagemodifierseance.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|e:\\session_3_disc\\prog_graph\\prog_final\\prog_projet\\prog_vs_final\\prog_final\\pagestatistique3.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\pagestatistique3.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|c:\\\u00E9cole\\projet_final_bd_prog\\prog_projet\\prog_vs_final\\prog_final\\pagemodifierseance.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\pagemodifierseance.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|e:\\session_3_disc\\prog_graph\\prog_final\\prog_projet\\prog_vs_final\\prog_final\\pagestatistique3.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\pagestatistique3.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|c:\\\u00E9cole\\projet_final_bd_prog\\prog_projet\\prog_vs_final\\prog_final\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|e:\\session_3_disc\\prog_graph\\prog_final\\prog_projet\\prog_vs_final\\prog_final\\pagestatistique2.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\pagestatistique2.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|c:\\\u00E9cole\\projet_final_bd_prog\\prog_projet\\prog_vs_final\\prog_final\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|e:\\session_3_disc\\prog_graph\\prog_final\\prog_projet\\prog_vs_final\\prog_final\\pagestatistique2.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\pagestatistique2.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|e:\\session_3_disc\\prog_graph\\prog_final\\prog_projet\\prog_vs_final\\prog_final\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|e:\\session_3_disc\\prog_graph\\prog_final\\prog_projet\\prog_vs_final\\prog_final\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,33 +34,90 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\\u00E9cole\\projet_final_bd_prog\\prog_projet\\prog_vs_final\\prog_final\\MainWindow.xaml",
+              "DocumentMoniker": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_projet\\prog_vs_final\\prog_final\\MainWindow.xaml",
               "RelativeDocumentMoniker": "prog_final\\MainWindow.xaml",
-              "ToolTip": "C:\\\u00E9cole\\projet_final_bd_prog\\prog_projet\\prog_vs_final\\prog_final\\MainWindow.xaml",
+              "ToolTip": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_projet\\prog_vs_final\\prog_final\\MainWindow.xaml",
               "RelativeToolTip": "prog_final\\MainWindow.xaml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAADQAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACwAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-12-04T20:27:13.28Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\\u00E9cole\\projet_final_bd_prog\\prog_projet\\prog_vs_final\\prog_final\\MainWindow.xaml.cs",
+              "DocumentMoniker": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_projet\\prog_vs_final\\prog_final\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "prog_final\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\\u00E9cole\\projet_final_bd_prog\\prog_projet\\prog_vs_final\\prog_final\\MainWindow.xaml.cs",
+              "ToolTip": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_projet\\prog_vs_final\\prog_final\\MainWindow.xaml.cs",
               "RelativeToolTip": "prog_final\\MainWindow.xaml.cs",
               "ViewState": "AgIAAIUAAAAAAAAAAAAkwHIAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-23T16:00:16.831Z",
               "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "pageStatistique3.xaml",
+              "DocumentMoniker": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_projet\\prog_vs_final\\prog_final\\pageStatistique3.xaml",
+              "RelativeDocumentMoniker": "prog_final\\pageStatistique3.xaml",
+              "ToolTip": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_projet\\prog_vs_final\\prog_final\\pageStatistique3.xaml",
+              "RelativeToolTip": "prog_final\\pageStatistique3.xaml",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAAAJUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-11T18:17:43.837Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "pageStatistique3.xaml.cs",
+              "DocumentMoniker": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_projet\\prog_vs_final\\prog_final\\pageStatistique3.xaml.cs",
+              "RelativeDocumentMoniker": "prog_final\\pageStatistique3.xaml.cs",
+              "ToolTip": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_projet\\prog_vs_final\\prog_final\\pageStatistique3.xaml.cs",
+              "RelativeToolTip": "prog_final\\pageStatistique3.xaml.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAmwBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T18:17:44.354Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "pageStatistique2.xaml",
+              "DocumentMoniker": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_projet\\prog_vs_final\\prog_final\\pageStatistique2.xaml",
+              "RelativeDocumentMoniker": "prog_final\\pageStatistique2.xaml",
+              "ToolTip": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_projet\\prog_vs_final\\prog_final\\pageStatistique2.xaml",
+              "RelativeToolTip": "prog_final\\pageStatistique2.xaml",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAAAJoAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-11T18:08:02.577Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "pageStatistique2.xaml.cs",
+              "DocumentMoniker": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_projet\\prog_vs_final\\prog_final\\pageStatistique2.xaml.cs",
+              "RelativeDocumentMoniker": "prog_final\\pageStatistique2.xaml.cs",
+              "ToolTip": "E:\\session_3_disc\\prog_graph\\prog_final\\prog_projet\\prog_vs_final\\prog_final\\pageStatistique2.xaml.cs",
+              "RelativeToolTip": "prog_final\\pageStatistique2.xaml.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwEAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T18:08:03.12Z",
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -61,31 +126,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "pageModifierSeance.xaml",
-              "DocumentMoniker": "C:\\\u00E9cole\\projet_final_bd_prog\\prog_projet\\prog_vs_final\\prog_final\\pageModifierSeance.xaml",
-              "RelativeDocumentMoniker": "prog_final\\pageModifierSeance.xaml",
-              "ToolTip": "C:\\\u00E9cole\\projet_final_bd_prog\\prog_projet\\prog_vs_final\\prog_final\\pageModifierSeance.xaml",
-              "RelativeToolTip": "prog_final\\pageModifierSeance.xaml",
-              "ViewState": "AgIAAMwAAAAAAAAAAAAAAOgAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-11T15:52:49.041Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "pageModifierSeance.xaml.cs",
-              "DocumentMoniker": "C:\\\u00E9cole\\projet_final_bd_prog\\prog_projet\\prog_vs_final\\prog_final\\pageModifierSeance.xaml.cs",
-              "RelativeDocumentMoniker": "prog_final\\pageModifierSeance.xaml.cs",
-              "ToolTip": "C:\\\u00E9cole\\projet_final_bd_prog\\prog_projet\\prog_vs_final\\prog_final\\pageModifierSeance.xaml.cs",
-              "RelativeToolTip": "prog_final\\pageModifierSeance.xaml.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAQwFsAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T15:41:27.192Z",
-              "EditorCaption": ""
             }
           ]
         }

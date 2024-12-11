@@ -19,9 +19,12 @@ namespace prog_final
 {
     public sealed partial class pageModifierSeance : Page
     {
+        int idSeance;
+
         public pageModifierSeance()
         {
             this.InitializeComponent();
+            
 
             SingletonSeance.getInstance().getToutSeances();
             gv_seance.ItemsSource = SingletonSeance.getInstance().getListe_des_seances();
@@ -71,6 +74,8 @@ namespace prog_final
 
                 if (selectedSeance != null)
                 {
+                    idSeance = selectedSeance.IdSeance;
+
                     cbx_Activite.SelectedItem = selectedSeance.NomActivite;
                     tbx_heure.Text = selectedSeance.Heure;
                     datepicker_date_seance.SelectedDate = selectedSeance.Date_seance;
@@ -86,13 +91,15 @@ namespace prog_final
                 int idActivite = SingletonActivite.getInstance().getIdActivite(cbx_Activite.SelectedValue.ToString());
                 DateTime date_seance = datepicker_date_seance.Date.DateTime;
 
-                SingletonSeance.getInstance().addSeance(
+                SingletonSeance.getInstance().modifierSeance(
+                    idSeance,
                     idActivite,
                     date_seance,
                     tbx_heure.Text,
                     Convert.ToInt32(tbx_nbrPlaceDispo.Text)
                     );
 
+                idSeance = -1;
                 cbx_Activite.SelectedValue = null;
                 tbx_heure.Text = "";
                 datepicker_date_seance.SelectedDate = null;
@@ -111,7 +118,7 @@ namespace prog_final
             bool validation = true;
 
             string nbrPattern = @"^[0-9]*$";
-            string heurePattern = @"^[0-2][0-9]:[0-5][0-9]*$";
+            string heurePattern = @"^([01][0-9]|2[0-3]):[0-5][0-9]$";
 
             if (cbx_Activite.SelectedValue == null)
             {
@@ -135,7 +142,7 @@ namespace prog_final
             }
             else if (!Regex.IsMatch(tbx_heure.Text, heurePattern))
             {
-                tbx_heureErr.Text = "Doit être une heure dans le format 00:00";
+                tbx_heureErr.Text = "Doit être une heure valide dans le format 00:00";
                 validation = false;
             }
             else

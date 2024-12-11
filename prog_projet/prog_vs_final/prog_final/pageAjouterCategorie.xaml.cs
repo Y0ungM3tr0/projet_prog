@@ -93,12 +93,14 @@ namespace prog_final
                 SingletonCategorie.getInstance().modifierCategorie(idCategorie, tbxModifier_type.Text);
 
                 tbx_type.Text = "";
+                tbxModifier_type.Text = "";
                 message_reussite.Visibility = Visibility.Visible;
             }
         }
 
         private bool validationInputModifier()
         {
+            message_reussite.Visibility = Visibility.Collapsed;
             bool validation = true;
 
             if (string.IsNullOrWhiteSpace(tbxModifier_type.Text))

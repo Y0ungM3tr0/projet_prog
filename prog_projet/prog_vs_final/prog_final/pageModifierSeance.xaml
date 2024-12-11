@@ -43,7 +43,7 @@
             Grid.Row="0"
             Visibility="Collapsed"
              >
-            Modification ou Suppression réussite
+            Modification ou Suppression réussite 
         </TextBlock>
 
         <GridView x:Name="gv_seance" Grid.Column="0" Grid.Row="1" Grid.RowSpan="6" Margin="0 -50 0 0" SelectionChanged="gv_seance_SelectionChanged" HorizontalAlignment="Center">

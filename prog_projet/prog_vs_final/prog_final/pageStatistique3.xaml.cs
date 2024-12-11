@@ -30,7 +30,39 @@ namespace prog_final
 
             SingletonAdherent.getInstance().getNb_total_adherent();
             gv_nb_total_adherent.ItemsSource = SingletonAdherent.getInstance().getListe_nb_total_adherent();
+
+            validation_listes();
         }
+        private void validation_listes()
+        {
+            if (SingletonActivite.getInstance().getListe_nbr_seance_par_activite().Count == 0)
+            {
+                header_nbr_seance_par_activite.Text = "Le nombre d'adherent par activite, (aucune activité)";
+            }
+            else
+            {
+                header_nbr_seance_par_activite.Text = "Le nombre d'adherent par activite:";
+            }
+
+            if (SingletonActivite.getInstance().getListe_nb_activites().Count == 0)
+            {
+                header_nb_activites.Text = "Le nombre total d'activité, (aucune activité)";
+            }
+            else
+            {
+                header_nb_activites.Text = "Le nombre total d'activités:";
+            }
+
+            if (SingletonAdherent.getInstance().getListe_nb_total_adherent().Count == 0)
+            {
+                header_nb_total_adherent.Text = "Le nombre total d'adhérents, (aucun adhérent)";
+            }
+            else
+            {
+                header_nb_total_adherent.Text = "Le nombre total d'adhérents:";
+            }
+        }
+
 
         private void btn_prev_click(object sender, RoutedEventArgs e)
         {

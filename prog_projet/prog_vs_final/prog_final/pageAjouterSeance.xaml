@@ -146,8 +146,9 @@
             VerticalAlignment="Bottom"
             Foreground="Green"
             Grid.Column="1"
+            Visibility="Collapsed"
              >
-            Ajout réussi
+            Ajout réussi (à la fin de la liste)
         </TextBlock>
 
         <GridView x:Name="gv_seance" Grid.Column="1" Grid.Row="1" Grid.RowSpan="6" SelectionChanged="gv_seance_SelectionChanged" HorizontalAlignment="Center">

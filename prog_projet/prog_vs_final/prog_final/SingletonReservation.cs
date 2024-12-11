@@ -205,7 +205,7 @@ namespace prog_final
             {
                 MySqlCommand commande = new MySqlCommand();
                 commande.Connection = con;
-                commande.CommandText = "SELECT * FROM nbr_participant_par_activite;";
+                commande.CommandText = "SELECT * FROM nb_participant_chq_activite;";
 
                 con.Open();
                 MySqlDataReader r = commande.ExecuteReader();
@@ -213,7 +213,7 @@ namespace prog_final
                 while (r.Read())
                 {
                     string nomActivite = r.GetString("nomActivite");
-                    int nbr_participant_par_activite = r.GetInt32("nbr_participant_par_activite");
+                    int nbr_participant_par_activite = r.GetInt32("nombre_participant");
 
                     Reservation reservation = new Reservation(nomActivite, nbr_participant_par_activite);
                     liste_nbr_participant_par_activite.Add(reservation);
@@ -231,18 +231,5 @@ namespace prog_final
                 Console.WriteLine(ex.Message);
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }

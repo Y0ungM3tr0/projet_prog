@@ -10,14 +10,14 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>05fd7d9d-c1d8-4cb1-9b90-db4c15a8d52d</PackageIdentityName>
     <PackageIdentityPublisher>CN=2366599</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\école\projet_final_bd_prog\prog_projet\prog_vs_final\prog_final\obj\x64\Debug\net6.0-windows10.0.19041.0\</IntermediateOutputPath>
+    <IntermediateOutputPath>E:\session_3_disc\prog_graph\prog_final\prog_projet\prog_vs_final\prog_final\obj\x64\Debug\net6.0-windows10.0.19041.0\</IntermediateOutputPath>
     <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
     <PackageRegistrationPath>
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>false</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\école\projet_final_bd_prog\prog_projet\prog_vs_final\prog_final\bin\x64\Debug\net6.0-windows10.0.19041.0\AppX</LayoutDir>
+    <LayoutDir>E:\session_3_disc\prog_graph\prog_final\prog_projet\prog_vs_final\prog_final\bin\x64\Debug\net6.0-windows10.0.19041.0\AppX</LayoutDir>
     <RegisteredManifestChecksum>07096AEF6D0C207500B9AB6DD95CC6567C9AAB163BF4353F16E05E0F1DE9FF97</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>05fd7d9d-c1d8-4cb1-9b90-db4c15a8d52d_1.0.0.0_x64__2qm5jdnspk8n2</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>05fd7d9d-c1d8-4cb1-9b90-db4c15a8d52d_2qm5jdnspk8n2!App</RegisteredUserModeAppID>
@@ -26,32 +26,32 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\école\projet_final_bd_prog\prog_projet\prog_vs_final\prog_final\bin\x64\Debug\net6.0-windows10.0.19041.0\AppxManifest.xml">
+    <AppXManifest Include="E:\session_3_disc\prog_graph\prog_final\prog_projet\prog_vs_final\prog_final\bin\x64\Debug\net6.0-windows10.0.19041.0\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-12-11T16:32:37.511</Modified>
+      <Modified>2024-12-11T18:20:58.939</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\école\projet_final_bd_prog\prog_projet\prog_vs_final\prog_final\bin\x64\Debug\net6.0-windows10.0.19041.0\resources.pri">
+    <AppxPackagedFile Include="E:\session_3_disc\prog_graph\prog_final\prog_projet\prog_vs_final\prog_final\bin\x64\Debug\net6.0-windows10.0.19041.0\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-12-11T15:54:45.627</Modified>
+      <Modified>2024-12-11T18:20:31.410</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\école\projet_final_bd_prog\prog_projet\prog_vs_final\prog_final\bin\x64\Debug\net6.0-windows10.0.19041.0\prog_final.runtimeconfig.json">
+    <AppxPackagedFile Include="E:\session_3_disc\prog_graph\prog_final\prog_projet\prog_vs_final\prog_final\bin\x64\Debug\net6.0-windows10.0.19041.0\prog_final.runtimeconfig.json">
       <PackagePath>prog_final.runtimeconfig.json</PackagePath>
-      <Modified>2024-12-11T16:32:37.309</Modified>
+      <Modified>2024-12-11T16:44:36.594</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\école\projet_final_bd_prog\prog_projet\prog_vs_final\prog_final\bin\x64\Debug\net6.0-windows10.0.19041.0\prog_final.dll">
+    <AppxPackagedFile Include="E:\session_3_disc\prog_graph\prog_final\prog_projet\prog_vs_final\prog_final\bin\x64\Debug\net6.0-windows10.0.19041.0\prog_final.dll">
       <PackagePath>prog_final.dll</PackagePath>
-      <Modified>2024-12-11T16:32:37.041</Modified>
+      <Modified>2024-12-11T18:20:58.843</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\école\projet_final_bd_prog\prog_projet\prog_vs_final\prog_final\obj\x64\Debug\net6.0-windows10.0.19041.0\apphost.exe">
+    <AppxPackagedFile Include="E:\session_3_disc\prog_graph\prog_final\prog_projet\prog_vs_final\prog_final\obj\x64\Debug\net6.0-windows10.0.19041.0\apphost.exe">
       <PackagePath>prog_final.exe</PackagePath>
-      <Modified>2024-12-11T16:32:37.054</Modified>
+      <Modified>2024-12-11T18:20:58.853</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\école\projet_final_bd_prog\prog_projet\prog_vs_final\prog_final\bin\x64\Debug\net6.0-windows10.0.19041.0\prog_final.deps.json">
+    <AppxPackagedFile Include="E:\session_3_disc\prog_graph\prog_final\prog_projet\prog_vs_final\prog_final\bin\x64\Debug\net6.0-windows10.0.19041.0\prog_final.deps.json">
       <PackagePath>prog_final.deps.json</PackagePath>
-      <Modified>2024-12-11T16:32:37.196</Modified>
+      <Modified>2024-12-11T16:44:36.476</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\macdo\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.34\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
@@ -241,31 +241,31 @@
       <PackagePath>runtimes\win\lib\net6.0\System.Windows.Extensions.dll</PackagePath>
       <Modified>2023-10-31T15:03:26.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\école\projet_final_bd_prog\prog_projet\prog_vs_final\prog_final\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="E:\session_3_disc\prog_graph\prog_final\prog_projet\prog_vs_final\prog_final\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2024-11-27T16:46:56.485</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\école\projet_final_bd_prog\prog_projet\prog_vs_final\prog_final\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="E:\session_3_disc\prog_graph\prog_final\prog_projet\prog_vs_final\prog_final\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <Modified>2024-11-27T16:46:56.486</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\école\projet_final_bd_prog\prog_projet\prog_vs_final\prog_final\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="E:\session_3_disc\prog_graph\prog_final\prog_projet\prog_vs_final\prog_final\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <Modified>2024-11-27T16:46:56.487</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\école\projet_final_bd_prog\prog_projet\prog_vs_final\prog_final\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="E:\session_3_disc\prog_graph\prog_final\prog_projet\prog_vs_final\prog_final\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <Modified>2024-11-27T16:46:56.489</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\école\projet_final_bd_prog\prog_projet\prog_vs_final\prog_final\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="E:\session_3_disc\prog_graph\prog_final\prog_projet\prog_vs_final\prog_final\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <Modified>2024-11-27T16:46:56.490</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\école\projet_final_bd_prog\prog_projet\prog_vs_final\prog_final\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="E:\session_3_disc\prog_graph\prog_final\prog_projet\prog_vs_final\prog_final\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <Modified>2024-11-27T16:46:56.491</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\école\projet_final_bd_prog\prog_projet\prog_vs_final\prog_final\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="E:\session_3_disc\prog_graph\prog_final\prog_projet\prog_vs_final\prog_final\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <Modified>2024-11-27T16:46:56.492</Modified>
     </AppxPackagedFile>
