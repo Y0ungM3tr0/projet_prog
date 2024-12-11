@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "VCwlKo3Vfvo=",
+  "dgSpecHash": "7WEc7JUEPew=",
   "success": true,
   "projectFilePath": "D:\\SESSION 3\\PROG INTERFACE\\GitHub\\projet_prog\\prog_final\\prog_final\\prog_final.csproj",
   "expectedPackageFiles": [
@@ -53,5 +53,55 @@
     "C:\\Users\\2356374\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\6.0.36\\microsoft.netcore.app.runtime.win-x64.6.0.36.nupkg.sha512",
     "C:\\Users\\2356374\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\6.0.36\\microsoft.windowsdesktop.app.runtime.win-x86.6.0.36.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Le package 'System.Private.Uri' 4.3.0 présente une vulnérabilité de gravité élevé(e) connue, https://github.com/advisories/GHSA-5f2m-466j-3848.",
+      "libraryId": "System.Private.Uri",
+      "targetGraphs": [
+        "net6.0-windows10.0.19041/win10-arm64",
+        "net6.0-windows10.0.19041/win10-x64",
+        "net6.0-windows10.0.19041/win10-x86"
+      ]
+    },
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Le package 'System.Private.Uri' 4.3.0 présente une vulnérabilité de gravité moyenne connue, https://github.com/advisories/GHSA-x5qj-9vmx-7g6g.",
+      "libraryId": "System.Private.Uri",
+      "targetGraphs": [
+        "net6.0-windows10.0.19041/win10-arm64",
+        "net6.0-windows10.0.19041/win10-x64",
+        "net6.0-windows10.0.19041/win10-x86"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Le package 'System.Private.Uri' 4.3.0 présente une vulnérabilité de gravité élevé(e) connue, https://github.com/advisories/GHSA-xhfc-gr8f-ffwc.",
+      "libraryId": "System.Private.Uri",
+      "targetGraphs": [
+        "net6.0-windows10.0.19041/win10-arm64",
+        "net6.0-windows10.0.19041/win10-x64",
+        "net6.0-windows10.0.19041/win10-x86"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Le package 'System.Text.Json' 8.0.4 présente une vulnérabilité de gravité élevé(e) connue, https://github.com/advisories/GHSA-8g4q-xg66-9fp4.",
+      "libraryId": "System.Text.Json",
+      "targetGraphs": [
+        "net6.0-windows10.0.19041",
+        "net6.0-windows10.0.19041/win10-arm64",
+        "net6.0-windows10.0.19041/win10-x64",
+        "net6.0-windows10.0.19041/win10-x86"
+      ]
+    }
+  ]
 }

@@ -36,54 +36,6 @@
                             </Grid.RowDefinitions>
 
                             <StackPanel Grid.Column="0" Grid.Row="0" HorizontalAlignment="Stretch">
-<<<<<<< HEAD:prog_final_69/prog_final/pageAffichageAdherent.xaml
-                                <TextBlock Margin="15,15,0,0" FontSize="25">
-                                    <Run Text="Matricule:"/>
-                                    <Run FontWeight="Light" Text="{x:Bind Matricule}"/>
-                                </TextBlock>
-                                <TextBlock Margin="15,15,0,0" FontSize="25">
-                                    <Run Text="Prenom:"/>
-                                    <Run FontWeight="Light" Text="{x:Bind Prenom}"/>
-                                </TextBlock>
-                                <TextBlock Margin="15,15,0,0" FontSize="25">
-                                    <Run Text="Nom:"/>
-                                    <Run FontWeight="Light" Text="{x:Bind Nom}"/>
-                                </TextBlock>
-                                <TextBlock Margin="15,15,0,0" FontSize="25">
-                                    <Run Text="Adresse:"/>
-                                    <Run FontWeight="Light" Text="{x:Bind Adresse}"/>
-                                </TextBlock>
-                                <TextBlock Margin="15,15,0,0" FontSize="25">
-                                    <Run Text="Date de naissance:"/>
-                                    <Run FontWeight="Light" Text="{x:Bind Date_naissance_string}"/>
-                                </TextBlock>
-                                <TextBlock Margin="15,15,0,0" FontSize="25">
-                                    <Run Text="Age:"/>
-                                    <Run FontWeight="Light" Text="{x:Bind Age}"/>
-                                </TextBlock>
-                            </StackPanel>
-
-                            <Button 
-                                Click="btn_modifier_Click"
-                                VerticalAlignment="Center"
-                                Grid.Column="2"
-                                Grid.Row="0"
-                                FontSize="19"
-                                Width="150" Height="40"
-                                >
-                                <SymbolIcon Symbol="Edit"/>
-                            </Button>
-
-                            <Button 
-                                Click="btn_Supp_Click"
-                                HorizontalAlignment="Center"
-                                VerticalAlignment="Center"
-                                Grid.Column="2"
-                                Grid.Row="1"
-                                FontSize="19"
-                                Width="150" Height="40"
-                                >
-=======
                                 <TextBlock Text="{x:Bind Matricule}" FontSize="25" Margin="15,15,0,0" FontFamily="Arial rouded" TextTrimming="WordEllipsis"/>
                                 <TextBlock Text="{x:Bind Nom}" FontSize="25" Margin="15,15,0,0" FontFamily="Arial rouded" TextTrimming="WordEllipsis"/>
                                 <TextBlock Text="{x:Bind Prenom}" FontSize="25" Margin="15,15,0,0" FontFamily="Arial rouded" TextTrimming="WordEllipsis"/>
@@ -113,7 +65,6 @@
                             FontSize="19"
                             Width="150" Height="40"
                             >
->>>>>>> 323ec648f6df40d1c2a70837411bea857bd0e2f3:prog_final/prog_final/pageAffichageAdherent.xaml
                                 <SymbolIcon Symbol="Delete" Foreground="Red"/>
                             </Button>
                         </Grid>
@@ -137,17 +88,12 @@
 
             <TextBlock 
                 x:Name="titre"
-                FontSize="40"
-                Margin="0 30 0 0"
-                FontWeight="Light"
+                FontSize="35"
                 HorizontalAlignment="Center"
                 Grid.Row="0"
+                Margin="5 25 5 5"
                 >
-<<<<<<< HEAD:prog_final_69/prog_final/pageAffichageAdherent.xaml
-                Modifier l'adherent:
-=======
                 Modifier l'adherent: 
->>>>>>> 323ec648f6df40d1c2a70837411bea857bd0e2f3:prog_final/prog_final/pageAffichageAdherent.xaml
             </TextBlock>
 
             <StackPanel Grid.Row="1">
@@ -155,11 +101,11 @@
                     x:Name="tbx_nom"
                     Header="Nom:"
                     Margin="5"
-                    Width="280" Height="75"
+                    Width="240" Height="75"
                     FontSize="18" 
                     PlaceholderText="Votre nom de famille"
                     PlaceholderForeground="DarkGray"
-                    >
+                    >   
                 </TextBox>
                 <TextBlock
                     x:Name="nomErr"
@@ -176,7 +122,7 @@
                     x:Name="tbx_prenom"
                     Header="Prénom:"
                     Margin="5"
-                    Width="280" Height="75"
+                    Width="240" Height="75"
                     FontSize="18" 
                     PlaceholderText="Votre prénom"
                     PlaceholderForeground="DarkGray"
@@ -197,7 +143,7 @@
                     x:Name="tbx_adresse"
                     Header="Adresse:"
                     Margin="5"
-                    Width="280" Height="75"
+                    Width="240" Height="75"
                     FontSize="18" 
                     PlaceholderText="123 Rue Guilbert"
                     PlaceholderForeground="DarkGray"
@@ -214,28 +160,23 @@
             </StackPanel>
 
             <StackPanel Grid.Row="4">
-<<<<<<< HEAD:prog_final_69/prog_final/pageAffichageAdherent.xaml
-                <DatePicker
-                    x:Name="datepicker_date_seance"
-                    Header="Choisir la date:"
-=======
                 <TextBox
                     x:Name="tbx_date_naissance"
                     Header="Date de naissance:"
->>>>>>> 323ec648f6df40d1c2a70837411bea857bd0e2f3:prog_final/prog_final/pageAffichageAdherent.xaml
                     Margin="5"
-                    Width="500" Height="75"
+                    Width="240" Height="75"
                     FontSize="18" 
-                    HorizontalAlignment="Center"
+                    PlaceholderText="votre date de naissance"
+                    PlaceholderForeground="DarkGray"
                     >
-                </DatePicker>
+                </TextBox>
                 <TextBlock
-                     x:Name="datepicker_date_seanceErr"
-                     FontSize="15"
-                     HorizontalAlignment="Center"
-                     VerticalAlignment="Bottom"
-                     Foreground="DarkRed"
-                     >
+                    x:Name="date_naissanceErr"
+                    FontSize="15"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Foreground="DarkRed"
+                    >
                 </TextBlock>
             </StackPanel>
 
@@ -243,7 +184,7 @@
                 Grid.Row="6"
                 x:Name="btn_modifier_bd"
                 Margin="5"
-                Width="240" Height="65"
+                Width="240" Height="75"
                 FontSize="18"
                 HorizontalAlignment="Center"
                 Click="btn_modifier_bd_Click"

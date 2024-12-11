@@ -6,8 +6,8 @@
       "version": "6.0.0"
     },
     "additionalProbingPaths": [
-      "C:\\Users\\simca\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\simca\\.nuget\\packages",
+      "C:\\Users\\2356374\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\2356374\\.nuget\\packages",
       "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ],
     "configProperties": {

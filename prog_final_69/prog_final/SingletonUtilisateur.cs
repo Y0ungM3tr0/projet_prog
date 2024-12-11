@@ -29,7 +29,7 @@ namespace prog_final
         {
             string sim = "Server=cours.cegep3r.info;Database=420345ri_gr00001_2356374-simon-cartier;Uid=2356374;Pwd=2356374;";
             string etienne = "Server=cours.cegep3r.info;Database=420345ri_gr00001_2366599-etienne-mac-donald;Uid=2366599;Pwd=2366599;";
-            return etienne;
+            return sim;
         }
         
 

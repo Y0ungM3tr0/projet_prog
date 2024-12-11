@@ -25,11 +25,11 @@
             Grid.Row="0"
             Grid.Column="0"
             x:Name="titre"
-            FontSize="30"
-            Margin="0 15 0 0"
+            FontSize="35"
             HorizontalAlignment="Center"
+            Margin="5 25 5 5"
             >
-            Ajouter une categories
+            Ajouter une catégorie
         </TextBlock>
 
         <StackPanel 
@@ -38,11 +38,10 @@
             >
             <TextBox
                 x:Name="tbx_type"
-                Header="categorie:"
+                Header="Catégorie:"
                 Margin="5"
-                Width="280" Height="75"
-                FontSize="18" 
-                PlaceholderText="ex: "
+                Width="240" Height="75"
+                FontSize="18"
                 PlaceholderForeground="DarkGray"
                 >   
             </TextBox>
@@ -52,7 +51,6 @@
                 HorizontalAlignment="Center"
                 VerticalAlignment="Bottom"
                 Foreground="DarkRed"
-                Margin="10"
                 >   
             </TextBlock>
             <Button
@@ -60,7 +58,7 @@
                 HorizontalAlignment="Center"
                 Click="add_btn_Click"
                 >
-                <SymbolIcon Symbol="Add"/>
+                ajouter
             </Button>
         </StackPanel>
 
@@ -70,14 +68,13 @@
             Grid.Row="0"
             Grid.Column="1"
             x:Name="titreModifierGridv"
-            FontSize="30"
-            Margin="0 15 0 0"
+            FontSize="25"
             HorizontalAlignment="Center"
             >
-            Modifier une categories
+            modifier une categories
         </TextBlock>
 
-        <GridView x:Name="gv_categorie" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="2" Margin="0 -90 0 0" SelectionChanged="gv_categorie_SelectionChanged" HorizontalAlignment="Center">
+        <GridView x:Name="gv_categorie" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" SelectionChanged="gv_categorie_SelectionChanged" HorizontalAlignment="Center">
             <GridView.ItemTemplate>
                 <DataTemplate x:DataType="local:Categorie" >
                     <StackPanel x:Name="produitCard" Margin="15" Background="White" CornerRadius="5" Width="500" HorizontalAlignment="Stretch">
@@ -91,15 +88,80 @@
                                 <RowDefinition Height="*" />
                             </Grid.RowDefinitions>
 
-                            <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" HorizontalAlignment="Center" Margin="15">
-                                <TextBlock Text="{x:Bind Type}" FontSize="25" FontFamily="Arial rouded" TextTrimming="WordEllipsis"/>
+                            <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" HorizontalAlignment="Stretch">
+                                <TextBlock Text="{x:Bind Type}" FontSize="25" Margin="15,15,0,0" FontFamily="Arial rouded" TextTrimming="WordEllipsis"/>
                             </StackPanel>
+
+                            <Button 
+                                Click="btn_modifier_grid"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Grid.Column="1"
+                                Grid.Row="1"
+                                FontSize="19"
+                                Width="140" Height="40"
+                                >
+                                Modifier
+                            </Button>
+                            <Button 
+                                Click="btn_Supp_Click"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Grid.Row="1" Grid.Column="0"
+                                FontSize="19"
+                                Width="140" Height="40"
+                                >
+                                Supprimer
+                            </Button>
                         </Grid>
                     </StackPanel>
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>
-       
+
+
+
+
+
+        <TextBlock
+            Grid.Row="0"
+            Grid.Column="2"
+            x:Name="titreModifier"
+            FontSize="25"
+            HorizontalAlignment="Center"
+            >
+            ajouter une categories
+        </TextBlock>
+
+        <StackPanel 
+            Grid.Row="1" Grid.Column="2"
+            HorizontalAlignment="Center"
+            >
+            <TextBox
+                x:Name="tbxmodifier_type"
+                Header="categorie:"
+                Margin="5"
+                Width="240" Height="75"
+                FontSize="18" 
+                PlaceholderText="ex: "
+                PlaceholderForeground="DarkGray"
+                >
+            </TextBox>
+            <TextBlock
+                x:Name="typemodifierErr"
+                FontSize="15"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Bottom"
+                Foreground="DarkRed"
+                >
+            </TextBlock>
+            <Button
+                Width="160" Height="40"
+                HorizontalAlignment="Center"
+                >
+                modifier la categorie
+            </Button>
+        </StackPanel>
 
 
     </Grid>
