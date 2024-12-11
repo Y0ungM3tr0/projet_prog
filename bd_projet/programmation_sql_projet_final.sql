@@ -76,13 +76,20 @@ CREATE TABLE reservation (
 ALTER TABLE appreciation
 MODIFY matricule VARCHAR(110),
 ADD CONSTRAINT FOREIGN KEY (matricule) REFERENCES adherent (matricule) ON UPDATE CASCADE;
+ALTER TABLE appreciation
+DROP FOREIGN KEY appreciation_ibfk_2;
+
 ALTER TABLE reservation
 MODIFY matricule VARCHAR(110),
 ADD CONSTRAINT FOREIGN KEY (matricule) REFERENCES adherent (matricule) ON UPDATE CASCADE;
 ALTER TABLE reservation
 DROP FOREIGN KEY reservation_ibfk_2;
-ALTER TABLE appreciation
-DROP FOREIGN KEY appreciation_ibfk_2;
+
+ALTER TABLE seance
+MODIFY idActivite INT,
+ADD CONSTRAINT FOREIGN KEY (idActivite) REFERENCES activite (idActivite) ON UPDATE CASCADE;
+ALTER TABLE seance
+DROP FOREIGN KEY seance_ibfk_1;
 
 -- ----------------------------------------------------------------
 
