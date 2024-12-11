@@ -1,0 +1,95 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\macdo\\OneDrive\\Bureau\\prog_final_69\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|c:\\users\\macdo\\onedrive\\bureau\\prog_final_69\\prog_final\\pagemodifierseance.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\pagemodifierseance.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|c:\\users\\macdo\\onedrive\\bureau\\prog_final_69\\prog_final\\pagemodifierseance.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\pagemodifierseance.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|c:\\users\\macdo\\onedrive\\bureau\\prog_final_69\\prog_final\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|c:\\users\\macdo\\onedrive\\bureau\\prog_final_69\\prog_final\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A30F00CF-D5CC-4468-9627-322CC617C9D5}|prog_final\\prog_final.csproj|solutionrelative:prog_final\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\macdo\\OneDrive\\Bureau\\prog_final_69\\prog_final\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "prog_final\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\macdo\\OneDrive\\Bureau\\prog_final_69\\prog_final\\MainWindow.xaml",
+              "RelativeToolTip": "prog_final\\MainWindow.xaml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAADQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-04T20:27:13.28Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\macdo\\OneDrive\\Bureau\\prog_final_69\\prog_final\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "prog_final\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\macdo\\OneDrive\\Bureau\\prog_final_69\\prog_final\\MainWindow.xaml.cs",
+              "RelativeToolTip": "prog_final\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAkwHIAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T16:00:16.831Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "pageModifierSeance.xaml",
+              "DocumentMoniker": "C:\\Users\\macdo\\OneDrive\\Bureau\\prog_final_69\\prog_final\\pageModifierSeance.xaml",
+              "RelativeDocumentMoniker": "prog_final\\pageModifierSeance.xaml",
+              "ToolTip": "C:\\Users\\macdo\\OneDrive\\Bureau\\prog_final_69\\prog_final\\pageModifierSeance.xaml",
+              "RelativeToolTip": "prog_final\\pageModifierSeance.xaml",
+              "ViewState": "AgIAAMwAAAAAAAAAAAAAAOgAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-11T15:52:49.041Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "pageModifierSeance.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\macdo\\OneDrive\\Bureau\\prog_final_69\\prog_final\\pageModifierSeance.xaml.cs",
+              "RelativeDocumentMoniker": "prog_final\\pageModifierSeance.xaml.cs",
+              "ToolTip": "C:\\Users\\macdo\\OneDrive\\Bureau\\prog_final_69\\prog_final\\pageModifierSeance.xaml.cs",
+              "RelativeToolTip": "prog_final\\pageModifierSeance.xaml.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwFsAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T15:41:27.192Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

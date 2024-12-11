@@ -1,0 +1,64 @@
+﻿<Window
+    x:Class="prog_final.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:prog_final"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <NavigationView x:Name="nav" SelectionChanged="nav_SelectionChanged" IsSettingsVisible="False" IsBackButtonVisible="Collapsed">
+        <NavigationView.PaneCustomContent>
+            <StackPanel Padding="15" Orientation="Horizontal">
+                <Grid VerticalAlignment="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <TextBlock 
+                        IsTapEnabled="False" 
+                        x:Name="navUtilisateur"
+                        Grid.Row="0" Grid.Column="1"
+                        Visibility="Visible"
+                        VerticalAlignment="Center"
+                    >
+                    </TextBlock>
+                    <TextBlock 
+                        IsTapEnabled="False" 
+                        x:Name="infoUser"
+                        Grid.Row="1"  Grid.Column="1"
+                        Visibility="Visible"
+                        VerticalAlignment="Center"
+                        >
+                    </TextBlock>
+                </Grid>
+            </StackPanel>
+        </NavigationView.PaneCustomContent>
+        <NavigationView.MenuItems>
+            
+            <NavigationViewItem Icon="ViewAll" Content="Voir les futures seances" Name="pageAffichageActivité"/>
+            <NavigationViewItem Icon="ViewAll" Content="Mes reservations" Name="pageAffichageReservation" Visibility="Collapsed"/>
+            <NavigationViewItem Icon="ViewAll" Content="Noter une seance" Name="pageAjouterAppreciation" Visibility="Collapsed"/>
+            <NavigationViewItemSeparator />
+
+            <NavigationViewItem Icon="Add" Content="Gestion Activites" Name="pageAjouterActivite" Visibility="Collapsed"/>
+            <NavigationViewItem Icon="Manage" Content="Ajouter Séances" Name="pageAjouterSeance" Visibility="Collapsed"/>
+            <NavigationViewItem Icon="Manage" Content="Gestion Séances" Name="pageModifierSeance" Visibility="Collapsed"/>
+
+            <NavigationViewItem Icon="ViewAll" Content="Ajouter Adherents" Name="pageAjouterAdherent" Visibility="Collapsed"/>
+            <NavigationViewItem Icon="ViewAll" Content="Gestion Adherents" Name="pageAffichageAdherent" Visibility="Collapsed"/>
+            
+            <NavigationViewItem Icon="Add" Content="Gestion Categories" Name="pageAjouterCategorie" Visibility="Collapsed"/>
+
+            <NavigationViewItem Icon="ZoomIn" Content="Statistique" Name="pageStatistique" Visibility="Collapsed"/>
+            <NavigationViewItemSeparator />
+            <NavigationViewItem Icon="Admin" Content="Connexion" Name="pageConnexion"/>
+            <NavigationViewItem Icon="Clear" Content="Deconnexion" Name="pageDeconnexion"/>
+        </NavigationView.MenuItems>
+
+        <Frame x:Name="mainFrame"/>
+    </NavigationView>
+</Window>

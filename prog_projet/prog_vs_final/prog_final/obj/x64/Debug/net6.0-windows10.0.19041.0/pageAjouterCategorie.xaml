@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="prog_final.pageAjouterCategorie"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:prog_final"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="LightGray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:ConnectionId='2'
+            Grid.Row="0"
+            Grid.Column="0"
+            x:Name="titre"
+            FontSize="30"
+            Margin="0 15 0 0"
+            HorizontalAlignment="Center"
+            >
+            Ajouter une categories
+        </TextBlock>
+
+        <StackPanel 
+            Grid.Row="1" Grid.Column="0"
+            HorizontalAlignment="Center"
+            >
+            <TextBox x:ConnectionId='14'
+                x:Name="tbx_type"
+                Header="categorie:"
+                Margin="5"
+                Width="280" Height="75"
+                FontSize="18" 
+                PlaceholderText="ex: "
+                PlaceholderForeground="DarkGray"
+                >   
+            </TextBox>
+            <TextBlock x:ConnectionId='15'
+                x:Name="typeErr"
+                FontSize="15"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Bottom"
+                Foreground="DarkRed"
+                Margin="10"
+                >   
+            </TextBlock>
+            <TextBlock x:ConnectionId='16'
+                 x:Name="message_reussite_ajout"
+                 FontSize="15"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Bottom"
+                 Foreground="Green"
+                 Visibility="Collapsed"
+                 Margin="10"
+                 >
+                Ajout réussit
+            </TextBlock>
+            <Button x:ConnectionId='17'
+                Width="100" Height="40"
+                HorizontalAlignment="Center"
+                                     
+                >
+                <SymbolIcon Symbol="Add"/>
+            </Button>
+        </StackPanel>
+
+       
+        
+        <TextBlock x:ConnectionId='3'
+            Grid.Row="0"
+            Grid.Column="1"
+            x:Name="titreModifierGridv"
+            FontSize="30"
+            Margin="0 15 0 0"
+            HorizontalAlignment="Center"
+            >
+            Modifier une categories
+        </TextBlock>
+
+        <GridView x:ConnectionId='4' x:Name="gv_categorie" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Margin="0 -90 0 0"                                                  HorizontalAlignment="Center">
+            <GridView.ItemTemplate>
+                <DataTemplate                              >
+                    <StackPanel x:ConnectionId='11' x:Name="produitCard" Margin="15" Background="White" CornerRadius="5" Width="500" HorizontalAlignment="Stretch">
+                        <Grid Margin="5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                            <StackPanel Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" Margin="15">
+                                <TextBlock x:ConnectionId='13'                      FontSize="25" FontFamily="Arial rouded" TextTrimming="WordEllipsis"/>
+                            </StackPanel>
+
+                            <Button x:ConnectionId='12' 
+                                                          
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center"
+                                Grid.Column="1"
+                                Grid.Row="0"
+                                FontSize="19"
+                                Width="130" Height="40"
+                                >
+                                <SymbolIcon Symbol="Edit"/>
+                            </Button>
+                        </Grid>
+                    </StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+
+
+        <TextBlock x:ConnectionId='5'
+             Grid.Row="0"
+             Grid.Column="2"
+             x:Name="titreModifier"
+             FontSize="30"
+             Margin="0 15 0 0"
+             HorizontalAlignment="Center"
+             >
+             Modifier une categories
+        </TextBlock>
+
+        <StackPanel 
+             Grid.Row="1" Grid.Column="2"
+             HorizontalAlignment="Center"
+             >
+            <TextBox x:ConnectionId='6'
+                 x:Name="tbxModifier_type"
+                 Header="categorie:"
+                 Margin="5"
+                 Width="280" Height="75"
+                 FontSize="18" 
+                 PlaceholderText="ex: "
+                 PlaceholderForeground="DarkGray"
+                 >
+            </TextBox>
+            <TextBlock x:ConnectionId='7'
+                 x:Name="typeModifierErr"
+                 FontSize="15"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Bottom"
+                 Foreground="DarkRed"
+                 Margin="10"
+                 >
+            </TextBlock>
+            <TextBlock x:ConnectionId='8'
+                 x:Name="message_reussite"
+                 FontSize="15"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Bottom"
+                 Foreground="Green"
+                Visibility="Collapsed"
+                 Margin="10"
+                 >
+                Modification réussite
+            </TextBlock>
+            <Button x:ConnectionId='9'
+                x:Name="btn_modifier_grid"
+                 Width="100" Height="40"
+                 HorizontalAlignment="Center"
+                                                
+                Visibility="Collapsed"
+                 >
+                <SymbolIcon Symbol="Edit"/>
+            </Button>
+        </StackPanel>
+
+
+    </Grid>
+</Page>
+

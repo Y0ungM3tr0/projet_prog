@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="prog_final.pageStatistique3"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:prog_final"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="LightGray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="5*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="5*" />
+        </Grid.RowDefinitions>
+
+        <Grid
+             Grid.Column="0"
+             Grid.Row="0"
+             HorizontalAlignment="Left"
+             VerticalAlignment="Top"
+             >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Button x:ConnectionId='18'
+                 Grid.Column="0"
+                 HorizontalAlignment="Left"
+                 Width="60"
+                                       
+                 >
+                <Button.Content>
+                    <FontIcon Glyph="&#xF0B0;" VerticalAlignment="Center"/>
+                </Button.Content>
+            </Button>
+            <Button x:ConnectionId='19'
+                 Grid.Column="1"
+                 HorizontalAlignment="Right"
+                 Width="60"
+                                       
+                 >
+                <Button.Content>
+                    <FontIcon Glyph="&#xF0AF;" VerticalAlignment="Center"/>
+                </Button.Content>
+            </Button>
+            <TextBlock
+                 Grid.Column="2" 
+                 HorizontalAlignment="Center"
+                 FontSize="20"
+                 Margin="10,0,0,0"
+                 >
+                 page 3
+            </TextBlock>
+        </Grid>
+
+
+        <TextBlock x:ConnectionId='2'
+            x:Name="header_nbr_seance_par_activite"
+            Grid.Column="1" 
+            Grid.Row="1"
+            HorizontalAlignment="Center"
+            FontSize="25"
+            >
+            Le nombre d'adherent par activite
+        </TextBlock>
+
+        <GridView x:ConnectionId='3' x:Name="gv_nbr_seance_par_activite" Grid.Row="2" Grid.RowSpan="3" Grid.Column="1"                                                                HorizontalAlignment="Center">
+            <GridView.ItemTemplate>
+                <DataTemplate                             >
+                    <StackPanel x:ConnectionId='15' x:Name="produitCard" Margin="15" Background="White" CornerRadius="5" Width="400" HorizontalAlignment="Stretch">
+                        <Grid Margin="5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                            <StackPanel HorizontalAlignment="Stretch" Grid.Row="0">
+                                <TextBlock FontSize="20" Margin="5">
+                                    <Run Text="Le nom de l'activite:"/>
+                                    <Run x:ConnectionId='17' FontWeight="Light"                             />
+                                </TextBlock>
+                            </StackPanel>
+                            <StackPanel HorizontalAlignment="Stretch" Grid.Row="1">
+                                <TextBlock FontSize="20" Margin="5">
+                                    <Run Text="Le nombre de séances:"/>
+                                    <Run x:ConnectionId='16' FontWeight="Light"                                        />
+                                </TextBlock>
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+
+        <TextBlock x:ConnectionId='4'
+            x:Name="header_nb_activites"
+            Grid.Column="0" 
+            Grid.Row="3"
+            HorizontalAlignment="Center"
+            FontSize="20"
+            >
+            Le nombre total d'activités
+        </TextBlock>
+
+        <GridView x:ConnectionId='5' x:Name="gv_nb_activites" Grid.Row="4" Grid.Column="0"                                                     HorizontalAlignment="Center">
+            <GridView.ItemTemplate>
+                <DataTemplate                             >
+                    <StackPanel x:ConnectionId='12' x:Name="produitCard" Margin="15" Background="White" CornerRadius="5" Width="400" HorizontalAlignment="Stretch">
+                        <Grid Margin="5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                            <StackPanel HorizontalAlignment="Stretch">
+                                <TextBlock x:ConnectionId='13'                              FontSize="25" Margin="15,15,0,0" FontFamily="Arial rouded" TextTrimming="WordEllipsis"/>
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+
+
+        <TextBlock x:ConnectionId='6'
+            x:Name="header_nb_total_adherent"
+            Grid.Column="0" 
+            Grid.Row="1"
+            HorizontalAlignment="Center"
+            FontSize="20"
+            >
+            Le nombre total d'adhérents
+        </TextBlock>
+
+        <GridView x:ConnectionId='7' x:Name="gv_nb_total_adherent" Grid.Row="2" Grid.Column="0"                                                          HorizontalAlignment="Center">
+            <GridView.ItemTemplate>
+                <DataTemplate                             >
+                    <StackPanel x:ConnectionId='9' x:Name="produitCard" Margin="15" Background="White" CornerRadius="5" Width="400" HorizontalAlignment="Stretch">
+                        <Grid Margin="5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                            <StackPanel HorizontalAlignment="Stretch">
+                                <TextBlock x:ConnectionId='10'                              FontSize="25" Margin="15,15,0,0" FontFamily="Arial rouded" TextTrimming="WordEllipsis"/>
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+    </Grid>
+</Page>
+
